@@ -1,0 +1,54 @@
+{
+    "faqrow1": [
+        {
+            "title": "What if I don't have a team or an idea?",
+            "body": "No problem! Many hackers do not have a fully-formed team or hack concept before the event begins. We will be hosting team-forming activities after hacking begins to help you find the perfect match. If you're a first-time hacker, there will be many others looking for team members with whom you can pair."
+        },
+        {
+            "title": "Who can attend?",
+            "body": "All undergraduate students from any university in the world are eligible."
+        },
+        {
+            "title": "How much does it cost?",
+            "body": "Cal Hacks is free for all accepted hackers. We will provide your WiFi, meals, caffeine, swag, and workspace for the entire weekend."
+        },
+        {
+            "title": "How big should teams be? Can I hack alone?",
+            "body": "We highly encourage you to build with a team. Teamwork is deeply rooted in the hacking ethos, and you'll have a better time building with your brightest peers. Teams should be at most five people."
+        },
+        {
+            "title": "How do I get to Cal Hacks from the airport?",
+            "body": "We recommend taking BART to the venue, as it is the quickest and cheapest way. From OAK, take the AirBART shuttle to a Richmond train, and get off at Downtown Berkeley. From SFO, take the AirTrain to the BART station, then take either a Richmond train to downtown Berkeley or take a Pittsburgh/Bay Point train and transfer at 19th Street Oakland to a Richmond train."
+        },
+        {
+            "title": "What if I have another question?",
+            "body": "Please feel free to reach out to us via <a href='https://www.facebook.com/CalHacks' target='_blank'>Facebook</a>, <a href='https://twitter.com/calhacks' target='_blank'>Twitter</a>, or <a href='mailto:team@calhacks.io' target='_blank'>email at team@calhacks.io</a>."
+        }
+    ],
+    "faqrow2": [
+        {
+            "title": "What is a hackathon?",
+            "body": "Hackathons are where your crazy ideas become reality. Build anything—there are no restrictions on what you can create. Dive in and make the most incredible thing you can alongside fellow creators. While some may see hackers as the crazy ones, we see genius."
+        },
+        {
+            "title": "What about hardware hacking equipment?",
+            "body": "We have partnered with the <a href='http://invent.citris-uc.org/about/facilities/' target='_blank'>CITRIS Invention Lab</a> to provide complimentary hardware hacking resources to all hackers, including 3D printers, laser cutters, soldering stations, and electrical engineering equipment.  Many sponsors will also provide hardware hacking devices for tinkering. Make sure to bring any specialty equipment that you may need."
+        },
+        {
+            "title": "What can I build?",
+            "body": "Web, mobile, hardware, you name it. Any type of project is welcome. Projects will be judged based on creativity, technical difficulty, polish, and utility by a panel of industry judges."
+        },
+        {
+            "title": "What should I bring?",
+            "body": "All attendees are required to bring their valid student ID for admission. Laptops, sleeping bags, and toiletries are highly recommended."
+        },
+        {
+            "title": "Is there a code of conduct?",
+            "body": "<a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf' target='_blank'>yes.</a>tl;dr: Don't be a jerk."
+        },
+        {
+            "title": "How will I get to the Bay?",
+            "body": "Free Cal Hacks-sponsored buses will pick up and drop off hackers at universities within California."
+        }
+    ]
+}
