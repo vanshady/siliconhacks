@@ -64,7 +64,7 @@ var index = React.createClass({
               <h1>Location</h1>
               <p>
 
-                Cal Hacks 2.0 will take place at
+                Silicon Hacks will take place at
                 <a href="http://www.californiamemorialstadium.com/">California
                 Memorial Stadium</a>, on Piedmont Avenue on the east side of UC
                 Berkeley campus. The address is:
