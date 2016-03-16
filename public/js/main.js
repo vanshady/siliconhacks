@@ -24289,11 +24289,7 @@ const FaqCard = React.createClass({
         { className: "card-title" },
         this.props.title
       ),
-      React.createElement(
-        "div",
-        { className: "card-body" },
-        this.props.body
-      )
+      React.createElement("div", { className: "card-body", dangerouslySetInnerHTML: { __html: this.props.body } })
     );
   }
 });
@@ -24303,6 +24299,7 @@ module.exports = FaqCard;
 },{"react":220}],226:[function(require,module,exports){
 const React = require('react');
 const FaqCard = require('./faq-card.jsx');
+let key = 0;
 
 const FaqRow = React.createClass({
   displayName: 'FaqRow',
@@ -24310,7 +24307,8 @@ const FaqRow = React.createClass({
 
   render() {
     const cards = this.props.cards['faqrow' + this.props.row].map(function (obj) {
-      return React.createElement(FaqCard, { title: obj.title, body: obj.body });
+      key++;
+      return React.createElement(FaqCard, { key: key, title: obj.title, body: obj.body });
     });
 
     return React.createElement(

@@ -34,7 +34,8 @@ const FaqCard = React.createClass({
     return (
       <div className="faq-card">
         <div className="card-title">{this.props.title}</div>
-        <div className="card-body">{this.props.body}</div>
+        <div className="card-body" dangerouslySetInnerHTML={{ __html: this.props.body }}>
+        </div>
       </div>
     );
   },
