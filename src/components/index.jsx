@@ -1,7 +1,7 @@
-var React = require('react');
-var FaqSection = require('./faq-section.jsx');
-var Sponsors = require('./sponsors.jsx');
-var index = React.createClass({
+const React = require('react');
+const FaqSection = require('./faq-section.jsx');
+const Sponsors = require('./sponsors.jsx');
+const index = React.createClass({
 
   render() {
     return (
@@ -157,7 +157,7 @@ var index = React.createClass({
       </div>
 
     );
-  }
+  },
 
 });
 

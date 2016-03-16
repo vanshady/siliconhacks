@@ -70,7 +70,7 @@ const Sponsors = React.createClass({
         </div>
 
         );
-  }
+  },
 });
 
 module.exports = Sponsors;

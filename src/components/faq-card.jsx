@@ -1,7 +1,10 @@
 const React = require('react');
 
 const FaqCard = React.createClass({
-
+  propTypes: {
+    title: React.PropTypes.string.isRequired,
+    body: React.PropTypes.string.isRequired,
+  },
   render() {
     // var cardStyle = {
     //   fontFamily: "Proxima Nova, Open Sans, sans-serif",
@@ -34,7 +37,7 @@ const FaqCard = React.createClass({
         <div className="card-body">{this.props.body}</div>
       </div>
     );
-  }
+  },
 });
 
 module.exports = FaqCard;

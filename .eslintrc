@@ -1,3 +1,9 @@
 {
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "plugins": [
+        "html"
+    ],
+    "rules": {
+      "prefer-es6-class": 0
+    }
 }

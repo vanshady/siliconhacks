@@ -1,6 +1,6 @@
 const React = require('react');
-var FaqRow = require('./faq-row.jsx');
-var cardData = require('../faq.json');
+const FaqRow = require('./faq-row.jsx');
+const cardData = require('../faq.json');
 
 const FaqSection = React.createClass({
 
@@ -36,7 +36,7 @@ const FaqSection = React.createClass({
         <div className="slant bottom right"></div>
       </div>
     );
-  }
+  },
 });
 
 module.exports = FaqSection;

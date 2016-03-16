@@ -3,10 +3,10 @@ const React = require('react');
 const ReactRouter = require('react-router');
 const Router = ReactRouter.Router;
 const Route = ReactRouter.Route;
-const RouterHistory = ReactRouter.useRouterHistory;
+const routerHistory = ReactRouter.useRouterHistory;
 const CreateHistory = require('history').createHashHistory;
-const History = RouterHistory(CreateHistory)({
-  queryKey: false
+const History = routerHistory(CreateHistory)({
+  queryKey: false,
 });
 
 const Index = require('./components/index.jsx');
