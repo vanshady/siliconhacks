@@ -10,15 +10,11 @@ const History = routerHistory(CreateHistory)({
 });
 
 const Index = require('./components/index.jsx');
-// const News = require('./components/News.jsx');
-// const Photos = require('./components/Photos.jsx');
 
 const Routes = (
     <Router history={History}>
-        <Route path="/" component={Index}>
-            {/* <Route path="/news" component={News} />
-            <Route path="/photos" component={Photos} />*/}
-        </Route>
+      <Route path="/" component={Index}>
+      </Route>
     </Router>
 );
 

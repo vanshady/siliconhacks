@@ -24132,17 +24132,15 @@ const Route = ReactRouter.Route;
 const routerHistory = ReactRouter.useRouterHistory;
 const CreateHistory = require('history').createHashHistory;
 const History = routerHistory(CreateHistory)({
-    queryKey: false
+  queryKey: false
 });
 
 const Index = require('./components/index.jsx');
-// const News = require('./components/News.jsx');
-// const Photos = require('./components/Photos.jsx');
 
 const Routes = React.createElement(
-    Router,
-    { history: History },
-    React.createElement(Route, { path: '/', component: Index })
+  Router,
+  { history: History },
+  React.createElement(Route, { path: '/', component: Index })
 );
 
 module.exports = Routes;
