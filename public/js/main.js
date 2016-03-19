@@ -24229,12 +24229,12 @@ const ApplySection = React.createClass({
         React.createElement(
           "div",
           { className: "apply-header" },
-          "Applications are closed! Are you coming?"
+          "Join the maling list"
         ),
         React.createElement(
           "a",
-          { className: "button apply rain-drake", href: "#" },
-          "I'm coming!"
+          { className: "button apply", href: "https://siliconhacks.typeform.com/to/wK5Mls", target: "_blank" },
+          "Apply"
         )
       )
     );

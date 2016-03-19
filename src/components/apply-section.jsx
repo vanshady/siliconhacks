@@ -6,8 +6,8 @@ const ApplySection = React.createClass({
       <div id="apply" className="section">
         <div className="desktop-img"></div>
         <div className="apply-container">
-          <div className="apply-header">Applications are closed! Are you coming?</div>
-          <a className="button apply rain-drake" href="#">I'm coming!</a>
+          <div className="apply-header">Join the maling list</div>
+          <a className="button apply" href="https://siliconhacks.typeform.com/to/wK5Mls" target="_blank">Apply</a>
         </div>
       </div>
     );
