@@ -24346,7 +24346,7 @@ const FaqSection = React.createClass({
 
 module.exports = FaqSection;
 
-},{"../faq.json":235,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
+},{"../faq.json":236,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
 const React = require('react');
 
 const FooterSection = React.createClass({
@@ -24405,99 +24405,45 @@ module.exports = FooterSection;
 
 },{"react":220}],229:[function(require,module,exports){
 const React = require('react');
-
-const pStyle = {
-  textAlign: "center"
-};
+const Schedules = require('./schedules.jsx');
 
 const GeneralSection = React.createClass({
-  displayName: "GeneralSection",
+  displayName: 'GeneralSection',
 
   render() {
     return React.createElement(
-      "div",
-      { id: "general", className: "section" },
+      'div',
+      { id: 'general', className: 'section' },
       React.createElement(
-        "div",
-        { className: "section-wrapper" },
+        'div',
+        { className: 'section-wrapper' },
         React.createElement(
-          "div",
-          { className: "section-body" },
+          'div',
+          { className: 'section-body' },
           React.createElement(
-            "h1",
+            'h1',
             null,
-            "Schedule",
-            React.createElement("img", { className: "emoji", src: "assets/img/emoji/party_popper.png" })
+            'Schedule',
+            React.createElement('img', { className: 'emoji', src: 'assets/img/emoji/party_popper.png' })
           ),
+          React.createElement(Schedules, null),
           React.createElement(
-            "p",
-            { style: pStyle },
-            React.createElement(
-              "b",
-              null,
-              "Setup Begins:"
-            ),
-            "Friday, Oct 9 @ 6 PM",
-            React.createElement("br", null),
-            React.createElement(
-              "b",
-              null,
-              "Hacker Registration Begins:"
-            ),
-            "Friday, Oct 9 @ 7 PM",
-            React.createElement("br", null),
-            React.createElement(
-              "b",
-              null,
-              "Opening Ceremonies:"
-            ),
-            "Friday, Oct 9 @ 9 PM",
-            React.createElement("br", null),
-            React.createElement(
-              "b",
-              null,
-              "Hacking Begins:"
-            ),
-            "Friday, Oct 9 @ 11 PM",
-            React.createElement("br", null),
-            React.createElement(
-              "b",
-              null,
-              "Hacking Ends:"
-            ),
-            "Sunday, Oct 11 @ 10 AM",
-            React.createElement("br", null),
-            React.createElement(
-              "b",
-              null,
-              "Science Fair Style Project Expo:"
-            ),
-            "Sunday, Oct 11 @ 11 AM",
-            React.createElement("br", null),
-            React.createElement(
-              "b",
-              null,
-              "Closing Ceremonies:"
-            ),
-            "Sunday, Oct 11 @ 2 PM"
+            'a',
+            { href: 'live' },
+            'Click here for more info!'
           ),
-          React.createElement(
-            "a",
-            { href: "live" },
-            "Click here for more info!"
-          ),
-          React.createElement("br", null),
-          React.createElement("br", null)
+          React.createElement('br', null),
+          React.createElement('br', null)
         )
       ),
-      React.createElement("div", { className: "slant bottom right" })
+      React.createElement('div', { className: 'slant bottom right' })
     );
   }
 });
 
 module.exports = GeneralSection;
 
-},{"react":220}],230:[function(require,module,exports){
+},{"./schedules.jsx":233,"react":220}],230:[function(require,module,exports){
 const React = require('react');
 
 const HeadSection = React.createClass({
@@ -24589,7 +24535,7 @@ const index = React.createClass({
 
 module.exports = index;
 
-},{"./about-section.jsx":223,"./apply-section.jsx":224,"./faq-section.jsx":227,"./footer-section.jsx":228,"./general-section.jsx":229,"./head-section.jsx":230,"./nav.jsx":232,"./sponsor-section.jsx":233,"react":220}],232:[function(require,module,exports){
+},{"./about-section.jsx":223,"./apply-section.jsx":224,"./faq-section.jsx":227,"./footer-section.jsx":228,"./general-section.jsx":229,"./head-section.jsx":230,"./nav.jsx":232,"./sponsor-section.jsx":234,"react":220}],232:[function(require,module,exports){
 const React = require('react');
 
 const Nav = React.createClass({
@@ -24656,6 +24602,31 @@ module.exports = Nav;
 
 },{"react":220}],233:[function(require,module,exports){
 const React = require('react');
+const scheduleData = require('../schedule.json');
+const schedule = scheduleData.schedule;
+
+const Schedules = React.createClass({
+  displayName: 'Schedules',
+
+  render() {
+    const rows = () => {
+      let s = '';
+      for (let i = 0; i < schedule.length; i++) {
+        s += `<b>${ schedule[i].event }</b>${ schedule[i].time }<br />`;
+      }
+      return s;
+    };
+    const pStyle = {
+      textAlign: 'center'
+    };
+    return React.createElement('p', { style: pStyle, dangerouslySetInnerHTML: { __html: rows() } });
+  }
+});
+
+module.exports = Schedules;
+
+},{"../schedule.json":238,"react":220}],234:[function(require,module,exports){
+const React = require('react');
 const Sponsors = require('./sponsors.jsx');
 
 const SponsorSection = React.createClass({
@@ -24691,7 +24662,7 @@ const SponsorSection = React.createClass({
 
 module.exports = SponsorSection;
 
-},{"./sponsors.jsx":234,"react":220}],234:[function(require,module,exports){
+},{"./sponsors.jsx":235,"react":220}],235:[function(require,module,exports){
 const React = require('react');
 
 const Sponsors = React.createClass({
@@ -24786,7 +24757,7 @@ const Sponsors = React.createClass({
 
 module.exports = Sponsors;
 
-},{"react":220}],235:[function(require,module,exports){
+},{"react":220}],236:[function(require,module,exports){
 module.exports={
     "faqrow1": [
         {
@@ -24841,11 +24812,44 @@ module.exports={
         }
     ]
 }
-},{}],236:[function(require,module,exports){
+},{}],237:[function(require,module,exports){
 
 const ReactDOM = require('react-dom');
 const Routes = require('./Routes.jsx');
 
 ReactDOM.render(Routes, document.getElementById('main'));
 
-},{"./Routes.jsx":222,"react-dom":28}]},{},[236]);
+},{"./Routes.jsx":222,"react-dom":28}],238:[function(require,module,exports){
+module.exports={
+    "schedule": [
+        {
+            "event": "Setup Begins:",
+            "time": "Friday, Oct 9 @ 6 PM"
+        },
+        {
+            "event": "Hacker Registration Begins:",
+            "time": "Friday, Oct 9 @ 7 PM"
+        },
+        {
+            "event": "Opening Ceremonies:",
+            "time": "Friday, Oct 9 @ 9 PM"
+        },
+        {
+            "event": "Hacking Begins:",
+            "time": "Friday, Oct 9 @ 11 PM"
+        },
+        {
+            "event": "Hacking Ends:",
+            "time": "Friday, Oct 11 @ 10 PM"
+        },
+        {
+            "event": "Science Fair Style Project Expo:",
+            "time": "Friday, Oct 11 @ 11 PM"
+        },
+        {
+            "event": "Closing Ceremonies:",
+            "time": "Friday, Oct 11 @ 2 PM"
+        }
+    ]
+}
+},{}]},{},[237]);
