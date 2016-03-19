@@ -2,9 +2,10 @@
   "name": "siliconhacks",
   "version": "1.0.0",
   "description": "Cal Hacks 2 website. Written in vanilla HTML, CSS, and JavaScript.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
+    "start": "node server.js",
+    "build": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
