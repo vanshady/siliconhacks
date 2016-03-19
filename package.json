@@ -4,8 +4,8 @@
   "description": "Cal Hacks 2 website. Written in vanilla HTML, CSS, and JavaScript.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "build": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
+    "startandwatch": "nodemon server.js",
+    "buildandwatch": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
