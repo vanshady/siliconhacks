@@ -6,9 +6,9 @@ const Schedules = React.createClass({
   render() {
     const rows = () => {
       let s = '';
-      for (let i = 0; i < schedule.length; i++) {
-        s += `<b>${schedule[i].event}</b>${schedule[i].time}<br />`;
-      }
+      schedule.forEach((obj) => {
+        s += `<b>${obj.event}</b>${obj.time}<br />`;
+      });
       return s;
     };
     const pStyle = {
