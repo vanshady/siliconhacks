@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server.js",
     "build": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build & npm run start"
   },
   "author": "",
   "license": "ISC",
