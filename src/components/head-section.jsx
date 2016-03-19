@@ -4,7 +4,7 @@ const HeadSection = React.createClass({
   render() {
     return (
       <div id="landing" className="section full">
-        <div id="landing-filter-hashtag-instagram-hashtag-besties-for-life-hashtag-no-filter-hashtag-slide-into-my-dms">
+        <div id="landing-filter">
         </div>
         <div className="section-wrapper">
           <div id="copy-container">

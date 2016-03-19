@@ -24453,7 +24453,7 @@ const HeadSection = React.createClass({
     return React.createElement(
       "div",
       { id: "landing", className: "section full" },
-      React.createElement("div", { id: "landing-filter-hashtag-instagram-hashtag-besties-for-life-hashtag-no-filter-hashtag-slide-into-my-dms" }),
+      React.createElement("div", { id: "landing-filter" }),
       React.createElement(
         "div",
         { className: "section-wrapper" },
