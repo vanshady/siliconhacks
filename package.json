@@ -1,7 +1,7 @@
 {
   "name": "siliconhacks",
   "version": "1.0.0",
-  "description": "Cal Hacks 2 website. Written in vanilla HTML, CSS, and JavaScript.",
+  "description": "SiliconHacks website. Written in HTML, CSS, Node.js, express, and React.",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",

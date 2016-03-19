@@ -24254,31 +24254,6 @@ const FaqCard = React.createClass({
     body: React.PropTypes.string.isRequired
   },
   render() {
-    // var cardStyle = {
-    //   fontFamily: "Proxima Nova, Open Sans, sans-serif",
-    //   marginBottom: "20px",
-    //   backgroundColor: "white",
-    //   borderRadius: "4px",
-    //   color: "#3E3E3E",
-    //   padding: "40px 30px",
-    //   position: "relative",
-    //   textAlign: "left",
-    //   width: "100%"
-    // };
-    //
-    // var cardTitleStyle = {
-    //   fontSize: "20px",
-    //   lineHeight: 1.5,
-    //   marginBottom: "25px",
-    //   fontWeight: "bold",
-    // };
-    //
-    // var cardBodyStyle = {
-    //   fontSize: "14px",
-    //   lineHeight: 1.7,
-    //   fontWeight: 400
-    // };
-
     return React.createElement(
       "div",
       { className: "faq-card" },
@@ -24404,7 +24379,7 @@ const FooterSection = React.createClass({
       React.createElement(
         "p",
         null,
-        "Made with ♥ by the Cal Hacks team! Contact us at",
+        "Made with ♥ by the SiliconHacks team! Contact us at",
         React.createElement(
           "a",
           { href: "mailto:team@calhacks.io" },
@@ -24564,13 +24539,13 @@ const HeadSection = React.createClass({
             { className: "button-container" },
             React.createElement(
               "a",
-              { className: "button live", href: "live" },
-              "Live"
+              { className: "button", href: "live" },
+              "Apply"
             ),
             React.createElement(
               "a",
-              { className: "button", href: "http://meerkatapp.co/calhacks" },
-              "Stream"
+              { className: "button", href: "" },
+              "Sponsor Us"
             )
           )
         )
