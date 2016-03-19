@@ -24485,7 +24485,7 @@ const HeadSection = React.createClass({
             { className: "button-container" },
             React.createElement(
               "a",
-              { className: "button", href: "live" },
+              { className: "button", href: "https://siliconhacks.typeform.com/to/wK5Mls", target: "_blank" },
               "Apply"
             ),
             React.createElement(
