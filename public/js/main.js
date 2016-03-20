@@ -24590,7 +24590,8 @@ const Organizer = React.createClass({
       color: 'inherit',
       transition: '0.3s ease',
       fontFamily: 'Proxima Nova, Montserrat, sans-serif',
-      textAlign: 'center'
+      textAlign: 'center',
+      fontSize: '16px'
     };
     return React.createElement(
       'div',

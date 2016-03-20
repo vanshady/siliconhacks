@@ -13,6 +13,7 @@ const Organizer = React.createClass({
       transition: '0.3s ease',
       fontFamily: 'Proxima Nova, Montserrat, sans-serif',
       textAlign: 'center',
+      fontSize: '16px',
     };
     return (
         <div className="col-xs-12 col-md-6 col-lg-4" style={{ marginTop: '30px' }}>
