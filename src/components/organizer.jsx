@@ -19,10 +19,14 @@ const Organizer = React.createClass({
         <div className="col-xs-12 col-md-6 col-lg-4" style={{ marginTop: '30px' }}>
           <div className="row">
             <div className="col-xs-4">
-              <img className="img-circle" src={imageURL} height="100" width="100" alt={organizer.name} />
+              <img className="img-circle" src={imageURL} height="100" width="100"
+                alt={organizer.name}
+              />
             </div>
             <div className="col-xs-8">
-                 <a href={organizer.link} target="_blank" style={{ fontSize: '18px', marginBottom: '20px' }}>{organizer.name}</a><br />
+                 <a href={organizer.link} target="_blank"
+                   style={{ fontSize: '18px', marginBottom: '20px' }}
+                 >{organizer.name}</a><br />
                  <p style={schoolStyle}>{organizer.school}</p>
             </div>
           </div>

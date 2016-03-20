@@ -24152,6 +24152,9 @@ const AboutSection = React.createClass({
   displayName: "AboutSection",
 
   render() {
+    // const aboutStyle = {
+    //   backgroundColor: 'white',
+    // };
     return React.createElement(
       "div",
       { id: "about", className: "section" },
@@ -24186,18 +24189,7 @@ const AboutSection = React.createClass({
           React.createElement(
             "p",
             null,
-            "Silicon Hacks will take place at",
-            React.createElement(
-              "a",
-              { href: "http://www.californiamemorialstadium.com/" },
-              "California Memorial Stadium"
-            ),
-            ", on Piedmont Avenue on the east side of UC Berkeley campus. The address is:",
-            React.createElement(
-              "a",
-              { href: "https://goo.gl/maps/jX538" },
-              "2227 Piedmont Ave Berkeley, CA 94720"
-            ),
+            "Silicon Hacks will take place at SOME PLACE. The address is: ADDRESS",
             React.createElement("br", null),
             React.createElement("br", null),
             "See you there :)"
@@ -24218,6 +24210,30 @@ const ApplySection = React.createClass({
   displayName: "ApplySection",
 
   render() {
+    // const applyStyle = {
+    //   height: '600px',
+    //   backgroundColor: '#6FCBDC',
+    // };
+    // const applyContainerStyle = {
+    //   width: '100%',
+    //   maxWidth: '400px',
+    //   textAlign: 'center',
+    //   margin: '0 auto',
+    //   marginYop: '150px',
+    //   position: 'relative',
+    // };
+    // const applyHeaderStyle = {
+    //   color: 'white',
+    //   fontSize: '28px',
+    //   lineHeight: '1.5',
+    //   textAlign: 'center',
+    //   marginBottom: '15px',
+    // };
+    // const buttonApplyStyle = {
+    //   padding: '12px 25px',
+    //   textAlign: 'center',
+    //   fontSize: '24px',
+    // };
     return React.createElement(
       "div",
       { id: "apply", className: "section" },
@@ -24246,22 +24262,47 @@ module.exports = ApplySection;
 const React = require('react');
 
 const FaqCard = React.createClass({
-  displayName: "FaqCard",
+  displayName: 'FaqCard',
 
   propTypes: {
     title: React.PropTypes.string.isRequired,
     body: React.PropTypes.string.isRequired
   },
   render() {
+    const faqCardStyle = {
+      fontFamily: 'Proxima Nova, Open Sans, sans-serif',
+      marginBottom: '20px',
+      backgroundColor: 'white',
+      borderRadius: '4px',
+      color: '#3E3E3E',
+      padding: '40px 30px',
+      position: 'relative',
+      textAlign: 'left',
+      width: '100%'
+    };
+    const cardTitleStyle = {
+      fontSize: '20px',
+      lineHeight: '1.5',
+      marginBottom: '25px',
+      fontWeight: 'bold'
+    };
+    const cardBodyStyle = {
+      fontSize: '14px',
+      lineHeight: '1.7',
+      fontWeight: '400'
+    };
     return React.createElement(
-      "div",
-      { className: "faq-card" },
+      'div',
+      { style: faqCardStyle, className: 'faq-card' },
       React.createElement(
-        "div",
-        { className: "card-title" },
+        'div',
+        { className: 'card-title', style: cardTitleStyle },
         this.props.title
       ),
-      React.createElement("div", { className: "card-body", dangerouslySetInnerHTML: { __html: this.props.body } })
+      React.createElement('div', { className: 'card-body',
+        dangerouslySetInnerHTML: { __html: this.props.body },
+        style: cardBodyStyle
+      })
     );
   }
 });
@@ -24284,10 +24325,15 @@ const FaqRow = React.createClass({
       key++;
       return React.createElement(FaqCard, { key: key, title: obj.title, body: obj.body });
     });
-
+    const faqRowStyle = {
+      width: '50%',
+      float: 'left',
+      minWidth: '300px',
+      padding: '0px 10px'
+    };
     return React.createElement(
       'div',
-      { className: 'faq-row' },
+      { className: 'faq-row', style: faqRowStyle },
       cards
     );
   }
@@ -24305,9 +24351,18 @@ const FaqSection = React.createClass({
 
 
   render() {
+    const faqStyle = {
+      backgroundColor: '#F8BF61',
+      color: 'white'
+    };
+
+    const sectionBodyStyle = {
+      maxWidth: '800px'
+    };
+
     return React.createElement(
       'div',
-      { className: 'section', id: 'FAQ' },
+      { className: 'section', id: 'FAQ', style: faqStyle },
       React.createElement('div', { className: 'slant top left' }),
       React.createElement(
         'div',
@@ -24316,7 +24371,7 @@ const FaqSection = React.createClass({
       ),
       React.createElement(
         'div',
-        { className: 'section-body' },
+        { className: 'section-body', style: sectionBodyStyle },
         React.createElement(FaqRow, { cards: cardData.faqrow1, row: '1' }),
         React.createElement(FaqRow, { cards: cardData.faqrow2, row: '2' }),
         React.createElement('div', { className: 'clear' })
@@ -24328,44 +24383,51 @@ const FaqSection = React.createClass({
 
 module.exports = FaqSection;
 
-},{"../data.json":238,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
+},{"../data.json":237,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
 const React = require('react');
 
 const FooterSection = React.createClass({
-  displayName: "FooterSection",
+  displayName: 'FooterSection',
 
   render() {
+    const footerSectionStyle = {
+      backgroundColor: '#3E3E3E',
+      color: 'white',
+      textAlign: 'center',
+      padding: '20px 20px',
+      fontFamily: 'Proxima Nova, Open Sans, sans-serif'
+    };
     return React.createElement(
-      "div",
-      { className: "section", id: "footer" },
+      'div',
+      { className: 'section', id: 'footer', style: footerSectionStyle },
       React.createElement(
-        "a",
-        { href: "https://www.facebook.com/CalHacks", target: "_blank", className: "social" },
-        React.createElement("img", { src: "assets/img/facebook.svg", alt: "Facebook" })
+        'a',
+        { href: 'https://www.facebook.com/CalHacks', target: '_blank', className: 'social' },
+        React.createElement('img', { src: 'assets/img/facebook.svg', alt: 'Facebook' })
       ),
       React.createElement(
-        "a",
-        { href: "https://twitter.com/calhacks", target: "_blank", className: "social" },
-        React.createElement("img", { src: "assets/img/twitter.svg", alt: "Twitter" })
+        'a',
+        { href: 'https://twitter.com/calhacks', target: '_blank', className: 'social' },
+        React.createElement('img', { src: 'assets/img/twitter.svg', alt: 'Twitter' })
       ),
       React.createElement(
-        "a",
-        { href: "mailto:hacksilicon@gmail.com", target: "_blank", className: "social" },
-        React.createElement("img", { src: "assets/img/mail.svg", alt: "Email" })
+        'a',
+        { href: 'mailto:hacksilicon@gmail.com', target: '_blank', className: 'social' },
+        React.createElement('img', { src: 'assets/img/mail.svg', alt: 'Email' })
       ),
       React.createElement(
-        "a",
-        { href: "https://instagram.com/calhacks", target: "_blank", className: "social instagram" },
-        React.createElement("img", { src: "assets/img/instagram.svg", alt: "Instagram" })
+        'a',
+        { href: 'https://instagram.com/calhacks', target: '_blank', className: 'social instagram' },
+        React.createElement('img', { src: 'assets/img/instagram.svg', alt: 'Instagram' })
       ),
       React.createElement(
-        "p",
+        'p',
         null,
-        "Made with ♥ by the SiliconHacks team! Contact us at",
+        'Made with ♥ by the SiliconHacks team! Contact us at',
         React.createElement(
-          "a",
-          { href: "mailto:hacksilicon@gmail.com" },
-          "hacksilicon@gmail.com"
+          'a',
+          { href: 'mailto:hacksilicon@gmail.com' },
+          'hacksilicon@gmail.com'
         )
       )
     );
@@ -24382,9 +24444,15 @@ const GeneralSection = React.createClass({
   displayName: 'GeneralSection',
 
   render() {
+    const generalSectionStyle = {
+      backgroundColor: 'white',
+      paddingBottom: '60px',
+      paddingTop: '120px'
+    };
+
     return React.createElement(
       'div',
-      { id: 'general', className: 'section' },
+      { id: 'general', className: 'section', style: generalSectionStyle },
       React.createElement(
         'div',
         { className: 'section-wrapper' },
@@ -24398,11 +24466,6 @@ const GeneralSection = React.createClass({
             React.createElement('img', { className: 'emoji', src: 'assets/img/emoji/party_popper.png' })
           ),
           React.createElement(Schedules, null),
-          React.createElement(
-            'a',
-            { href: 'live' },
-            'Click here for more info!'
-          ),
           React.createElement('br', null),
           React.createElement('br', null)
         )
@@ -24449,7 +24512,7 @@ const HeadSection = React.createClass({
           React.createElement(
             "div",
             { className: "sub-headline mini" },
-            "UC Berkeley | Oct. 9-11"
+            "LOCATION | TIME"
           ),
           React.createElement(
             "div",
@@ -24602,14 +24665,18 @@ const Organizer = React.createClass({
         React.createElement(
           'div',
           { className: 'col-xs-4' },
-          React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100', alt: organizer.name })
+          React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100',
+            alt: organizer.name
+          })
         ),
         React.createElement(
           'div',
           { className: 'col-xs-8' },
           React.createElement(
             'a',
-            { href: organizer.link, target: '_blank', style: { fontSize: '18px', marginBottom: '20px' } },
+            { href: organizer.link, target: '_blank',
+              style: { fontSize: '18px', marginBottom: '20px' }
+            },
             organizer.name
           ),
           React.createElement('br', null),
@@ -24660,7 +24727,7 @@ const OrganizersSection = React.createClass({
 
 module.exports = OrganizersSection;
 
-},{"../data.json":238,"./organizer.jsx":233,"react":220}],235:[function(require,module,exports){
+},{"../data.json":237,"./organizer.jsx":233,"react":220}],235:[function(require,module,exports){
 const React = require('react');
 const scheduleData = require('../data.json');
 const schedule = scheduleData.schedule;
@@ -24685,33 +24752,33 @@ const Schedules = React.createClass({
 
 module.exports = Schedules;
 
-},{"../data.json":238,"react":220}],236:[function(require,module,exports){
+},{"../data.json":237,"react":220}],236:[function(require,module,exports){
 const React = require('react');
-const Sponsors = require('./sponsors.jsx');
+// const Sponsors = require('./sponsors.jsx');
 
 const SponsorSection = React.createClass({
-  displayName: 'SponsorSection',
+  displayName: "SponsorSection",
 
   render() {
     return React.createElement(
-      'div',
-      { id: 'sponsor', className: 'section' },
+      "div",
+      { id: "sponsor", className: "section" },
       React.createElement(
-        'div',
-        { className: 'section-body' },
+        "div",
+        { className: "section-body" },
         React.createElement(
-          'h1',
+          "h1",
           null,
-          'Interested in Sponsoring?'
+          "Interested in Sponsoring?"
         ),
         React.createElement(
-          'p',
+          "p",
           null,
-          'Email us at',
+          "Email us at",
           React.createElement(
-            'a',
-            { href: 'mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry' },
-            'hacksilicon@gmail.com'
+            "a",
+            { href: "mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry" },
+            "hacksilicon@gmail.com"
           )
         )
       )
@@ -24721,102 +24788,7 @@ const SponsorSection = React.createClass({
 
 module.exports = SponsorSection;
 
-},{"./sponsors.jsx":237,"react":220}],237:[function(require,module,exports){
-const React = require('react');
-
-const Sponsors = React.createClass({
-    displayName: "Sponsors",
-
-    render() {
-        return React.createElement(
-            "div",
-            { id: "sponsors-container" },
-            React.createElement(
-                "h1",
-                null,
-                "Sponsors"
-            ),
-            React.createElement("img", { className: "sponsor title", src: "assets/img/sponsors/microsoft.png", alt: "Microsoft" }),
-            React.createElement("img", { className: "sponsor sponsor-too-big polar", src: "assets/img/sponsors/uber.png", alt: "Uber" }),
-            React.createElement("img", { className: "sponsor polar sponsor-too-small", src: "assets/img/sponsors/capital1.png", alt: "Capital One" }),
-            React.createElement("br", null),
-            React.createElement("br", null),
-            React.createElement("br", null),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/teespring.png", alt: "Teespring" }),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/visa.png", alt: "Visa" }),
-            React.createElement("img", { className: "sponsor sponsor-too-small grizzly", src: "assets/img/sponsors/here.png", alt: "Here" }),
-            React.createElement("img", { className: "sponsor grizzly sponsor-too-small", src: "assets/img/sponsors/gm.png", alt: "GM" }),
-            React.createElement("img", { className: "sponsor grizzly sponsor-too-small", src: "assets/img/sponsors/block.png", alt: "Blockchain" }),
-            React.createElement("img", { className: "sponsor grizzly sponsor-too-small", src: "assets/img/sponsors/moxtra.png", alt: "Moxtra" }),
-            React.createElement("img", { className: "sponsor sponsor-too-big grizzly", src: "assets/img/sponsors/blackrock.png", alt: "BlackRock" }),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/a16z.png", alt: "A16Z" }),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/illumio.png", alt: "Illumio" }),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/aerospike.png", alt: "Aerospike" }),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/gap.png", alt: "GapTech" }),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/kpcb.png", alt: "KPCB" }),
-            React.createElement("img", { className: "sponsor grizzly", src: "assets/img/sponsors/fireeye.png", alt: "FireEye" }),
-            React.createElement("br", null),
-            React.createElement("br", null),
-            React.createElement("br", null),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/facebook.png", alt: "Facebook" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/pdt.png", alt: "PDT Partners" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/postmates.png", alt: "Postmates" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/unity.png", alt: "Unity" }),
-            React.createElement("img", { className: "sponsor sponsor-too-small brown", src: "assets/img/sponsors/pwc.png", alt: "pwc" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/splunk.png", alt: "Splunk" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/thiel.png", alt: "Thiel Foundation" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/compose.png", alt: "Compose.io" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/accel.png", alt: "Accel Partners" }),
-            React.createElement("img", { className: "sponsor brown", src: "assets/img/sponsors/magnet.png", alt: "magnet" }),
-            React.createElement("br", null),
-            React.createElement("br", null),
-            React.createElement("br", null),
-            React.createElement("img", { className: "sponsor cub sponsor-too-small", src: "assets/img/sponsors/branch.png", alt: "Branch Metrics" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/elastic.png", alt: "elastic" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/thync.png", alt: "Thync" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/sensel.png", alt: "Sensel" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/typesafe.png", alt: "Typesafe" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/zenefits.png", alt: "Zenefits" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/meerkat.png", alt: "Meerkat" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/nerdwallet.png", alt: "nerdwallet" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/ebay.png", alt: "Ebay" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/truprice.png", alt: "truprice" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/pivotal.png", alt: "Pivotal" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/soylent.png", alt: "soylent" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/pfizer.png", alt: "Pfizer" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/namecheap.png", alt: "Namecheap" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/indeed.png", alt: "Indeed" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/digitalocean.png", alt: "Digital Ocean" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/atnt.png", alt: "AT&T" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/yikyak.png", alt: "Yik Yak" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/1517.png", alt: "1517" }),
-            React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/tigertext.png", alt: "Tiger Text" }),
-            React.createElement(
-                "a",
-                { href: "http://www.arm.com/university" },
-                React.createElement("img", { className: "sponsor cub", src: "assets/img/sponsors/arm.png", alt: "ARM" })
-            ),
-            React.createElement("img", { className: "sponsor", src: "assets/img/sponsors/sharebus.png", alt: "Share the Bus" }),
-            React.createElement(
-                "h1",
-                { imageClass: "partners-title" },
-                "Partners"
-            ),
-            React.createElement("img", { className: "partner title", src: "assets/img/sponsors/citris.png", alt: "CITRIS" }),
-            React.createElement("img", { className: "partner", src: "assets/img/sponsors/foundry.png", alt: "CITRIS Foundry" }),
-            React.createElement("img", { className: "partner", src: "assets/img/sponsors/kairos.png", alt: "Kairos" }),
-            React.createElement("img", { className: "partner", src: "assets/img/sponsors/hackers.png", alt: "Hackers at Berkeley" }),
-            React.createElement("img", { className: "partner", src: "assets/img/sponsors/mlh.png", alt: "Major League Hacking" }),
-            React.createElement("img", { className: "partner", src: "assets/img/sponsors/stab.png", alt: "Startup at Berkeley" }),
-            React.createElement("img", { className: "partner", src: "assets/img/sponsors/inventionlab.png", alt: "CITRIS Invention Lab" }),
-            React.createElement("img", { className: "partner", src: "assets/img/sponsors/socialapps.png", alt: "Social Apps Lab at Citris" })
-        );
-    }
-});
-
-module.exports = Sponsors;
-
-},{"react":220}],238:[function(require,module,exports){
+},{"react":220}],237:[function(require,module,exports){
 module.exports={
     "faqrow1": [
         {
@@ -24829,19 +24801,19 @@ module.exports={
         },
         {
             "title": "How much does it cost?",
-            "body": "Cal Hacks is free for all accepted hackers. We will provide your WiFi, meals, caffeine, swag, and workspace for the entire weekend."
+            "body": "SiliconHacks is free for all accepted hackers. We will provide your WiFi, meals, caffeine, swag, and workspace for the entire weekend."
         },
         {
             "title": "How big should teams be? Can I hack alone?",
             "body": "We highly encourage you to build with a team. Teamwork is deeply rooted in the hacking ethos, and you'll have a better time building with your brightest peers. Teams should be at most five people."
         },
         {
-            "title": "How do I get to Cal Hacks from the airport?",
+            "title": "How do I get to SiliconHacks from the airport?",
             "body": "We recommend taking BART to the venue, as it is the quickest and cheapest way. From OAK, take the AirBART shuttle to a Richmond train, and get off at Downtown Berkeley. From SFO, take the AirTrain to the BART station, then take either a Richmond train to downtown Berkeley or take a Pittsburgh/Bay Point train and transfer at 19th Street Oakland to a Richmond train."
         },
         {
             "title": "What if I have another question?",
-            "body": "Please feel free to reach out to us via <a href='https://www.facebook.com/CalHacks' target='_blank'>Facebook</a>, <a href='https://twitter.com/calhacks' target='_blank'>Twitter</a>, or <a href='mailto:hacksilicon@gmail.com' target='_blank'>email at hacksilicon@gmail.com</a>."
+            "body": "Please feel free to reach out to us via <a href='https://www.facebook.com/SiliconHacks' target='_blank'>Facebook</a>, <a href='https://twitter.com/SiliconHacks' target='_blank'>Twitter</a>, or <a href='mailto:hacksilicon@gmail.com' target='_blank'>email at hacksilicon@gmail.com</a>."
         }
     ],
     "faqrow2": [
@@ -24867,7 +24839,7 @@ module.exports={
         },
         {
             "title": "How will I get to the Bay?",
-            "body": "Free Cal Hacks-sponsored buses will pick up and drop off hackers at universities within California."
+            "body": "Free SiliconHacks-sponsored buses will pick up and drop off hackers at universities within California."
         }
     ],
     "organizers": [
@@ -24967,11 +24939,11 @@ module.exports={
         }
     ]
 }
-},{}],239:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 
 const ReactDOM = require('react-dom');
 const Routes = require('./Routes.jsx');
 
 ReactDOM.render(Routes, document.getElementById('main'));
 
-},{"./Routes.jsx":222,"react-dom":28}]},{},[239]);
+},{"./Routes.jsx":222,"react-dom":28}]},{},[238]);

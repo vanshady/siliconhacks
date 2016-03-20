@@ -1,5 +1,5 @@
 const React = require('react');
-const Sponsors = require('./sponsors.jsx');
+// const Sponsors = require('./sponsors.jsx');
 
 const SponsorSection = React.createClass({
   render() {
@@ -10,7 +10,9 @@ const SponsorSection = React.createClass({
 
           <p>
             Email us at
-            <a href="mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry">hacksilicon@gmail.com</a>
+            <a href="mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry">
+              hacksilicon@gmail.com
+            </a>
           </p>
         </div>
       </div>

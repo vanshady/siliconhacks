@@ -2,6 +2,9 @@ const React = require('react');
 
 const AboutSection = React.createClass({
   render() {
+    // const aboutStyle = {
+    //   backgroundColor: 'white',
+    // };
     return (
       <div id="about" className="section">
         <div className="section-wrapper">
@@ -23,12 +26,8 @@ const AboutSection = React.createClass({
             <p>
 
               Silicon Hacks will take place at
-              <a href="http://www.californiamemorialstadium.com/">California
-              Memorial Stadium</a>, on Piedmont Avenue on the east side of UC
-              Berkeley campus. The address is:
-              <a href="https://goo.gl/maps/jX538">2227 Piedmont Ave Berkeley,
-               CA 94720
-              </a>
+              SOME PLACE. The address is:
+              ADDRESS
 
               <br /><br />
 

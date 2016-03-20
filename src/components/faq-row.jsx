@@ -11,9 +11,14 @@ const FaqRow = React.createClass({
       key++;
       return (<FaqCard key={key} title={obj.title} body={obj.body} />);
     });
-
+    const faqRowStyle = {
+      width: '50%',
+      float: 'left',
+      minWidth: '300px',
+      padding: '0px 10px',
+    };
     return (
-      <div className="faq-row">
+      <div className="faq-row" style={faqRowStyle} >
         {cards}
       </div>
     );
