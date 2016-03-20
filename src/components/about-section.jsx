@@ -5,8 +5,7 @@ const AboutSection = React.createClass({
     return (
       <div id="about" className="section">
         <div className="section-wrapper">
-          <img id="instructions" src="assets/img/instructions.svg" />
-          <div className="section-body">
+            <div className="section-body">
             <h1>
               Come Hack with Us
               <img className="emoji" src="assets/img/emoji/sunglasses.png" />

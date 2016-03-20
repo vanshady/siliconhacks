@@ -24158,7 +24158,6 @@ const AboutSection = React.createClass({
       React.createElement(
         "div",
         { className: "section-wrapper" },
-        React.createElement("img", { id: "instructions", src: "assets/img/instructions.svg" }),
         React.createElement(
           "div",
           { className: "section-body" },

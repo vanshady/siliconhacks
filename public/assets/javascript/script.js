@@ -1,55 +1,3 @@
-var pixels = ['ambulance.svg', 'battery-half.svg', 'chevron-left.svg',
-  'chevron-right.svg', 'diamond.svg', 'emoticon-confused.svg', 'file-text.svg',
-  'food.svg', 'hand.svg', 'location.svg', 'palette.svg', 'question.svg',
-  'ruler-triangle.svg', 'stats-down.svg', 'tshirt.svg'];
-
-function randomPixel() {
-  var rand = Math.floor(Math.random() * pixels.length);
-  var path = 'assets/img/pixel/' + pixels[rand];
-  var html = "<img class='pixel' src='" + path + "'>";
-  return $(html);
-}
-
-function loadPixels(num, container) {
-  var $container = $(container);
-  for (var i = 0; i < num; i++) {
-    var pixel = randomPixel();
-    $container.append(pixel);
-    return pixel;
-  }
-}
-
-function loadPixelOnMouse(e) {
-  var $container = $(this);
-  var offset = $container.offset();
-  var pixel = loadPixels(1, $container);
-  pixel.css({
-    left: e.pageX - offset.left,
-    top: e.pageY - offset.top
-  });
-}
-
-function loadDrake() {
-  var path = 'assets/img/drake.png';
-  var html = "<img class='drake' src='" + path + "'>";
-  return $(html);
-}
-
-function drakeOnMouse(e) {
-  var $container = $(this);
-  var offset = $container.offset();
-  var drake = loadDrake();
-  $container.append(drake);
-  drake.css({
-    left: e.pageX - offset.left,
-    top: e.pageY - offset.top
-  });
-}
-
-function everythingDrake() {
-  $('.section:not(#footer) img').attr('src', 'assets/img/drake.png');
-}
-
 function onScroll(event) {
   var scrollPos = $(document).scrollTop();
   $('#nav-sections a').each(function () {
@@ -62,155 +10,6 @@ function onScroll(event) {
     } else {
       currLink.parent().removeClass('active');
     }
-  });
-}
-
-SC.initialize({
-  // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-  // too lazy to hide this server side
-  client_id: '5bf5997727498f138cd393324936657c'
-  // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-});
-
-var raining_drake = false;
-var rate_of_rain = 1000;
-var drake_batch = 10;
-var rain_offset_x = 50;
-var rain_offset_y = -200;
-var rain_variance = 300;
-var min_drake_size = 30;
-var drake_size_variance = 66;
-var min_acceleration = 4;
-var acceleration_variance = 12;
-var drake_death_time = 10000;
-var drake_refresh_rate = 200;
-
-
-function startRaining(wait) {
-  rainDrakes(Math.floor(drake_batch * Math.random()));
-  setTimeout(function () {
-    startRaining(wait);
-  }, wait);
-}
-
-function rainDrakes(num) {
-  while (num) {
-    num--;
-    rainDrake({
-      x: -rain_offset_x + Math.floor(Math.random() * (screen.width + 2 * rain_offset_x)),
-      y: rain_offset_y - Math.floor(Math.random() * rain_variance)
-    });
-  }
-}
-
-function rainDrake(starting, size) {
-  var size = size ? size : min_drake_size + Math.floor(Math.random() * drake_size_variance);
-  var drake = new Drake(starting, size, min_acceleration + Math.random() * acceleration_variance);
-  drake.fall();
-  setTimeout(function () {
-    drake.die();
-  }.bind(this), drake_death_time);
-  return drake;
-}
-
-window.rainDrake = rainDrake;
-
-function Drake(starting, size, acceleration) {
-  this.x = starting.x;
-  this.y = starting.y;
-  this.size = size;
-  this.acceleration = acceleration;
-  this.velocity_x;
-  this.velocity_y;
-  this.time = 0;
-  this.img;
-  this.moving = true;
-  this.time_interval = drake_refresh_rate;
-  this.create();
-}
-
-Drake.prototype.create = function () {
-  this.img = $("<img class='spin' src='assets/img/drake.png'>")
-    .mouseenter(function () {
-      this.turnToSix();
-    }.bind(this));
-  $('body').append(this.img);
-  this.img.css({
-    zIndex: Math.floor(Math.random() * 4),
-    transition: '0.3s linear',
-    width: this.size,
-    position: 'fixed',
-    top: this.y,
-    left: this.x
-  });
-};
-
-Drake.prototype.fall = function () {
-
-  this.img.css({
-    top: this.calcY()
-  });
-  if (this.moving) {
-    setTimeout(function () {
-      this.fall();
-    }.bind(this), this.time_interval);
-  }
-};
-
-Drake.prototype.calcY = function () {
-  this.y += 1 / 2 * this.acceleration * (this.time * this.time);
-  this.time += this.time_interval * 0.001;
-  return this.y;
-};
-
-Drake.prototype.calcX = function () {
-  return this.x += 2;
-};
-
-Drake.prototype.decompose = function () {
-  var time = this.time + this.time_interval * 2 * 0.001;
-  var direction = (Math.random() > .5) ? -1 : 1;
-  var variance = Math.floor(Math.random() * 60) * direction;
-  var drake = rainDrake({ x: this.x + variance, y: this.y }, this.size / 2);
-  drake.time = time;
-};
-
-Drake.prototype.shrink = function () {
-  this.size = this.size / 2;
-  this.img.css({
-    width: this.size
-  });
-};
-
-Drake.prototype.turnToSix = function () {
-  this.img.attr('src', 'assets/img/six.png');
-};
-
-Drake.prototype.die = function () {
-  this.img.remove();
-  this.moving = false;
-};
-
-function logSongs(options) {
-  SC.get('/tracks', options, function (tracks) {
-    tracks.map(function (track) {
-      console.log(track.title, track.bpm, track);
-    });
-  });
-}
-
-function drakeMe(target, tooLate) {
-  var link = '/tracks';
-  var search = 'octobersveryown';
-  SC.get(link, {
-    q: search,
-    limit: 25
-  }, function (tracks) {
-    console.log(target);
-    var song = tracks[Math.floor((tracks.length - 1) * Math.random())];
-    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-    SC.oEmbed(song.uri, { auto_play: true }, target);
-    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
   });
 }
 
@@ -276,23 +75,7 @@ var poem = '%cCal Hacks, a poem %c\n\n' +
   "who doesn't deplore a chance to explore,\n" +
   'come join us for 2 days of hacking galore!';
 
-var logEmoji = function () {
-  var styles = {
-    please: 'color: #336699; font-weight: bold',
-    emoji: function () {
-      return "background-image: url('" +
-        'http://emojipedia.org/wp-content/uploads/2013/07/6-winking-face.png' +
-        "'); background-size: cover";
-    }
-  };
-  console.log(
-    poem,
-    styles.please, styles.emoji(), styles.please
-  );
-};
-
 $(document).ready(function () {
-  logEmoji();
 
   // var window_height = $(window).height();
   // adjust section height
@@ -308,7 +91,6 @@ $(document).ready(function () {
     $(window).scroll(switchNav);
     $('body').backstretch('assets/img/hackathon_background.jpg');
     $(document).on('scroll', onScroll);
-    $('.section').click(loadPixelOnMouse);
     $('.faq-card').click(function (e) {e.stopPropagation();});
   } else {
     $('#nav').addClass('active-mobile');
@@ -321,24 +103,6 @@ $(document).ready(function () {
       }, 300);
     });
   }
-
-  $('.drake-me').click(function () {
-    var target = $('#drake-here')[0];
-    drakeMe(target);
-    $('.section').unbind('click', loadPixelOnMouse);
-    $('.section').on('click', drakeOnMouse);
-    everythingDrake();
-  });
-
-  $('.rain-drake').click(function () {
-    if (raining_drake) return;
-
-    startRaining(rate_of_rain);
-    $('.section').unbind('click', loadPixelOnMouse);
-    $('.section').on('click', drakeOnMouse);
-    $('.apply-header').text('We <3 you!');
-    raining_drake = true;
-  });
 
   // smoothscroll
   $("a[href^='#']").on('click', function (e) {
