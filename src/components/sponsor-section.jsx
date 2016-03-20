@@ -10,7 +10,7 @@ const SponsorSection = React.createClass({
 
           <p>
             Email us at
-            <a href="mailto:sponsorship@calhacks.io?subject=Cal%20Hacks%202.0%20Sponsorship%20Inquiry">sponsorship@calhacks.io</a>
+            <a href="mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry">hacksilicon@gmail.com</a>
           </p>
         </div>
         <Sponsors />

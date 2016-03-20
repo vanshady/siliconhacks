@@ -570,11 +570,13 @@ a {
   color: white;
   font-size: 28px;
   line-height: 1.5;
+  text-align: center;
   margin-bottom: 15px
 }
 
 .button.apply {
   padding: 12px 25px;
+  text-align: center;
   font-size: 24px
 }
 

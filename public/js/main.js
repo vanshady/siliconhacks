@@ -24368,7 +24368,7 @@ const FooterSection = React.createClass({
       ),
       React.createElement(
         "a",
-        { href: "mailto:team@calhacks.io", target: "_blank", className: "social" },
+        { href: "mailto:hacksilicon@gmail.com", target: "_blank", className: "social" },
         React.createElement("img", { src: "assets/img/mail.svg", alt: "Email" })
       ),
       React.createElement(
@@ -24382,8 +24382,8 @@ const FooterSection = React.createClass({
         "Made with ♥ by the SiliconHacks team! Contact us at",
         React.createElement(
           "a",
-          { href: "mailto:team@calhacks.io" },
-          "team@calhacks.io"
+          { href: "mailto:hacksilicon@gmail.com" },
+          "hacksilicon@gmail.com"
         )
       ),
       React.createElement(
@@ -24620,6 +24620,8 @@ const OrganizersSection = React.createClass({
         s += `<b>${ obj.name }</b>`;
         if (obj.email !== '') {
           s += ` : <a href="mailto:${ obj.email }" target="_top">${ obj.email }</a>`;
+        } else if (obj.link !== '') {
+          s += ` : <a href="${ obj.link }" target="_blank">${ obj.link }</a>`;
         }
         s += '<br />';
       });
@@ -24694,8 +24696,8 @@ const SponsorSection = React.createClass({
           'Email us at',
           React.createElement(
             'a',
-            { href: 'mailto:sponsorship@calhacks.io?subject=Cal%20Hacks%202.0%20Sponsorship%20Inquiry' },
-            'sponsorship@calhacks.io'
+            { href: 'mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry' },
+            'hacksilicon@gmail.com'
           )
         )
       ),
@@ -24826,7 +24828,7 @@ module.exports={
         },
         {
             "title": "What if I have another question?",
-            "body": "Please feel free to reach out to us via <a href='https://www.facebook.com/CalHacks' target='_blank'>Facebook</a>, <a href='https://twitter.com/calhacks' target='_blank'>Twitter</a>, or <a href='mailto:team@calhacks.io' target='_blank'>email at team@calhacks.io</a>."
+            "body": "Please feel free to reach out to us via <a href='https://www.facebook.com/CalHacks' target='_blank'>Facebook</a>, <a href='https://twitter.com/calhacks' target='_blank'>Twitter</a>, or <a href='mailto:hacksilicon@gmail.com' target='_blank'>email at hacksilicon@gmail.com</a>."
         }
     ],
     "faqrow2": [
@@ -24868,38 +24870,47 @@ module.exports={
     "organizers": [
         {
             "name": "Anderson Pan",
+            "link": "",
             "email": ""
         },
         {
             "name": "Dhanush Patel",
+            "link": "",
             "email": "dhanush.patel@ymail.com"
         },
         {
             "name": "Janet Fang",
+            "link": "",
             "email": ""
         },
         {
             "name": "Jiarun Chen",
+            "link": "",
             "email": ""
         },
         {
             "name": "Justin Raizes",
+            "link": "",
             "email": ""
         },
         {
             "name": "Kaanchana Allaki",
+            "link": "",
             "email": ""
         },
         {
             "name": "Minwei Xu",
-            "email": "faceswilliam@gmail.com"
+            "link": "http://mwxu.me/",
+            "email": ""
         },
         {
             "name": "Moshe Rienhart",
+            "link": "",
             "email": ""
         },
         {
             "name": "Vivian Shen",
+            "link": "",
             "email": ""
         }
     ]
