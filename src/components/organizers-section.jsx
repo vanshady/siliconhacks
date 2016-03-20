@@ -1,6 +1,6 @@
 const React = require('react');
 const Organizer = require('./organizer.jsx');
-const organizersData = require('../organizers.json');
+const organizersData = require('../data.json');
 const organizers = organizersData.organizers;
 
 const OrganizersSection = React.createClass({
@@ -8,7 +8,7 @@ const OrganizersSection = React.createClass({
     let i = -1;
     const rows = organizers.map((obj) => {
       i++;
-      return (<Organizer key={i} name={obj.name} image={obj.image} college={obj.college} link={obj.link} />);
+      return (<Organizer key={i} organizer={obj} />);
     });
     return (
       <div id="about" className="section container" style={{ maxWidth: 'none' }}>

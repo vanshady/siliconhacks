@@ -1,5 +1,5 @@
 const React = require('react');
-const scheduleData = require('../schedule.json');
+const scheduleData = require('../data.json');
 const schedule = scheduleData.schedule;
 
 const Schedules = React.createClass({

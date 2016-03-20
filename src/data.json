@@ -50,5 +50,118 @@
             "title": "How will I get to the Bay?",
             "body": "Free Cal Hacks-sponsored buses will pick up and drop off hackers at universities within California."
         }
+    ],
+    "organizers": [
+        // {
+        //     "name": "Anderson Pan",
+        //     "link": "",
+        //     "email": ""
+        // },
+        {
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
+        },
+        {
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
+        },
+        {
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
+        },
+        {
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
+        },
+        {
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
+        },
+        {
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
+        }
+        // {
+        //     "name": "Janet Fang",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Jesse Gao",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Jiarun Chen",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Justin Raizes",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Kaanchana Allaki",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Minwei Xu",
+        //     "link": "http://mwxu.me/",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Moshe Rienhart",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Vivian Shen",
+        //     "link": "",
+        //     "email": ""
+        // }
+    ],
+    "schedule": [
+        {
+            "event": "Setup Begins:",
+            "time": "Friday, Oct 9 @ 6 PM"
+        },
+        {
+            "event": "Hacker Registration Begins:",
+            "time": "Friday, Oct 9 @ 7 PM"
+        },
+        {
+            "event": "Opening Ceremonies:",
+            "time": "Friday, Oct 9 @ 9 PM"
+        },
+        {
+            "event": "Hacking Begins:",
+            "time": "Friday, Oct 9 @ 11 PM"
+        },
+        {
+            "event": "Hacking Ends:",
+            "time": "Friday, Oct 11 @ 10 PM"
+        },
+        {
+            "event": "Science Fair Style Project Expo:",
+            "time": "Friday, Oct 11 @ 11 PM"
+        },
+        {
+            "event": "Closing Ceremonies:",
+            "time": "Friday, Oct 11 @ 2 PM"
+        }
     ]
 }

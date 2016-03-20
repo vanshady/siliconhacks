@@ -24276,9 +24276,11 @@ let key = 0;
 const FaqRow = React.createClass({
   displayName: 'FaqRow',
 
-
+  propTypes: {
+    cards: React.PropTypes.array.isRequired
+  },
   render() {
-    const cards = this.props.cards['faqrow' + this.props.row].map(function (obj) {
+    const cards = this.props.cards.map(obj => {
       key++;
       return React.createElement(FaqCard, { key: key, title: obj.title, body: obj.body });
     });
@@ -24296,32 +24298,13 @@ module.exports = FaqRow;
 },{"./faq-card.jsx":225,"react":220}],227:[function(require,module,exports){
 const React = require('react');
 const FaqRow = require('./faq-row.jsx');
-const cardData = require('../faq.json');
+const cardData = require('../data.json');
 
 const FaqSection = React.createClass({
   displayName: 'FaqSection',
 
 
   render() {
-    // const sectionStyle = {
-    //   backgroundColor: '#F8BF61',
-    //   color: 'white'
-    // };
-    //
-    // const sectionHeaderStyle = {
-    //   fontSize: '20px',
-    //   marginBottom: '40px',
-    //   textAlign: 'center'
-    // };
-    //
-    // const sectionBodyStyle = {
-    //   maxWidth: '800px'
-    // };
-    //
-    // const clearStyle = {
-    //   clear: 'both'
-    // };
-
     return React.createElement(
       'div',
       { className: 'section', id: 'FAQ' },
@@ -24334,8 +24317,8 @@ const FaqSection = React.createClass({
       React.createElement(
         'div',
         { className: 'section-body' },
-        React.createElement(FaqRow, { cards: cardData, row: '1' }),
-        React.createElement(FaqRow, { cards: cardData, row: '2' }),
+        React.createElement(FaqRow, { cards: cardData.faqrow1, row: '1' }),
+        React.createElement(FaqRow, { cards: cardData.faqrow2, row: '2' }),
         React.createElement('div', { className: 'clear' })
       ),
       React.createElement('div', { className: 'slant bottom right' })
@@ -24345,7 +24328,7 @@ const FaqSection = React.createClass({
 
 module.exports = FaqSection;
 
-},{"../faq.json":238,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
+},{"../data.json":238,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
 const React = require('react');
 
 const FooterSection = React.createClass({
@@ -24608,13 +24591,11 @@ const Organizer = React.createClass({
   displayName: 'Organizer',
 
   propTypes: {
-    image: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired,
-    college: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired
+    organizer: React.PropTypes.object.isRequired
   },
   render() {
-    const imageURL = `assets/img/organizers/${ this.props.image }`;
+    const organizer = this.props.organizer;
+    const imageURL = `assets/img/organizers/${ organizer.image }`;
     return React.createElement(
       'div',
       { className: 'col-xs-12 col-md-6 col-lg-4', style: { marginTop: '20px' } },
@@ -24624,7 +24605,7 @@ const Organizer = React.createClass({
         React.createElement(
           'div',
           { className: 'col-xs-5' },
-          React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100', alt: this.props.name })
+          React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100', alt: organizer.name })
         ),
         React.createElement(
           'div',
@@ -24632,19 +24613,19 @@ const Organizer = React.createClass({
           React.createElement(
             'p',
             { style: { fontSize: '14px' } },
-            this.props.name
+            organizer.name
           ),
           React.createElement(
             'p',
             { style: { fontSize: '14px' } },
-            this.props.college
+            organizer.college
           ),
           React.createElement(
             'p',
             { style: { fontSize: '14px' } },
             React.createElement(
               'a',
-              { className: 'btn btn-default', href: this.props.link, role: 'button' },
+              { className: 'btn btn-default', href: organizer.link, role: 'button' },
               'Read More »'
             )
           )
@@ -24659,7 +24640,7 @@ module.exports = Organizer;
 },{"react":220}],234:[function(require,module,exports){
 const React = require('react');
 const Organizer = require('./organizer.jsx');
-const organizersData = require('../organizers.json');
+const organizersData = require('../data.json');
 const organizers = organizersData.organizers;
 
 const OrganizersSection = React.createClass({
@@ -24669,7 +24650,7 @@ const OrganizersSection = React.createClass({
     let i = -1;
     const rows = organizers.map(obj => {
       i++;
-      return React.createElement(Organizer, { key: i, name: obj.name, image: obj.image, college: obj.college, link: obj.link });
+      return React.createElement(Organizer, { key: i, organizer: obj });
     });
     return React.createElement(
       'div',
@@ -24690,9 +24671,9 @@ const OrganizersSection = React.createClass({
 
 module.exports = OrganizersSection;
 
-},{"../organizers.json":240,"./organizer.jsx":233,"react":220}],235:[function(require,module,exports){
+},{"../data.json":238,"./organizer.jsx":233,"react":220}],235:[function(require,module,exports){
 const React = require('react');
-const scheduleData = require('../schedule.json');
+const scheduleData = require('../data.json');
 const schedule = scheduleData.schedule;
 
 const Schedules = React.createClass({
@@ -24715,7 +24696,7 @@ const Schedules = React.createClass({
 
 module.exports = Schedules;
 
-},{"../schedule.json":241,"react":220}],236:[function(require,module,exports){
+},{"../data.json":238,"react":220}],236:[function(require,module,exports){
 const React = require('react');
 const Sponsors = require('./sponsors.jsx');
 
@@ -24900,17 +24881,7 @@ module.exports={
             "title": "How will I get to the Bay?",
             "body": "Free Cal Hacks-sponsored buses will pick up and drop off hackers at universities within California."
         }
-    ]
-}
-},{}],239:[function(require,module,exports){
-
-const ReactDOM = require('react-dom');
-const Routes = require('./Routes.jsx');
-
-ReactDOM.render(Routes, document.getElementById('main'));
-
-},{"./Routes.jsx":222,"react-dom":28}],240:[function(require,module,exports){
-module.exports={
+    ],
     "organizers": [
         // {
         //     "name": "Anderson Pan",
@@ -24993,10 +24964,7 @@ module.exports={
         //     "link": "",
         //     "email": ""
         // }
-    ]
-}
-},{}],241:[function(require,module,exports){
-module.exports={
+    ],
     "schedule": [
         {
             "event": "Setup Begins:",
@@ -25028,4 +24996,11 @@ module.exports={
         }
     ]
 }
-},{}]},{},[239]);
+},{}],239:[function(require,module,exports){
+
+const ReactDOM = require('react-dom');
+const Routes = require('./Routes.jsx');
+
+ReactDOM.render(Routes, document.getElementById('main'));
+
+},{"./Routes.jsx":222,"react-dom":28}]},{},[239]);
