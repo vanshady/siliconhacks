@@ -970,7 +970,13 @@ a {
     margin: 20px 0px;
     margin-left: calc(50% - 50px);
   }
-
+  
+  /* organizers */
+  
+  /*#organizers.section {
+    max-width: none;
+  }*/
+  
   /* footer */
 
   #social.section {

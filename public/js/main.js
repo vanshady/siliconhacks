@@ -24346,7 +24346,7 @@ const FaqSection = React.createClass({
 
 module.exports = FaqSection;
 
-},{"../faq.json":237,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
+},{"../faq.json":238,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
 const React = require('react');
 
 const FooterSection = React.createClass({
@@ -24443,7 +24443,7 @@ const GeneralSection = React.createClass({
 
 module.exports = GeneralSection;
 
-},{"./schedules.jsx":234,"react":220}],230:[function(require,module,exports){
+},{"./schedules.jsx":235,"react":220}],230:[function(require,module,exports){
 const React = require('react');
 
 const HeadSection = React.createClass({
@@ -24537,7 +24537,7 @@ const index = React.createClass({
 
 module.exports = index;
 
-},{"./about-section.jsx":223,"./apply-section.jsx":224,"./faq-section.jsx":227,"./footer-section.jsx":228,"./general-section.jsx":229,"./head-section.jsx":230,"./nav.jsx":232,"./organizers-section.jsx":233,"./sponsor-section.jsx":235,"react":220}],232:[function(require,module,exports){
+},{"./about-section.jsx":223,"./apply-section.jsx":224,"./faq-section.jsx":227,"./footer-section.jsx":228,"./general-section.jsx":229,"./head-section.jsx":230,"./nav.jsx":232,"./organizers-section.jsx":234,"./sponsor-section.jsx":236,"react":220}],232:[function(require,module,exports){
 const React = require('react');
 
 const Nav = React.createClass({
@@ -24604,6 +24604,62 @@ module.exports = Nav;
 
 },{"react":220}],233:[function(require,module,exports){
 const React = require('react');
+
+const Organizer = React.createClass({
+  displayName: 'Organizer',
+
+  propTypes: {
+    image: React.PropTypes.string.isRequired,
+    name: React.PropTypes.string.isRequired,
+    college: React.PropTypes.string.isRequired,
+    link: React.PropTypes.string.isRequired
+  },
+  render() {
+    const imageURL = `assets/img/organizers/${ this.props.image }`;
+    return React.createElement(
+      'div',
+      { className: 'col-xs-12 col-md-6 col-lg-4', style: { marginTop: '20px' } },
+      React.createElement(
+        'div',
+        { className: 'row' },
+        React.createElement(
+          'div',
+          { className: 'col-xs-5' },
+          React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100', alt: this.props.name })
+        ),
+        React.createElement(
+          'div',
+          { className: 'col-xs-7' },
+          React.createElement(
+            'p',
+            { style: { fontSize: '14px' } },
+            this.props.name
+          ),
+          React.createElement(
+            'p',
+            { style: { fontSize: '14px' } },
+            this.props.college
+          ),
+          React.createElement(
+            'p',
+            { style: { fontSize: '14px' } },
+            React.createElement(
+              'a',
+              { className: 'btn btn-default', href: this.props.link, role: 'button' },
+              'Read More »'
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Organizer;
+
+},{"react":220}],234:[function(require,module,exports){
+const React = require('react');
+const Organizer = require('./organizer.jsx');
 const organizersData = require('../organizers.json');
 const organizers = organizersData.organizers;
 
@@ -24611,34 +24667,23 @@ const OrganizersSection = React.createClass({
   displayName: 'OrganizersSection',
 
   render() {
-    const pStyle = {
-      textAlign: 'center'
-    };
-    const rows = () => {
-      let s = '';
-      organizers.forEach(obj => {
-        s += `<b>${ obj.name }</b>`;
-        if (obj.email !== '') {
-          s += ` : <a href="mailto:${ obj.email }" target="_top">${ obj.email }</a>`;
-        } else if (obj.link !== '') {
-          s += ` : <a href="${ obj.link }" target="_blank">${ obj.link }</a>`;
-        }
-        s += '<br />';
-      });
-      return s;
-    };
+    let i = -1;
+    const rows = organizers.map(obj => {
+      i++;
+      return React.createElement(Organizer, { key: i, name: obj.name, image: obj.image, college: obj.college, link: obj.link });
+    });
     return React.createElement(
       'div',
-      { id: 'about', className: 'section' },
+      { id: 'about', className: 'section container', style: { maxWidth: 'none' } },
       React.createElement(
         'div',
-        { className: 'section-body' },
+        { className: 'section-body row', style: { maxWidth: 'none', width: '80%' } },
         React.createElement(
           'h1',
           null,
           'Organizers'
         ),
-        React.createElement('p', { style: pStyle, dangerouslySetInnerHTML: { __html: rows() } })
+        rows
       )
     );
   }
@@ -24646,7 +24691,7 @@ const OrganizersSection = React.createClass({
 
 module.exports = OrganizersSection;
 
-},{"../organizers.json":239,"react":220}],234:[function(require,module,exports){
+},{"../organizers.json":240,"./organizer.jsx":233,"react":220}],235:[function(require,module,exports){
 const React = require('react');
 const scheduleData = require('../schedule.json');
 const schedule = scheduleData.schedule;
@@ -24671,7 +24716,7 @@ const Schedules = React.createClass({
 
 module.exports = Schedules;
 
-},{"../schedule.json":240,"react":220}],235:[function(require,module,exports){
+},{"../schedule.json":241,"react":220}],236:[function(require,module,exports){
 const React = require('react');
 const Sponsors = require('./sponsors.jsx');
 
@@ -24708,7 +24753,7 @@ const SponsorSection = React.createClass({
 
 module.exports = SponsorSection;
 
-},{"./sponsors.jsx":236,"react":220}],236:[function(require,module,exports){
+},{"./sponsors.jsx":237,"react":220}],237:[function(require,module,exports){
 const React = require('react');
 
 const Sponsors = React.createClass({
@@ -24803,7 +24848,7 @@ const Sponsors = React.createClass({
 
 module.exports = Sponsors;
 
-},{"react":220}],237:[function(require,module,exports){
+},{"react":220}],238:[function(require,module,exports){
 module.exports={
     "faqrow1": [
         {
@@ -24858,64 +24903,100 @@ module.exports={
         }
     ]
 }
-},{}],238:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 
 const ReactDOM = require('react-dom');
 const Routes = require('./Routes.jsx');
 
 ReactDOM.render(Routes, document.getElementById('main'));
 
-},{"./Routes.jsx":222,"react-dom":28}],239:[function(require,module,exports){
+},{"./Routes.jsx":222,"react-dom":28}],240:[function(require,module,exports){
 module.exports={
     "organizers": [
+        // {
+        //     "name": "Anderson Pan",
+        //     "link": "",
+        //     "email": ""
+        // },
         {
-            "name": "Anderson Pan",
-            "link": "",
-            "email": ""
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
         },
         {
             "name": "Dhanush Patel",
-            "link": "",
-            "email": "dhanush.patel@ymail.com"
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
         },
         {
-            "name": "Janet Fang",
-            "link": "",
-            "email": ""
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
         },
         {
-            "name": "Jiarun Chen",
-            "link": "",
-            "email": ""
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
         },
         {
-            "name": "Justin Raizes",
-            "link": "",
-            "email": ""
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
         },
         {
-            "name": "Kaanchana Allaki",
-            "link": "",
-            "email": ""
-        },
-        {
-            "name": "Minwei Xu",
-            "link": "http://mwxu.me/",
-            "email": ""
-        },
-        {
-            "name": "Moshe Rienhart",
-            "link": "",
-            "email": ""
-        },
-        {
-            "name": "Vivian Shen",
-            "link": "",
-            "email": ""
+            "name": "Dhanush Patel",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "dhanush.jpg",
+            "college": "Diabolo Valley College"
         }
+        // {
+        //     "name": "Janet Fang",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Jesse Gao",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Jiarun Chen",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Justin Raizes",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Kaanchana Allaki",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Minwei Xu",
+        //     "link": "http://mwxu.me/",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Moshe Rienhart",
+        //     "link": "",
+        //     "email": ""
+        // },
+        // {
+        //     "name": "Vivian Shen",
+        //     "link": "",
+        //     "email": ""
+        // }
     ]
 }
-},{}],240:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 module.exports={
     "schedule": [
         {
@@ -24948,4 +25029,4 @@ module.exports={
         }
     ]
 }
-},{}]},{},[238]);
+},{}]},{},[239]);
