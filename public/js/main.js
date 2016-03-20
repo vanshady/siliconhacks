@@ -24346,7 +24346,7 @@ const FaqSection = React.createClass({
 
 module.exports = FaqSection;
 
-},{"../faq.json":236,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
+},{"../faq.json":237,"./faq-row.jsx":226,"react":220}],228:[function(require,module,exports){
 const React = require('react');
 
 const FooterSection = React.createClass({
@@ -24443,7 +24443,7 @@ const GeneralSection = React.createClass({
 
 module.exports = GeneralSection;
 
-},{"./schedules.jsx":233,"react":220}],230:[function(require,module,exports){
+},{"./schedules.jsx":234,"react":220}],230:[function(require,module,exports){
 const React = require('react');
 
 const HeadSection = React.createClass({
@@ -24512,6 +24512,7 @@ const GeneralSection = require('./general-section.jsx');
 const HeadSection = require('./head-section.jsx');
 const Nav = require('./nav.jsx');
 const SponsorSection = require('./sponsor-section.jsx');
+const OrganizersSection = require('./organizers-section.jsx');
 
 const index = React.createClass({
   displayName: 'index',
@@ -24527,6 +24528,7 @@ const index = React.createClass({
       React.createElement(GeneralSection, null),
       React.createElement(ApplySection, null),
       React.createElement(SponsorSection, null),
+      React.createElement(OrganizersSection, null),
       React.createElement(FooterSection, null)
     );
   }
@@ -24535,7 +24537,7 @@ const index = React.createClass({
 
 module.exports = index;
 
-},{"./about-section.jsx":223,"./apply-section.jsx":224,"./faq-section.jsx":227,"./footer-section.jsx":228,"./general-section.jsx":229,"./head-section.jsx":230,"./nav.jsx":232,"./sponsor-section.jsx":234,"react":220}],232:[function(require,module,exports){
+},{"./about-section.jsx":223,"./apply-section.jsx":224,"./faq-section.jsx":227,"./footer-section.jsx":228,"./general-section.jsx":229,"./head-section.jsx":230,"./nav.jsx":232,"./organizers-section.jsx":233,"./sponsor-section.jsx":235,"react":220}],232:[function(require,module,exports){
 const React = require('react');
 
 const Nav = React.createClass({
@@ -24602,6 +24604,48 @@ module.exports = Nav;
 
 },{"react":220}],233:[function(require,module,exports){
 const React = require('react');
+const organizersData = require('../organizers.json');
+const organizers = organizersData.organizers;
+
+const OrganizersSection = React.createClass({
+  displayName: 'OrganizersSection',
+
+  render() {
+    const pStyle = {
+      textAlign: 'center'
+    };
+    const rows = () => {
+      let s = '';
+      organizers.forEach(obj => {
+        s += `<b>${ obj.name }</b>`;
+        if (obj.email !== '') {
+          s += ` : <a href="mailto:${ obj.email }" target="_top">${ obj.email }</a>`;
+        }
+        s += '<br />';
+      });
+      return s;
+    };
+    return React.createElement(
+      'div',
+      { id: 'about', className: 'section' },
+      React.createElement(
+        'div',
+        { className: 'section-body' },
+        React.createElement(
+          'h1',
+          null,
+          'Organizers'
+        ),
+        React.createElement('p', { style: pStyle, dangerouslySetInnerHTML: { __html: rows() } })
+      )
+    );
+  }
+});
+
+module.exports = OrganizersSection;
+
+},{"../organizers.json":239,"react":220}],234:[function(require,module,exports){
+const React = require('react');
 const scheduleData = require('../schedule.json');
 const schedule = scheduleData.schedule;
 
@@ -24625,7 +24669,7 @@ const Schedules = React.createClass({
 
 module.exports = Schedules;
 
-},{"../schedule.json":238,"react":220}],234:[function(require,module,exports){
+},{"../schedule.json":240,"react":220}],235:[function(require,module,exports){
 const React = require('react');
 const Sponsors = require('./sponsors.jsx');
 
@@ -24662,7 +24706,7 @@ const SponsorSection = React.createClass({
 
 module.exports = SponsorSection;
 
-},{"./sponsors.jsx":235,"react":220}],235:[function(require,module,exports){
+},{"./sponsors.jsx":236,"react":220}],236:[function(require,module,exports){
 const React = require('react');
 
 const Sponsors = React.createClass({
@@ -24757,7 +24801,7 @@ const Sponsors = React.createClass({
 
 module.exports = Sponsors;
 
-},{"react":220}],236:[function(require,module,exports){
+},{"react":220}],237:[function(require,module,exports){
 module.exports={
     "faqrow1": [
         {
@@ -24812,14 +24856,55 @@ module.exports={
         }
     ]
 }
-},{}],237:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 
 const ReactDOM = require('react-dom');
 const Routes = require('./Routes.jsx');
 
 ReactDOM.render(Routes, document.getElementById('main'));
 
-},{"./Routes.jsx":222,"react-dom":28}],238:[function(require,module,exports){
+},{"./Routes.jsx":222,"react-dom":28}],239:[function(require,module,exports){
+module.exports={
+    "organizers": [
+        {
+            "name": "Anderson Pan",
+            "email": ""
+        },
+        {
+            "name": "Dhanush Patel",
+            "email": "dhanush.patel@ymail.com"
+        },
+        {
+            "name": "Janet Fang",
+            "email": ""
+        },
+        {
+            "name": "Jiarun Chen",
+            "email": ""
+        },
+        {
+            "name": "Justin Raizes",
+            "email": ""
+        },
+        {
+            "name": "Kaanchana Allaki",
+            "email": ""
+        },
+        {
+            "name": "Minwei Xu",
+            "email": "faceswilliam@gmail.com"
+        },
+        {
+            "name": "Moshe Rienhart",
+            "email": ""
+        },
+        {
+            "name": "Vivian Shen",
+            "email": ""
+        }
+    ]
+}
+},{}],240:[function(require,module,exports){
 module.exports={
     "schedule": [
         {
@@ -24852,4 +24937,4 @@ module.exports={
         }
     ]
 }
-},{}]},{},[237]);
+},{}]},{},[238]);
