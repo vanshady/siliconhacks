@@ -24367,17 +24367,6 @@ const FooterSection = React.createClass({
           { href: "mailto:hacksilicon@gmail.com" },
           "hacksilicon@gmail.com"
         )
-      ),
-      React.createElement(
-        "p",
-        { className: "credit" },
-        "Credit:",
-        React.createElement(
-          "a",
-          { href: "http://www.freepik.com/" },
-          "freepik"
-        ),
-        "for the desktop illustration"
       )
     );
   }
@@ -24596,38 +24585,37 @@ const Organizer = React.createClass({
   render() {
     const organizer = this.props.organizer;
     const imageURL = `assets/img/organizers/${ organizer.image }`;
+    const schoolStyle = {
+      textDecoration: 'none',
+      color: 'inherit',
+      transition: '0.3s ease',
+      fontFamily: 'Proxima Nova, Montserrat, sans-serif',
+      textAlign: 'center'
+    };
     return React.createElement(
       'div',
-      { className: 'col-xs-12 col-md-6 col-lg-4', style: { marginTop: '20px' } },
+      { className: 'col-xs-12 col-md-6 col-lg-4', style: { marginTop: '30px' } },
       React.createElement(
         'div',
         { className: 'row' },
         React.createElement(
           'div',
-          { className: 'col-xs-5' },
+          { className: 'col-xs-4' },
           React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100', alt: organizer.name })
         ),
         React.createElement(
           'div',
-          { className: 'col-xs-7' },
+          { className: 'col-xs-8' },
           React.createElement(
-            'p',
-            { style: { fontSize: '14px' } },
+            'a',
+            { href: organizer.link, target: '_blank', style: { fontSize: '18px', marginBottom: '20px' } },
             organizer.name
           ),
+          React.createElement('br', null),
           React.createElement(
             'p',
-            { style: { fontSize: '14px' } },
-            organizer.college
-          ),
-          React.createElement(
-            'p',
-            { style: { fontSize: '14px' } },
-            React.createElement(
-              'a',
-              { className: 'btn btn-default', href: organizer.link, role: 'button' },
-              'Read More »'
-            )
+            { style: schoolStyle },
+            organizer.school
           )
         )
       )
@@ -24654,7 +24642,7 @@ const OrganizersSection = React.createClass({
     });
     return React.createElement(
       'div',
-      { id: 'about', className: 'section container', style: { maxWidth: 'none' } },
+      { id: 'general', className: 'section container', style: { maxWidth: 'none' } },
       React.createElement(
         'div',
         { className: 'section-body row', style: { maxWidth: 'none', width: '80%' } },
@@ -24725,8 +24713,7 @@ const SponsorSection = React.createClass({
             'hacksilicon@gmail.com'
           )
         )
-      ),
-      React.createElement(Sponsors, null)
+      )
     );
   }
 });
@@ -24883,46 +24870,47 @@ module.exports={
         }
     ],
     "organizers": [
-        // {
-        //     "name": "Anderson Pan",
-        //     "link": "",
-        //     "email": ""
-        // },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Anderson Pan",
+            "link": "",
+            "image": "anderson.jpg",
+            "school": "Foothill High School"
         },
         {
             "name": "Dhanush Patel",
             "link": "http://dhanushpatel.x10host.com",
             "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "school": "Diabolo Valley College"
         },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Jesse Gao",
+            "link": "",
+            "image": "jesse.jpg",
+            "school": "UC Berkeley"
         },
         {
-            "name": "Dhanush Patel",
+            "name": "Jiarun Chen",
             "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "image": "jiarun.jpg",
+            "school": "John F. Kennedy High School"
         },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Minwei Xu",
+            "link": "http://mwxu.me",
+            "image": "minwei.jpg",
+            "school": "UC Davis"
         },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Moshe Reinhart",
+            "link": "",
+            "image": "moshe.jpg",
+            "school": "San Jose State University"
+        },
+        {
+            "name": "Vivian Shen",
+            "link": "",
+            "image": "vivian.jpg",
+            "school": "Columbia University"
         }
         // {
         //     "name": "Janet Fang",
@@ -24930,10 +24918,6 @@ module.exports={
         //     "email": ""
         // },
         // {
-        //     "name": "Jesse Gao",
-        //     "link": "",
-        //     "email": ""
-        // },
         // {
         //     "name": "Jiarun Chen",
         //     "link": "",
@@ -24949,21 +24933,7 @@ module.exports={
         //     "link": "",
         //     "email": ""
         // },
-        // {
-        //     "name": "Minwei Xu",
-        //     "link": "http://mwxu.me/",
-        //     "email": ""
-        // },
-        // {
-        //     "name": "Moshe Rienhart",
-        //     "link": "",
-        //     "email": ""
-        // },
-        // {
-        //     "name": "Vivian Shen",
-        //     "link": "",
-        //     "email": ""
-        // }
+
     ],
     "schedule": [
         {

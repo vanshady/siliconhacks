@@ -52,46 +52,47 @@
         }
     ],
     "organizers": [
-        // {
-        //     "name": "Anderson Pan",
-        //     "link": "",
-        //     "email": ""
-        // },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Anderson Pan",
+            "link": "",
+            "image": "anderson.jpg",
+            "school": "Foothill High School"
         },
         {
             "name": "Dhanush Patel",
             "link": "http://dhanushpatel.x10host.com",
             "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "school": "Diabolo Valley College"
         },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Jesse Gao",
+            "link": "",
+            "image": "jesse.jpg",
+            "school": "UC Berkeley"
         },
         {
-            "name": "Dhanush Patel",
+            "name": "Jiarun Chen",
             "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "image": "jiarun.jpg",
+            "school": "John F. Kennedy High School"
         },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Minwei Xu",
+            "link": "http://mwxu.me",
+            "image": "minwei.jpg",
+            "school": "UC Davis"
         },
         {
-            "name": "Dhanush Patel",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "dhanush.jpg",
-            "college": "Diabolo Valley College"
+            "name": "Moshe Reinhart",
+            "link": "",
+            "image": "moshe.jpg",
+            "school": "San Jose State University"
+        },
+        {
+            "name": "Vivian Shen",
+            "link": "",
+            "image": "vivian.jpg",
+            "school": "Columbia University"
         }
         // {
         //     "name": "Janet Fang",
@@ -99,10 +100,6 @@
         //     "email": ""
         // },
         // {
-        //     "name": "Jesse Gao",
-        //     "link": "",
-        //     "email": ""
-        // },
         // {
         //     "name": "Jiarun Chen",
         //     "link": "",
@@ -118,21 +115,7 @@
         //     "link": "",
         //     "email": ""
         // },
-        // {
-        //     "name": "Minwei Xu",
-        //     "link": "http://mwxu.me/",
-        //     "email": ""
-        // },
-        // {
-        //     "name": "Moshe Rienhart",
-        //     "link": "",
-        //     "email": ""
-        // },
-        // {
-        //     "name": "Vivian Shen",
-        //     "link": "",
-        //     "email": ""
-        // }
+
     ],
     "schedule": [
         {

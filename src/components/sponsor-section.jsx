@@ -13,7 +13,6 @@ const SponsorSection = React.createClass({
             <a href="mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry">hacksilicon@gmail.com</a>
           </p>
         </div>
-        <Sponsors />
       </div>
     );
   },

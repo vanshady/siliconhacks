@@ -19,10 +19,6 @@ const FooterSection = React.createClass({
         <p>Made with &hearts; by the SiliconHacks team! Contact us at
           <a href="mailto:hacksilicon@gmail.com">hacksilicon@gmail.com</a>
         </p>
-        <p className="credit">Credit:
-          <a href="http://www.freepik.com/">freepik</a>
-          for the desktop illustration
-        </p>
       </div>
     );
   },

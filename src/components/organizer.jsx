@@ -7,16 +7,22 @@ const Organizer = React.createClass({
   render() {
     const organizer = this.props.organizer;
     const imageURL = `assets/img/organizers/${organizer.image}`;
+    const schoolStyle = {
+      textDecoration: 'none',
+      color: 'inherit',
+      transition: '0.3s ease',
+      fontFamily: 'Proxima Nova, Montserrat, sans-serif',
+      textAlign: 'center',
+    };
     return (
-        <div className="col-xs-12 col-md-6 col-lg-4" style={{ marginTop: '20px' }}>
+        <div className="col-xs-12 col-md-6 col-lg-4" style={{ marginTop: '30px' }}>
           <div className="row">
-            <div className="col-xs-5">
+            <div className="col-xs-4">
               <img className="img-circle" src={imageURL} height="100" width="100" alt={organizer.name} />
             </div>
-            <div className="col-xs-7">
-                <p style={{ fontSize: '14px' }}>{organizer.name}</p>
-                <p style={{ fontSize: '14px' }}>{organizer.college}</p>
-                <p style={{ fontSize: '14px' }}><a className="btn btn-default" href={organizer.link} role="button">Read More &raquo;</a></p>
+            <div className="col-xs-8">
+                 <a href={organizer.link} target="_blank" style={{ fontSize: '18px', marginBottom: '20px' }}>{organizer.name}</a><br />
+                 <p style={schoolStyle}>{organizer.school}</p>
             </div>
           </div>
         </div>
