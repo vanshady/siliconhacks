@@ -13,6 +13,9 @@ const OrganizersSection = React.createClass({
         s += `<b>${obj.name}</b>`;
         if (obj.email !== '') {
           s += ` : <a href="mailto:${obj.email}" target="_top">${obj.email}</a>`;
+        } else
+        if (obj.link !== '') {
+          s += ` : <a href="${obj.link}" target="_blank">${obj.link}</a>`;
         }
         s += '<br />';
       });
