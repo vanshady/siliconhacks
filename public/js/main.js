@@ -24847,13 +24847,13 @@ module.exports={
             "name": "Anderson Pan",
             "link": "",
             "image": "anderson.jpg",
-            "school": "Foothill High School"
+            "school": "Diablo Valley College"
         },
         {
             "name": "Dhanush Patel",
             "link": "http://dhanushpatel.x10host.com",
             "image": "dhanush.jpg",
-            "school": "Diabolo Valley College"
+            "school": "Diablo Valley College"
         },
         {
             "name": "Jesse Gao",
@@ -24885,28 +24885,6 @@ module.exports={
             "image": "vivian.jpg",
             "school": "Columbia University"
         }
-        // {
-        //     "name": "Janet Fang",
-        //     "link": "",
-        //     "email": ""
-        // },
-        // {
-        // {
-        //     "name": "Jiarun Chen",
-        //     "link": "",
-        //     "email": ""
-        // },
-        // {
-        //     "name": "Justin Raizes",
-        //     "link": "",
-        //     "email": ""
-        // },
-        // {
-        //     "name": "Kaanchana Allaki",
-        //     "link": "",
-        //     "email": ""
-        // },
-
     ],
     "schedule": [
         {

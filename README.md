@@ -9,8 +9,7 @@ SiliconHacks website. Written in HTML, CSS, and JavaScript, React.
 # Credits
 **Developers:**
 * Minwei Xu
-* Jane Doe
-* John Doe
+* Moshe Reinhart
 
 **Designers:**
 * Jane Doe
