@@ -12,5 +12,6 @@ SiliconHacks website. Written in HTML, CSS, and JavaScript, React.
 * Moshe Reinhart
 
 **Designers:**
-* Jane Doe
-* John Doe
+* Anderson Pan
+* Jesse Gao
+* Jiarun Chen
