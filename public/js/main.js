@@ -24351,18 +24351,10 @@ const FaqSection = React.createClass({
 
 
   render() {
-    const faqStyle = {
-      backgroundColor: '#F8BF61',
-      color: 'white'
-    };
-
-    const sectionBodyStyle = {
-      maxWidth: '800px'
-    };
 
     return React.createElement(
       'div',
-      { className: 'section', id: 'FAQ', style: faqStyle },
+      { className: 'section', id: 'FAQ' },
       React.createElement('div', { className: 'slant top left' }),
       React.createElement(
         'div',
@@ -24371,7 +24363,7 @@ const FaqSection = React.createClass({
       ),
       React.createElement(
         'div',
-        { className: 'section-body', style: sectionBodyStyle },
+        { className: 'section-body' },
         React.createElement(FaqRow, { cards: cardData.faqrow1, row: '1' }),
         React.createElement(FaqRow, { cards: cardData.faqrow2, row: '2' }),
         React.createElement('div', { className: 'clear' })
