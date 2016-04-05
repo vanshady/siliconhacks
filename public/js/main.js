@@ -14710,6 +14710,10 @@ var ReactEmptyComponentInjection = {
   }
 };
 
+function registerNullComponentID() {
+  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
+}
+
 var ReactEmptyComponent = function (instantiate) {
   this._currentElement = null;
   this._rootNodeID = null;
@@ -14718,7 +14722,7 @@ var ReactEmptyComponent = function (instantiate) {
 assign(ReactEmptyComponent.prototype, {
   construct: function (element) {},
   mountComponent: function (rootID, transaction, context) {
-    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
+    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
     this._rootNodeID = rootID;
     return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
   },
@@ -19024,7 +19028,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.7';
+module.exports = '0.14.8';
 },{}],149:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24814,12 +24818,12 @@ module.exports={
             "body": "Hackathons are where your crazy ideas become reality. Build anything—there are no restrictions on what you can create. Dive in and make the most incredible thing you can alongside fellow creators. While some may see hackers as the crazy ones, we see genius."
         },
         {
-            "title": "What about hardware hacking equipment?",
-            "body": "We have partnered with the <a href='http://invent.citris-uc.org/about/facilities/' target='_blank'>CITRIS Invention Lab</a> to provide complimentary hardware hacking resources to all hackers, including 3D printers, laser cutters, soldering stations, and electrical engineering equipment.  Many sponsors will also provide hardware hacking devices for tinkering. Make sure to bring any specialty equipment that you may need."
+            "title": "What resources will I have access to?",
+            "body": "As an <a href='http://mlh.org/' target='_blank'>MLH</a> sponsored event, we will be providing complimentary hardware hacking resources to all hackers, the full list will be announced 72 hours before the hackathon. There will be an abundance of mentors to provide personal help and beginner-friendly workshops throughout the weekend."
         },
         {
-            "title": "What can I build?",
-            "body": "Web, mobile, hardware, you name it. Any type of project is welcome. Projects will be judged based on creativity, technical difficulty, polish, and utility by a panel of industry judges."
+            "title": "What should I make?",
+            "body": "There are no limits except for one's own imagination. Judges will review your projects based on creativity, effort, utility, and social impact. For an idea of what Hackathon projects look like, check out <a href='http://devpost.com' target='_blank'>Devpost</a>."
         },
         {
             "title": "What should I bring?",
@@ -24866,7 +24870,7 @@ module.exports={
             "school": "UC Davis"
         },
         {
-            "name": "Moshe Reinhart",
+            "name": "Moshe Rienhart",
             "link": "",
             "image": "moshe.jpg",
             "school": "San Jose State University"
