@@ -35,7 +35,7 @@ a {
 }
 
 #about a:hover, #general a:hover, #FAQ a:hover, #sponsor p a:hover, #footer a:hover {
-  background-color: rgba(255, 235, 59, 1);
+  background-color: rgba(245, 166, 35, 1);
   color: white
 }
 
