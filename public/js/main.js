@@ -24789,7 +24789,7 @@ module.exports={
         },
         {
             "title": "Who can attend?",
-            "body": "All undergraduate students from any university in the world are eligible."
+            "body": "All undergraduate students from any university in the world are eligible, but students in and around Silicon Valley/Bay Area will be given preference. The eligibility of high school students is TBD."
         },
         {
             "title": "How much does it cost?",
@@ -24797,11 +24797,7 @@ module.exports={
         },
         {
             "title": "How big should teams be? Can I hack alone?",
-            "body": "We highly encourage you to build with a team. Teamwork is deeply rooted in the hacking ethos, and you'll have a better time building with your brightest peers. Teams should be at most five people."
-        },
-        {
-            "title": "How do I get to SiliconHacks from the airport?",
-            "body": "We recommend taking BART to the venue, as it is the quickest and cheapest way. From OAK, take the AirBART shuttle to a Richmond train, and get off at Downtown Berkeley. From SFO, take the AirTrain to the BART station, then take either a Richmond train to downtown Berkeley or take a Pittsburgh/Bay Point train and transfer at 19th Street Oakland to a Richmond train."
+            "body": "We highly encourage you to build with a team. Teamwork is deeply rooted in the hacking ethos, and you'll have a better time building with your brightest peers. Teams should be at most four people."
         },
         {
             "title": "What if I have another question?",
@@ -24811,15 +24807,15 @@ module.exports={
     "faqrow2": [
         {
             "title": "What is a hackathon?",
-            "body": "Hackathons are where your crazy ideas become reality. Build anything—there are no restrictions on what you can create. Dive in and make the most incredible thing you can alongside fellow creators. While some may see hackers as the crazy ones, we see genius."
+            "body": "Hackathons are where your crazy ideas become reality. Build anything�there are no restrictions on what you can create. Dive in and make the most incredible thing you can alongside fellow creators. While some may see hackers as the crazy ones, we see genius."
         },
         {
             "title": "What resources will I have access to?",
-            "body": "As an <a href='http://mlh.org/' target='_blank'>MLH</a> sponsored event, we will be providing complimentary hardware hacking resources to all hackers, the full list will be announced 72 hours before the hackathon. There will be an abundance of mentors to provide personal help and beginner-friendly workshops throughout the weekend."
+            "body": "We plan to have mentors, hardware, and workshops available throughout the event. Please check back later for more details."
         },
         {
             "title": "What should I make?",
-            "body": "There are no limits except for one's own imagination. Judges will review your projects based on creativity, effort, utility, and social impact. For an idea of what Hackathon projects look like, check out <a href='http://devpost.com' target='_blank'>Devpost</a>."
+            "body": "There are no limits except for one's own imagination. Judges will review your projects based on criteria such as creativity, effort, utility, complexity, and real-world impact. For an idea of what Hackathon projects look like, check out <a href='http://devpost.com' target='_blank'>Devpost</a>."
         },
         {
             "title": "What should I bring?",
@@ -24831,16 +24827,10 @@ module.exports={
         },
         {
             "title": "How will I get to the Bay?",
-            "body": "Free SiliconHacks-sponsored buses will pick up and drop off hackers at universities within California."
+            "body": "Free SiliconHacks-sponsored buses will pick up and drop off hackers at universities within California. Flights from anywhere are unlikely to be reimbursed though a final position is TBD. Car rides are likely to be reimbursed up to a certain amount, though the amount itself is TBA."
         }
     ],
     "organizers": [
-        {
-            "name": "Anderson Pan",
-            "link": "",
-            "image": "anderson.jpg",
-            "school": "Diablo Valley College"
-        },
         {
             "name": "Dhanush Patel",
             "link": "http://dhanushpatel.x10host.com",
@@ -24848,16 +24838,10 @@ module.exports={
             "school": "Diablo Valley College"
         },
         {
-            "name": "Jesse Gao",
+            "name": "Moshe Rienhart",
             "link": "",
-            "image": "jesse.jpg",
-            "school": "UC Berkeley"
-        },
-        {
-            "name": "Jiarun Chen",
-            "link": "http://dhanushpatel.x10host.com",
-            "image": "jiarun.jpg",
-            "school": "John F. Kennedy High School"
+            "image": "moshe.jpg",
+            "school": "San Jose State University"
         },
         {
             "name": "Minwei Xu",
@@ -24866,10 +24850,22 @@ module.exports={
             "school": "UC Davis"
         },
         {
-            "name": "Moshe Rienhart",
+            "name": "Anderson Pan",
             "link": "",
-            "image": "moshe.jpg",
-            "school": "San Jose State University"
+            "image": "anderson.jpg",
+            "school": "Diablo Valley College"
+        },
+        {
+            "name": "Jiarun Chen",
+            "link": "http://dhanushpatel.x10host.com",
+            "image": "jiarun.jpg",
+            "school": "John F. Kennedy High School"
+        },
+        {
+            "name": "Jesse Gao",
+            "link": "",
+            "image": "jesse.jpg",
+            "school": "UC Berkeley"
         },
         {
             "name": "Vivian Shen",
@@ -24880,32 +24876,8 @@ module.exports={
     ],
     "schedule": [
         {
-            "event": "Setup Begins:",
-            "time": "Friday, Oct 9 @ 6 PM"
-        },
-        {
-            "event": "Hacker Registration Begins:",
-            "time": "Friday, Oct 9 @ 7 PM"
-        },
-        {
-            "event": "Opening Ceremonies:",
-            "time": "Friday, Oct 9 @ 9 PM"
-        },
-        {
-            "event": "Hacking Begins:",
-            "time": "Friday, Oct 9 @ 11 PM"
-        },
-        {
-            "event": "Hacking Ends:",
-            "time": "Friday, Oct 11 @ 10 PM"
-        },
-        {
-            "event": "Science Fair Style Project Expo:",
-            "time": "Friday, Oct 11 @ 11 PM"
-        },
-        {
-            "event": "Closing Ceremonies:",
-            "time": "Friday, Oct 11 @ 2 PM"
+            "event": "Event starts:",
+            "time": "TBA"
         }
     ]
 }
