@@ -24244,7 +24244,7 @@ const ApplySection = React.createClass({
         React.createElement(
           "div",
           { className: "apply-header" },
-          "Join the maling list"
+          "Join the mailing list"
         ),
         React.createElement(
           "a",
