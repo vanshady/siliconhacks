@@ -24248,7 +24248,7 @@ const ApplySection = React.createClass({
         ),
         React.createElement(
           "a",
-          { className: "button apply", href: "https://siliconhacks.typeform.com/to/wK5Mls", target: "_blank" },
+          { className: "button apply", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
           "Apply"
         )
       )
@@ -24511,7 +24511,7 @@ const HeadSection = React.createClass({
             { className: "button-container" },
             React.createElement(
               "a",
-              { className: "button", href: "https://siliconhacks.typeform.com/to/wK5Mls", target: "_blank" },
+              { className: "button", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
               "Apply"
             ),
             React.createElement(
