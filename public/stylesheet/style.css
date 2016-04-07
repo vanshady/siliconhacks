@@ -374,9 +374,9 @@ a {
 
 #landing {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: relative;
-  padding: 200px 60px 0px 60px;
+  padding: 152px 60px 0px 60px;
   background-image: url("../assets/img/background.png");
   background-position: center;
   background-size: contain;
