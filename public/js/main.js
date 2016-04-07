@@ -24807,7 +24807,7 @@ module.exports={
     "faqrow2": [
         {
             "title": "What is a hackathon?",
-            "body": "Hackathons are where your crazy ideas become reality. Build anything�there are no restrictions on what you can create. Dive in and make the most incredible thing you can alongside fellow creators. While some may see hackers as the crazy ones, we see genius."
+            "body": "Hackathons are where your crazy ideas become reality. Build anything. There are no restrictions on what you can create. Dive in and make the most incredible thing you can alongside fellow creators. While some may see hackers as the crazy ones, we see genius."
         },
         {
             "title": "What resources will I have access to?",
