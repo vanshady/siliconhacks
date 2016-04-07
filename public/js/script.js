@@ -89,7 +89,7 @@ $(document).ready(function () {
 
   if ($(window).width() > 480) {
     $(window).scroll(switchNav);
-    $('body').backstretch('assets/img/background.png');
+    //$('body').backstretch('assets/img/background.png');
     $(document).on('scroll', onScroll);
     $('.faq-card').click(function (e) {e.stopPropagation();});
   } else {
