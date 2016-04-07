@@ -303,18 +303,18 @@ a {
 }
 
 #nav.active {
-  background-color: white;
+  background-color: #43A047;
   padding-top: 20px
 }
 
 #nav.active .nav-section {
-  color: #F5A623;
+  color: #FFEB3B;
   padding-bottom: 15px;
   opacity: 0.72
 }
 
 #nav.active .nav-section.active {
-  border-bottom: 3px solid #F5A623;
+  border-bottom: 3px solid #FFEB3B;
   opacity: 1
 }
 
@@ -755,7 +755,7 @@ a {
   }
 
   .nav-section:hover:not(#nav-close), .nav-section.active {
-    background-color: #F5A623;
+    background-color: #FFEB3B;
     padding: 20px;
     border: none;
     color: white
