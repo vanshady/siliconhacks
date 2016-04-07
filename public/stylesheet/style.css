@@ -377,7 +377,7 @@ a {
   height: 600px;
   position: relative;
   padding: 200px 60px 0px 60px;
-  /*background-image: url("../img/hackathon_background.jpg");
+  /*background-image: url("../img/background.png");
   background-size: cover;*/
 }
 
@@ -388,8 +388,8 @@ a {
   position: absolute;
   left: 0px;
   top: 0px;
-  background: linear-gradient(90deg, rgba(36, 198, 220, 0.360784) 10%, rgba(81, 74, 157, 0.239216) 90%);
-  background-color: rgba(0, 23, 36, 0.74);
+  /*background: linear-gradient(90deg, rgba(36, 198, 220, 0.360784) 10%, rgba(81, 74, 157, 0.239216) 90%);*/
+  background-color: rgba(0, 23, 36, 0.34);
 }
 
 .section:not(#landing) {
@@ -822,7 +822,7 @@ a {
 
   /*landing*/
   #landing {
-    background-image: url("../assets/img/hackathon_background.jpg");
+    background-image: url("../assets/img/background.png");
   }
 
   /* apply */
