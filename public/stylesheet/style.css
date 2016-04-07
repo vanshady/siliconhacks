@@ -46,10 +46,8 @@ a {
 /* assets */
 
 .logo {
-  width: 60px;
-  height: auto;
-  margin-top: -20px;
-  margin-left: -30px;
+  width: 150px;
+  margin-top: -5px
 }
 
 .emoji {
@@ -325,7 +323,7 @@ a {
 }
 
 #nav.active .logo {
-  margin-bottom: 0px
+  margin-bottom: 10px
 }
 
 #nav-close {
@@ -679,10 +677,10 @@ a {
     display: none
   }
 
-  /*.logo {
-    width: 80px;
+  .logo {
+    width: 100px;
     margin-top: 5px;
-  }*/
+  }
 
   #instructions {
     display: none;
