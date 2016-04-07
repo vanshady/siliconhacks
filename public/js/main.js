@@ -24573,8 +24573,8 @@ const Nav = React.createClass({
     return React.createElement(
       "nav",
       { id: "nav" },
-      React.createElement("img", { id: "logo_white", className: "logo", src: "assets/img/logo_green.png", alt: "Calhacks" }),
-      React.createElement("img", { id: "logo_orange", className: "logo", src: "assets/img/logo_green.png", alt: "Calhacks" }),
+      React.createElement("img", { id: "logo_white", className: "logo", src: "assets/img/logo_white.png", alt: "Calhacks" }),
+      React.createElement("img", { id: "logo_orange", className: "logo", src: "assets/img/logo_orange.png", alt: "Calhacks" }),
       React.createElement("img", { id: "menu_white", className: "nav-menu", src: "assets/img/menu_white.svg", alt: "" }),
       React.createElement("img", { id: "menu_orange", className: "nav-menu", src: "assets/img/menu_orange.svg", alt: "" }),
       React.createElement(
@@ -24821,10 +24821,10 @@ module.exports={
             "title": "What should I bring?",
             "body": "All attendees are required to bring their valid student ID for admission. Laptops, sleeping bags, and toiletries are highly recommended."
         },
-        {
-            "title": "Is there a code of conduct?",
-            "body": "<a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf' target='_blank'>yes.</a>tl;dr: Don't be a jerk."
-        },
+        // {
+        //     "title": "Is there a code of conduct?",
+        //     "body": "<a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf' target='_blank'>yes.</a>tl;dr: Don't be a jerk."
+        // },
         {
             "title": "How will I get to the Bay?",
             "body": "Free SiliconHacks-sponsored buses will pick up and drop off hackers at universities within California. Flights from anywhere are unlikely to be reimbursed though a final position is TBD. Car rides are likely to be reimbursed up to a certain amount, though the amount itself is TBA."
