@@ -24573,8 +24573,8 @@ const Nav = React.createClass({
     return React.createElement(
       "nav",
       { id: "nav" },
-      React.createElement("img", { id: "logo_white", className: "logo", src: "assets/img/logo_white.svg", alt: "Calhacks" }),
-      React.createElement("img", { id: "logo_orange", className: "logo", src: "assets/img/logo_orange.svg", alt: "Calhacks" }),
+      React.createElement("img", { id: "logo_white", className: "logo", src: "assets/img/logo_green.png", alt: "Calhacks" }),
+      React.createElement("img", { id: "logo_orange", className: "logo", src: "assets/img/logo_green.png", alt: "Calhacks" }),
       React.createElement("img", { id: "menu_white", className: "nav-menu", src: "assets/img/menu_white.svg", alt: "" }),
       React.createElement("img", { id: "menu_orange", className: "nav-menu", src: "assets/img/menu_orange.svg", alt: "" }),
       React.createElement(
