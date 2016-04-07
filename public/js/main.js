@@ -14710,10 +14710,6 @@ var ReactEmptyComponentInjection = {
   }
 };
 
-function registerNullComponentID() {
-  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
-}
-
 var ReactEmptyComponent = function (instantiate) {
   this._currentElement = null;
   this._rootNodeID = null;
@@ -14722,7 +14718,7 @@ var ReactEmptyComponent = function (instantiate) {
 assign(ReactEmptyComponent.prototype, {
   construct: function (element) {},
   mountComponent: function (rootID, transaction, context) {
-    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
+    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
     this._rootNodeID = rootID;
     return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
   },
@@ -19028,7 +19024,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.8';
+module.exports = '0.14.7';
 },{}],149:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24577,8 +24573,8 @@ const Nav = React.createClass({
     return React.createElement(
       "nav",
       { id: "nav" },
-      React.createElement("img", { id: "logo_white", className: "logo", src: "assets/img/logo_white.png", alt: "Calhacks" }),
-      React.createElement("img", { id: "logo_orange", className: "logo", src: "assets/img/logo_orange.png", alt: "Calhacks" }),
+      React.createElement("img", { id: "logo_white", className: "logo", src: "assets/img/logo.png", alt: "SiliconHacks" }),
+      React.createElement("img", { id: "logo_orange", className: "logo", src: "assets/img/logo.png", alt: "SiliconHacks" }),
       React.createElement("img", { id: "menu_white", className: "nav-menu", src: "assets/img/menu_white.svg", alt: "" }),
       React.createElement("img", { id: "menu_orange", className: "nav-menu", src: "assets/img/menu_orange.svg", alt: "" }),
       React.createElement(
