@@ -24394,12 +24394,12 @@ const FooterSection = React.createClass({
       { className: 'section', id: 'footer', style: footerSectionStyle },
       React.createElement(
         'a',
-        { href: 'https://www.facebook.com/CalHacks', target: '_blank', className: 'social' },
+        { href: 'https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts', target: '_blank', className: 'social' },
         React.createElement('img', { src: 'assets/img/facebook.svg', alt: 'Facebook' })
       ),
       React.createElement(
         'a',
-        { href: 'https://twitter.com/calhacks', target: '_blank', className: 'social' },
+        { href: 'https://twitter.com/SiliconHacks', target: '_blank', className: 'social' },
         React.createElement('img', { src: 'assets/img/twitter.svg', alt: 'Twitter' })
       ),
       React.createElement(
@@ -24409,7 +24409,7 @@ const FooterSection = React.createClass({
       ),
       React.createElement(
         'a',
-        { href: 'https://instagram.com/calhacks', target: '_blank', className: 'social instagram' },
+        { href: 'https://www.instagram.com/siliconhacks/', target: '_blank', className: 'social instagram' },
         React.createElement('img', { src: 'assets/img/instagram.svg', alt: 'Instagram' })
       ),
       React.createElement(
@@ -24801,7 +24801,7 @@ module.exports={
         },
         {
             "title": "What if I have another question?",
-            "body": "Please feel free to reach out to us via <a href='https://www.facebook.com/SiliconHacks' target='_blank'>Facebook</a>, <a href='https://twitter.com/SiliconHacks' target='_blank'>Twitter</a>, or <a href='mailto:hacksilicon@gmail.com' target='_blank'>email at hacksilicon@gmail.com</a>."
+            "body": "Please feel free to reach out to us via <a href='https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts' target='_blank'>Facebook</a>, <a href='https://twitter.com/SiliconHacks' target='_blank'>Twitter</a>, or <a href='mailto:hacksilicon@gmail.com' target='_blank'>email at hacksilicon@gmail.com</a>."
         }
     ],
     "faqrow2": [

@@ -11,16 +11,16 @@ const FooterSection = React.createClass({
     };
     return (
       <div className="section" id="footer" style={footerSectionStyle}>
-        <a href="https://www.facebook.com/CalHacks" target="_blank" className="social">
+        <a href="https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts" target="_blank" className="social">
           <img src="assets/img/facebook.svg" alt="Facebook" />
         </a>
-        <a href="https://twitter.com/calhacks" target="_blank" className="social">
+        <a href="https://twitter.com/SiliconHacks" target="_blank" className="social">
           <img src="assets/img/twitter.svg" alt="Twitter" />
         </a>
         <a href="mailto:hacksilicon@gmail.com" target="_blank" className="social">
           <img src="assets/img/mail.svg" alt="Email" />
         </a>
-        <a href="https://instagram.com/calhacks" target="_blank" className="social instagram">
+        <a href="https://www.instagram.com/siliconhacks/" target="_blank" className="social instagram">
           <img src="assets/img/instagram.svg" alt="Instagram" />
         </a>
         <p>Made with &hearts; by the SiliconHacks team! Contact us at
