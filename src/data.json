@@ -24,7 +24,7 @@
     "faqrow2": [
         {
             "title": "What is a hackathon?",
-            "body": "Hackathons are really cool events where moonshot and crazy ideas come to life. You can build anything you want, hardware, software, you name it. Some of the world’s most innovative and widely used products are started in these concentrations of innovation! Want to know more? Read here."
+            "body": "Hackathons are really cool events where moonshot and crazy ideas come to life. You can build anything you want, hardware, software, you name it. Some of the world’s most innovative and widely used products are started in these concentrations of innovation! Want to know more? Read<a href='https://medium.com/hackathons-anonymous/wtf-is-a-hackathon-92668579601' target='_blank'>here</a>."
         },
         {
             "title": "What resources will I have access to?",
@@ -32,7 +32,7 @@
         },
         {
             "title": "What should I make?",
-            "body": "There are no limits except for one's own imagination. Judges will review your projects based on criteria such as creativity, effort, utility, complexity, and real-world impact. For an idea of what Hackathon projects look like, check out <a href='http://devpost.com' target='_blank'>Devpost</a>."
+            "body": "There are no limits except for one's own imagination. Judges will review your projects based on criteria such as creativity, effort, utility, complexity, and real-world impact. For an idea of what Hackathon projects look like, check out<a href='http://cal-hacks2.devpost.com/' target='_blank'>Devpost</a>."
         },
         {
             "title": "What should I bring?",

@@ -14710,10 +14710,6 @@ var ReactEmptyComponentInjection = {
   }
 };
 
-function registerNullComponentID() {
-  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
-}
-
 var ReactEmptyComponent = function (instantiate) {
   this._currentElement = null;
   this._rootNodeID = null;
@@ -14722,7 +14718,7 @@ var ReactEmptyComponent = function (instantiate) {
 assign(ReactEmptyComponent.prototype, {
   construct: function (element) {},
   mountComponent: function (rootID, transaction, context) {
-    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
+    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
     this._rootNodeID = rootID;
     return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
   },
@@ -19028,7 +19024,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.8';
+module.exports = '0.14.7';
 },{}],149:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24811,7 +24807,7 @@ module.exports={
     "faqrow2": [
         {
             "title": "What is a hackathon?",
-            "body": "Hackathons are really cool events where moonshot and crazy ideas come to life. You can build anything you want, hardware, software, you name it. Some of the world’s most innovative and widely used products are started in these concentrations of innovation! Want to know more? Read here."
+            "body": "Hackathons are really cool events where moonshot and crazy ideas come to life. You can build anything you want, hardware, software, you name it. Some of the world’s most innovative and widely used products are started in these concentrations of innovation! Want to know more? Read<a href='https://medium.com/hackathons-anonymous/wtf-is-a-hackathon-92668579601' target='_blank'>here</a>."
         },
         {
             "title": "What resources will I have access to?",
@@ -24819,7 +24815,7 @@ module.exports={
         },
         {
             "title": "What should I make?",
-            "body": "There are no limits except for one's own imagination. Judges will review your projects based on criteria such as creativity, effort, utility, complexity, and real-world impact. For an idea of what Hackathon projects look like, check out <a href='http://devpost.com' target='_blank'>Devpost</a>."
+            "body": "There are no limits except for one's own imagination. Judges will review your projects based on criteria such as creativity, effort, utility, complexity, and real-world impact. For an idea of what Hackathon projects look like, check out<a href='http://cal-hacks2.devpost.com/' target='_blank'>Devpost</a>."
         },
         {
             "title": "What should I bring?",
