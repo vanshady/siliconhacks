@@ -363,11 +363,12 @@ a {
 
 .sub-headline {
   width: 100%;
+  font-weight: bold;
   font-size: 20px;
   text-align: center;
   line-height: 1.52;
   text-transform: uppercase;
-  color: rgb(216, 152, 37);
+  color: rgb(3, 169, 244);
 }
 
 .sub-headline.mini {
