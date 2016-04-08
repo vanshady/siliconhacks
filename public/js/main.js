@@ -24186,7 +24186,7 @@ const AboutSection = React.createClass({
           React.createElement(
             "p",
             null,
-            "Silicon Hacks will take place at SOME PLACE. The address is: ADDRESS",
+            "Silicon Hacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed!",
             React.createElement("br", null),
             React.createElement("br", null),
             "See you there :)"
