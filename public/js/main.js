@@ -14710,6 +14710,10 @@ var ReactEmptyComponentInjection = {
   }
 };
 
+function registerNullComponentID() {
+  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
+}
+
 var ReactEmptyComponent = function (instantiate) {
   this._currentElement = null;
   this._rootNodeID = null;
@@ -14718,7 +14722,7 @@ var ReactEmptyComponent = function (instantiate) {
 assign(ReactEmptyComponent.prototype, {
   construct: function (element) {},
   mountComponent: function (rootID, transaction, context) {
-    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
+    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
     this._rootNodeID = rootID;
     return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
   },
@@ -19024,7 +19028,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.7';
+module.exports = '0.14.8';
 },{}],149:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24785,7 +24789,7 @@ module.exports={
     "faqrow1": [
         {
             "title": "What if I don't have a team or an idea?",
-            "body": "No problem! Many hackers do not have a fully-formed team or hack concept before the event begins. We will be hosting team-forming activities after hacking begins to help you find the perfect match. If you're a first-time hacker, there will be many others looking for team members with whom you can pair."
+            "body": "Don’t sweat it! Many hackers do not have complete teams or even an idea of what they will make before the event begins. We will be hosting team-forming activities at the start of the event, and even if you're a first-time hacker, there will be many others also looking for team members with whom you can pair. Also, feel free to share ideas with other attendees through our Facebook and Slack groups that we will share later."
         },
         {
             "title": "Who can attend?",
@@ -24807,7 +24811,7 @@ module.exports={
     "faqrow2": [
         {
             "title": "What is a hackathon?",
-            "body": "Hackathons are where your crazy ideas become reality. Build anything. There are no restrictions on what you can create. Dive in and make the most incredible thing you can alongside fellow creators. While some may see hackers as the crazy ones, we see genius."
+            "body": "Hackathons are really cool events where moonshot and crazy ideas come to life. You can build anything you want, hardware, software, you name it. Some of the world’s most innovative and widely used products are started in these concentrations of innovation! Want to know more? Read here."
         },
         {
             "title": "What resources will I have access to?",
@@ -24826,7 +24830,7 @@ module.exports={
         //     "body": "<a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf' target='_blank'>yes.</a>tl;dr: Don't be a jerk."
         // },
         {
-            "title": "How will I get to the Bay?",
+            "title": "How will I get to the event?",
             "body": "Free SiliconHacks-sponsored buses will pick up and drop off hackers at universities within California. Flights from anywhere are unlikely to be reimbursed though a final position is TBD. Car rides are likely to be reimbursed up to a certain amount, though the amount itself is TBA."
         }
     ],
