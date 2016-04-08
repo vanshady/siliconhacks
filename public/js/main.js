@@ -24488,12 +24488,12 @@ const HeadSection = React.createClass({
           React.createElement(
             "div",
             { className: "sub-headline" },
-            "Calling all hackers. Dreamers. 4-A.M'ers"
+            "INVITING EVERY HACKER. DESIGNER. INNOVATOR. NIGHT OWL."
           ),
           React.createElement(
             "div",
             { className: "sub-headline mini" },
-            "LOCATION | TIME"
+            "LOCATION: TBA | TIME: FALL 2016"
           ),
           React.createElement(
             "div",
