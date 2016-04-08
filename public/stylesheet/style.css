@@ -246,6 +246,7 @@ a {
 
 .section-body {
   width: 100%;
+  min-width: 100px;
   max-width: 600px;
   text-align: center;
   margin: 0 auto;
