@@ -246,7 +246,6 @@ a {
 
 .section-body {
   width: 100%;
-  min-width: 100px;
   max-width: 600px;
   text-align: center;
   margin: 0 auto;
@@ -379,8 +378,8 @@ a {
   position: relative;
   padding: 152px 60px 0px 60px;
   background-image: url("../assets/img/background.png");
+  background-size: cover;
   background-position: center;
-  background-size: contain;
   background-repeat: no-repeat;
 }
 
