@@ -24489,12 +24489,7 @@ const HeadSection = React.createClass({
           React.createElement(
             "div",
             { className: "headline" },
-            "SiliconHacks",
-            React.createElement(
-              "span",
-              { id: "typed-cursor", className: "blinking" },
-              "|"
-            )
+            "SiliconHacks"
           ),
           React.createElement(
             "div",

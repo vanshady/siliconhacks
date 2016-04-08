@@ -9,7 +9,6 @@ const HeadSection = React.createClass({
         <div className="section-wrapper">
           <div id="copy-container">
             <div className="headline">SiliconHacks
-              <span id="typed-cursor" className="blinking">|</span>
             </div>
             <div className="sub-headline">Calling all hackers. Dreamers. 4-A.M'ers</div>
             <div className="sub-headline mini">LOCATION | TIME</div>
