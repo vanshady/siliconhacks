@@ -28,7 +28,7 @@ html {
 
 a {
   text-decoration: none;
-  border-bottom: 2px solid rgba(245, 166, 35, 0.72);
+  border-bottom: 2px solid rgba(67, 160, 71, 0.72);
   color: inherit;
   padding: 3px;
   transition: 0.3s ease;
@@ -46,8 +46,8 @@ a {
 /* assets */
 
 .logo {
-  width: 200px;
-  margin-top: 5px
+  width: 300px;
+  margin-top: -5px
 }
 
 .emoji {
@@ -303,18 +303,18 @@ a {
 }
 
 #nav.active {
-  background-color: #43A047;
+  background-color: #FFFFFF;
   padding-top: 20px
 }
 
 #nav.active .nav-section {
-  color: #FFEB3B;
+  color: #43A047;
   padding-bottom: 15px;
   opacity: 0.72
 }
 
 #nav.active .nav-section.active {
-  border-bottom: 3px solid #FFEB3B;
+  border-bottom: 3px solid #43A047;
   opacity: 1
 }
 
@@ -323,7 +323,7 @@ a {
 }
 
 #nav.active .logo {
-  margin-bottom: 10px
+  margin-bottom: 25px
 }
 
 #nav-close {
