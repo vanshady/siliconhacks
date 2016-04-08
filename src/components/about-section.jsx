@@ -11,16 +11,9 @@ const AboutSection = React.createClass({
             <div className="section-body">
             <h1>
               Come Hack with Us
-              <img className="emoji" src="assets/img/emoji/sunglasses.png" />
             </h1>
             <p>
-              A hackathon is where your crazy ideas become reality.
-              Build something: an app, a website, a game, a Slackbot,
-              <em>anything</em>.
-              The possibilities are limitless. Break things. Do something
-              you've never done before. Move quickly&mdash;you only have 36
-              hours! Grab your breadboards, charge your laptops, and
-              put on your Oculi. Let's hack!</p>
+              Turn your energy and free food into awesome projects by the end of one weekend. Bring your laptop, passion, smartphone, and whatever else you can manage to carry to this once-in-a-lifetime event and have some fun working alongside some of the best minds in Silicon Valley!</p>
 
             <h1>Location</h1>
             <p>

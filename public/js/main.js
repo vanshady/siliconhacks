@@ -14710,6 +14710,10 @@ var ReactEmptyComponentInjection = {
   }
 };
 
+function registerNullComponentID() {
+  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
+}
+
 var ReactEmptyComponent = function (instantiate) {
   this._currentElement = null;
   this._rootNodeID = null;
@@ -14718,7 +14722,7 @@ var ReactEmptyComponent = function (instantiate) {
 assign(ReactEmptyComponent.prototype, {
   construct: function (element) {},
   mountComponent: function (rootID, transaction, context) {
-    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
+    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
     this._rootNodeID = rootID;
     return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
   },
@@ -19024,7 +19028,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.7';
+module.exports = '0.14.8';
 },{}],149:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24167,19 +24171,12 @@ const AboutSection = React.createClass({
           React.createElement(
             "h1",
             null,
-            "Come Hack with Us",
-            React.createElement("img", { className: "emoji", src: "assets/img/emoji/sunglasses.png" })
+            "Come Hack with Us"
           ),
           React.createElement(
             "p",
             null,
-            "A hackathon is where your crazy ideas become reality. Build something: an app, a website, a game, a Slackbot,",
-            React.createElement(
-              "em",
-              null,
-              "anything"
-            ),
-            ". The possibilities are limitless. Break things. Do something you've never done before. Move quickly—you only have 36 hours! Grab your breadboards, charge your laptops, and put on your Oculi. Let's hack!"
+            "Turn your energy and free food into awesome projects by the end of one weekend. Bring your laptop, passion, smartphone, and whatever else you can manage to carry to this once-in-a-lifetime event and have some fun working alongside some of the best minds in Silicon Valley!"
           ),
           React.createElement(
             "h1",
