@@ -10,7 +10,7 @@ const AboutSection = React.createClass({
         <div className="section-wrapper">
             <div className="section-body">
             <h1>
-              Come Hack with Us
+              Come Hack With The Best
             </h1>
             <p>
               Turn your energy and free food into awesome projects by the end of one weekend. Bring your laptop, passion, smartphone, and whatever else you can manage to carry to this once-in-a-lifetime event and have some fun working alongside some of the best minds in Silicon Valley!</p>
@@ -18,7 +18,7 @@ const AboutSection = React.createClass({
             <h1>Location</h1>
             <p>
 
-              Silicon Hacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed
+              Silicon Hacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed!
 
             </p>
           </div>

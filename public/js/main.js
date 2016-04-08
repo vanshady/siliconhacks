@@ -24171,7 +24171,7 @@ const AboutSection = React.createClass({
           React.createElement(
             "h1",
             null,
-            "Come Hack with Us"
+            "Come Hack With The Best"
           ),
           React.createElement(
             "p",
@@ -24186,7 +24186,7 @@ const AboutSection = React.createClass({
           React.createElement(
             "p",
             null,
-            "Silicon Hacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed"
+            "Silicon Hacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed!"
           )
         )
       ),
