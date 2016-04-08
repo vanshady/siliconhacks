@@ -3,14 +3,8 @@ const Schedules = require('./schedules.jsx');
 
 const GeneralSection = React.createClass({
   render() {
-    const generalSectionStyle = {
-      backgroundColor: 'white',
-      paddingBottom: '60px',
-      paddingTop: '120px',
-    };
-
     return (
-      <div id="general" className="section" style={generalSectionStyle}>
+      <div id="general" className="section">
         <div className="section-wrapper">
           <div className="section-body">
             <h1>Schedule</h1>

@@ -3,9 +3,7 @@ const FaqRow = require('./faq-row.jsx');
 const cardData = require('../data.json');
 
 const FaqSection = React.createClass({
-
   render() {
-
     return (
       <div className="section" id="FAQ">
         <div className="slant top left"></div>

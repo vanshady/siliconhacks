@@ -2,9 +2,7 @@ const React = require('react');
 
 const AboutSection = React.createClass({
   render() {
-    // const aboutStyle = {
-    //   backgroundColor: 'white',
-    // };
+
     return (
       <div id="about" className="section">
         <div className="section-wrapper">

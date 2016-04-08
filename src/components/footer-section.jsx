@@ -2,15 +2,8 @@ const React = require('react');
 
 const FooterSection = React.createClass({
   render() {
-    const footerSectionStyle = {
-      backgroundColor: '#3E3E3E',
-      color: 'white',
-      textAlign: 'center',
-      padding: '20px 20px',
-      fontFamily: 'Proxima Nova, Open Sans, sans-serif',
-    };
     return (
-      <div className="section" id="footer" style={footerSectionStyle}>
+      <div className="section" id="footer">
         <a href="https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts" target="_blank" className="social">
           <img src="assets/img/facebook.svg" alt="Facebook" />
         </a>
