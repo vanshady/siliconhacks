@@ -338,7 +338,7 @@ a {
   left: 0px;
   top: 0px;
   /*background: linear-gradient(90deg, rgba(36, 198, 220, 0.360784) 10%, rgba(81, 74, 157, 0.239216) 90%);*/
-  background-color: rgba(0, 23, 36, 0.34);
+  background-color: rgba(0, 23, 36, 0.6);
 }
 
 .section:not(#landing) {
@@ -379,7 +379,6 @@ a {
 .sub-headline.mini {
   font-size: 16px;
   text-transform: none;
-  opacity: 0.72;
   color: white;
   margin-top: 15px
 }
