@@ -13,9 +13,7 @@ const GeneralSection = React.createClass({
       <div id="general" className="section" style={generalSectionStyle}>
         <div className="section-wrapper">
           <div className="section-body">
-            <h1>Schedule
-              <img className="emoji" src="assets/img/emoji/party_popper.png" />
-            </h1>
+            <h1>Schedule</h1>
             <Schedules />
             <br /><br />
           </div>
