@@ -1,5 +1,9 @@
 
+const React = require('react');
 const ReactDOM = require('react-dom');
-const Routes = require('./Routes.jsx');
+const Index = require('./components/index.jsx');
 
-ReactDOM.render(Routes, document.getElementById('main'));
+// const Routes = require('./Routes.jsx');
+// ReactDOM.render(Routes, document.getElementById('main'));
+
+ReactDOM.render(<Index />, document.getElementById('main'));
