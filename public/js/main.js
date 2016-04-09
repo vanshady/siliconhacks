@@ -19035,12 +19035,13 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],159:[function(require,module,exports){
-const React = require('react');
+"use strict";
 
-const AboutSection = React.createClass({
+var React = require('react');
+
+var AboutSection = React.createClass({
   displayName: "AboutSection",
-
-  render() {
+  render: function render() {
 
     return React.createElement(
       "div",
@@ -19081,12 +19082,13 @@ const AboutSection = React.createClass({
 module.exports = AboutSection;
 
 },{"react":157}],160:[function(require,module,exports){
-const React = require('react');
+"use strict";
 
-const ApplySection = React.createClass({
+var React = require('react');
+
+var ApplySection = React.createClass({
   displayName: "ApplySection",
-
-  render() {
+  render: function render() {
     return React.createElement(
       "div",
       { id: "apply", className: "section" },
@@ -19112,17 +19114,19 @@ const ApplySection = React.createClass({
 module.exports = ApplySection;
 
 },{"react":157}],161:[function(require,module,exports){
-const React = require('react');
+'use strict';
 
-const FaqCard = React.createClass({
+var React = require('react');
+
+var FaqCard = React.createClass({
   displayName: 'FaqCard',
 
   propTypes: {
     title: React.PropTypes.string.isRequired,
     body: React.PropTypes.string.isRequired
   },
-  render() {
-    const faqCardStyle = {
+  render: function render() {
+    var faqCardStyle = {
       fontFamily: 'Proxima Nova, Open Sans, sans-serif',
       marginBottom: '20px',
       backgroundColor: 'white',
@@ -19133,13 +19137,13 @@ const FaqCard = React.createClass({
       textAlign: 'left',
       width: '100%'
     };
-    const cardTitleStyle = {
+    var cardTitleStyle = {
       fontSize: '20px',
       lineHeight: '1.5',
       marginBottom: '25px',
       fontWeight: 'bold'
     };
-    const cardBodyStyle = {
+    var cardBodyStyle = {
       fontSize: '14px',
       lineHeight: '1.7',
       fontWeight: '400'
@@ -19163,22 +19167,24 @@ const FaqCard = React.createClass({
 module.exports = FaqCard;
 
 },{"react":157}],162:[function(require,module,exports){
-const React = require('react');
-const FaqCard = require('./faq-card.jsx');
-let key = 0;
+'use strict';
 
-const FaqRow = React.createClass({
+var React = require('react');
+var FaqCard = require('./faq-card.jsx');
+var key = 0;
+
+var FaqRow = React.createClass({
   displayName: 'FaqRow',
 
   propTypes: {
     cards: React.PropTypes.array.isRequired
   },
-  render() {
-    const cards = this.props.cards.map(obj => {
+  render: function render() {
+    var cards = this.props.cards.map(function (obj) {
       key++;
       return React.createElement(FaqCard, { key: key, title: obj.title, body: obj.body });
     });
-    const faqRowStyle = {
+    var faqRowStyle = {
       width: '50%',
       float: 'left',
       minWidth: '300px',
@@ -19195,14 +19201,15 @@ const FaqRow = React.createClass({
 module.exports = FaqRow;
 
 },{"./faq-card.jsx":161,"react":157}],163:[function(require,module,exports){
-const React = require('react');
-const FaqRow = require('./faq-row.jsx');
-const cardData = require('../data.json');
+'use strict';
 
-const FaqSection = React.createClass({
+var React = require('react');
+var FaqRow = require('./faq-row.jsx');
+var cardData = require('../data.json');
+
+var FaqSection = React.createClass({
   displayName: 'FaqSection',
-
-  render() {
+  render: function render() {
     return React.createElement(
       'div',
       { className: 'section', id: 'FAQ' },
@@ -19227,12 +19234,13 @@ const FaqSection = React.createClass({
 module.exports = FaqSection;
 
 },{"../data.json":173,"./faq-row.jsx":162,"react":157}],164:[function(require,module,exports){
-const React = require('react');
+"use strict";
 
-const FooterSection = React.createClass({
+var React = require('react');
+
+var FooterSection = React.createClass({
   displayName: "FooterSection",
-
-  render() {
+  render: function render() {
     return React.createElement(
       "div",
       { className: "section", id: "footer" },
@@ -19273,13 +19281,14 @@ const FooterSection = React.createClass({
 module.exports = FooterSection;
 
 },{"react":157}],165:[function(require,module,exports){
-const React = require('react');
-const Schedules = require('./schedules.jsx');
+'use strict';
 
-const GeneralSection = React.createClass({
+var React = require('react');
+var Schedules = require('./schedules.jsx');
+
+var GeneralSection = React.createClass({
   displayName: 'GeneralSection',
-
-  render() {
+  render: function render() {
     return React.createElement(
       'div',
       { id: 'general', className: 'section' },
@@ -19307,12 +19316,13 @@ const GeneralSection = React.createClass({
 module.exports = GeneralSection;
 
 },{"./schedules.jsx":171,"react":157}],166:[function(require,module,exports){
-const React = require('react');
+"use strict";
 
-const HeadSection = React.createClass({
+var React = require('react');
+
+var HeadSection = React.createClass({
   displayName: "HeadSection",
-
-  render() {
+  render: function render() {
     return React.createElement(
       "div",
       { id: "landing", className: "section full" },
@@ -19361,21 +19371,22 @@ const HeadSection = React.createClass({
 module.exports = HeadSection;
 
 },{"react":157}],167:[function(require,module,exports){
-const React = require('react');
-const ApplySection = require('./apply-section.jsx');
-const AboutSection = require('./about-section.jsx');
-const FaqSection = require('./faq-section.jsx');
-const FooterSection = require('./footer-section.jsx');
-const GeneralSection = require('./general-section.jsx');
-const HeadSection = require('./head-section.jsx');
-const Nav = require('./nav.jsx');
-const SponsorSection = require('./sponsor-section.jsx');
-const OrganizersSection = require('./organizers-section.jsx');
+'use strict';
 
-const index = React.createClass({
+var React = require('react');
+var ApplySection = require('./apply-section.jsx');
+var AboutSection = require('./about-section.jsx');
+var FaqSection = require('./faq-section.jsx');
+var FooterSection = require('./footer-section.jsx');
+var GeneralSection = require('./general-section.jsx');
+var HeadSection = require('./head-section.jsx');
+var Nav = require('./nav.jsx');
+var SponsorSection = require('./sponsor-section.jsx');
+var OrganizersSection = require('./organizers-section.jsx');
+
+var index = React.createClass({
   displayName: 'index',
-
-  render() {
+  render: function render() {
     return React.createElement(
       'div',
       { id: 'overflow-wrapper' },
@@ -19389,18 +19400,18 @@ const index = React.createClass({
       React.createElement(FooterSection, null)
     );
   }
-
 });
 
 module.exports = index;
 
 },{"./about-section.jsx":159,"./apply-section.jsx":160,"./faq-section.jsx":163,"./footer-section.jsx":164,"./general-section.jsx":165,"./head-section.jsx":166,"./nav.jsx":168,"./organizers-section.jsx":170,"./sponsor-section.jsx":172,"react":157}],168:[function(require,module,exports){
-const React = require('react');
+"use strict";
 
-const Nav = React.createClass({
+var React = require('react');
+
+var Nav = React.createClass({
   displayName: "Nav",
-
-  render() {
+  render: function render() {
     return React.createElement(
       "nav",
       { id: "nav" },
@@ -19460,18 +19471,20 @@ const Nav = React.createClass({
 module.exports = Nav;
 
 },{"react":157}],169:[function(require,module,exports){
-const React = require('react');
+'use strict';
 
-const Organizer = React.createClass({
+var React = require('react');
+
+var Organizer = React.createClass({
   displayName: 'Organizer',
 
   propTypes: {
     organizer: React.PropTypes.object.isRequired
   },
-  render() {
-    const organizer = this.props.organizer;
-    const imageURL = `assets/img/organizers/${ organizer.image }`;
-    const schoolStyle = {
+  render: function render() {
+    var organizer = this.props.organizer;
+    var imageURL = 'assets/img/organizers/' + organizer.image;
+    var schoolStyle = {
       textDecoration: 'none',
       color: 'inherit',
       transition: '0.3s ease',
@@ -19517,17 +19530,18 @@ const Organizer = React.createClass({
 module.exports = Organizer;
 
 },{"react":157}],170:[function(require,module,exports){
-const React = require('react');
-const Organizer = require('./organizer.jsx');
-const organizersData = require('../data.json');
-const organizers = organizersData.organizers;
+'use strict';
 
-const OrganizersSection = React.createClass({
+var React = require('react');
+var Organizer = require('./organizer.jsx');
+var organizersData = require('../data.json');
+var organizers = organizersData.organizers;
+
+var OrganizersSection = React.createClass({
   displayName: 'OrganizersSection',
-
-  render() {
-    let i = -1;
-    const rows = organizers.map(obj => {
+  render: function render() {
+    var i = -1;
+    var rows = organizers.map(function (obj) {
       i++;
       return React.createElement(Organizer, { key: i, organizer: obj });
     });
@@ -19551,22 +19565,23 @@ const OrganizersSection = React.createClass({
 module.exports = OrganizersSection;
 
 },{"../data.json":173,"./organizer.jsx":169,"react":157}],171:[function(require,module,exports){
-const React = require('react');
-const scheduleData = require('../data.json');
-const schedule = scheduleData.schedule;
+'use strict';
 
-const Schedules = React.createClass({
+var React = require('react');
+var scheduleData = require('../data.json');
+var schedule = scheduleData.schedule;
+
+var Schedules = React.createClass({
   displayName: 'Schedules',
-
-  render() {
-    const rows = () => {
-      let s = '';
-      schedule.forEach(obj => {
-        s += `<b>${ obj.event }</b>${ obj.time }<br />`;
+  render: function render() {
+    var rows = function rows() {
+      var s = '';
+      schedule.forEach(function (obj) {
+        s += '<b>' + obj.event + '</b>' + obj.time + '<br />';
       });
       return s;
     };
-    const pStyle = {
+    var pStyle = {
       textAlign: 'center'
     };
     return React.createElement('p', { style: pStyle, dangerouslySetInnerHTML: { __html: rows() } });
@@ -19576,13 +19591,14 @@ const Schedules = React.createClass({
 module.exports = Schedules;
 
 },{"../data.json":173,"react":157}],172:[function(require,module,exports){
-const React = require('react');
+"use strict";
+
+var React = require('react');
 // const Sponsors = require('./sponsors.jsx');
 
-const SponsorSection = React.createClass({
+var SponsorSection = React.createClass({
   displayName: "SponsorSection",
-
-  render() {
+  render: function render() {
     return React.createElement(
       "div",
       { id: "sponsor", className: "section" },
@@ -19718,10 +19734,11 @@ module.exports={
     ]
 }
 },{}],174:[function(require,module,exports){
+'use strict';
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Index = require('./components/index.jsx');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Index = require('./components/index.jsx');
 
 // const Routes = require('./Routes.jsx');
 // ReactDOM.render(Routes, document.getElementById('main'));
