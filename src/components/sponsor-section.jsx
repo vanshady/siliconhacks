@@ -7,9 +7,9 @@ const SponsorSection = React.createClass({
       <div id="sponsor" className="section">
         <div className="section-body">
           <h1>Interested in Sponsoring?</h1>
-          <br />
+          <a className="button green" href="https://siliconhacks.typeform.com/to/lzxr3H" target="_blank">Sponsor us</a>
           <p style={{textAlign:"center"}}>
-            Email us at
+            or email us at
             <a href="mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry">
               hacksilicon@gmail.com
             </a>

@@ -19101,7 +19101,7 @@ const ApplySection = React.createClass({
         ),
         React.createElement(
           "a",
-          { className: "button apply", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
+          { className: "button apply", href: "https://siliconhacks.typeform.com/to/wK5Mls", target: "_blank" },
           "Apply"
         )
       )
@@ -19594,11 +19594,15 @@ const SponsorSection = React.createClass({
           null,
           "Interested in Sponsoring?"
         ),
-        React.createElement("br", null),
+        React.createElement(
+          "a",
+          { className: "button green", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
+          "Sponsor us"
+        ),
         React.createElement(
           "p",
           { style: { textAlign: "center" } },
-          "Email us at",
+          "or email us at",
           React.createElement(
             "a",
             { href: "mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry" },
