@@ -17,7 +17,7 @@ const FooterSection = React.createClass({
           <img src="assets/img/instagram.svg" alt="Instagram" />
         </a>
         <p style={{ marginTop: '10px' }}>
-          Designed and developed by the SiliconHacks team. Contact us at
+          Site inspired by CalHacks and designed and developed by the SiliconHacks team. Contact us at
           <a href="mailto:hacksilicon@gmail.com">hacksilicon@gmail.com</a>
         </p>
       </div>
