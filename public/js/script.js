@@ -70,7 +70,8 @@ $(document).ready(function () {
     $(document).on('scroll', onScroll);
     $('.faq-card').click(function (e) {e.stopPropagation();});
   } else {
-    $('#nav').addClass('active-mobile');
+    //$('#nav').addClass('active-mobile');
+    $(window).scroll(switchNavMobile);
     $('#logo_white').hide();
     $('#logo_green').show();
     $('#nav-close, .nav-section').click(function () {
