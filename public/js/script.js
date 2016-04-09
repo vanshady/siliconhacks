@@ -3,7 +3,7 @@ function onScroll(event) {
   $('#nav-sections a').each(function () {
     var currLink = $(this);
     var refElement = $(currLink.attr('href'));
-    if (refElement.position().top <= scrollPos &&
+    if (refElement.position() && refElement.position().top <= scrollPos &&
         refElement.position().top + refElement.height() > scrollPos) {
       $('#nav-sections .nav-section').removeClass('active');
       currLink.parent().addClass('active');

@@ -483,6 +483,12 @@ a {
 }
 
 #sponsor.section {
+  background-color: white;
+  padding-bottom: 60px;
+  padding-top: 120px;
+}
+
+/*#sponsor.section {
   background-color: #F0F0F0;
   color: #8F9CB3;
   padding: 80px 60px;
@@ -519,7 +525,7 @@ a {
 
 .sponsor-too-small {
   height: 40px;
-}
+}*/
 
 .partner {
   height: 35px;
@@ -540,7 +546,7 @@ a {
   -webkit-filter: none;
 }
 
-.sponsor:hover {
+/*.sponsor:hover {
   opacity: 1;
   filter: none;
   -webkit-filter: none;
@@ -548,7 +554,7 @@ a {
 
 #sponsors-container h1 {
   margin-bottom: 40px
-}
+}*/
 
 
 .social {
@@ -786,7 +792,7 @@ a {
   }
 
   /*sponsors */
-  #sponsors-container {
+  /*#sponsors-container {
     width: 100%;
     padding: 0px 15px;
   }
@@ -806,7 +812,7 @@ a {
 
   .sponsor-too-small {
     height: 20px;
-  }
+  }*/
 
   .partner {
     height: 25px;

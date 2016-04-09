@@ -4,7 +4,7 @@ const React = require('react');
 const SponsorSection = React.createClass({
   render() {
     return (
-      <div id="general" className="section">
+      <div id="sponsor" className="section">
         <div className="section-body">
           <h1>Interested in Sponsoring?</h1>
           <br />

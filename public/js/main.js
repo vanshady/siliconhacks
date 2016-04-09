@@ -19585,7 +19585,7 @@ const SponsorSection = React.createClass({
   render() {
     return React.createElement(
       "div",
-      { id: "general", className: "section" },
+      { id: "sponsor", className: "section" },
       React.createElement(
         "div",
         { className: "section-body" },
