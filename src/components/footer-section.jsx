@@ -16,7 +16,8 @@ const FooterSection = React.createClass({
         <a href="https://www.instagram.com/siliconhacks/" target="_blank" className="social instagram">
           <img src="assets/img/instagram.svg" alt="Instagram" />
         </a>
-        <p>Made with &hearts; by the SiliconHacks team! Contact us at
+        <p style={{ marginTop: '10px' }}>
+          Designed and developed by the SiliconHacks team. Contact us at
           <a href="mailto:hacksilicon@gmail.com">hacksilicon@gmail.com</a>
         </p>
       </div>

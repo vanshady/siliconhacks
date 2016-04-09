@@ -19258,8 +19258,8 @@ const FooterSection = React.createClass({
       ),
       React.createElement(
         "p",
-        null,
-        "Made with ♥ by the SiliconHacks team! Contact us at",
+        { style: { marginTop: '10px' } },
+        "Designed and developed by the SiliconHacks team. Contact us at",
         React.createElement(
           "a",
           { href: "mailto:hacksilicon@gmail.com" },
