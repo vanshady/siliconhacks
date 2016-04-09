@@ -4,11 +4,11 @@ const React = require('react');
 const SponsorSection = React.createClass({
   render() {
     return (
-      <div id="sponsor" className="section">
+      <div id="general" className="section">
         <div className="section-body">
           <h1>Interested in Sponsoring?</h1>
-
-          <p>
+          <br />
+          <p style={{textAlign:"center"}}>
             Email us at
             <a href="mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry">
               hacksilicon@gmail.com

@@ -19383,9 +19383,8 @@ const index = React.createClass({
       React.createElement(HeadSection, null),
       React.createElement(AboutSection, null),
       React.createElement(FaqSection, null),
-      React.createElement(GeneralSection, null),
-      React.createElement(ApplySection, null),
       React.createElement(SponsorSection, null),
+      React.createElement(ApplySection, null),
       React.createElement(OrganizersSection, null),
       React.createElement(FooterSection, null)
     );
@@ -19586,7 +19585,7 @@ const SponsorSection = React.createClass({
   render() {
     return React.createElement(
       "div",
-      { id: "sponsor", className: "section" },
+      { id: "general", className: "section" },
       React.createElement(
         "div",
         { className: "section-body" },
@@ -19595,9 +19594,10 @@ const SponsorSection = React.createClass({
           null,
           "Interested in Sponsoring?"
         ),
+        React.createElement("br", null),
         React.createElement(
           "p",
-          null,
+          { style: { textAlign: "center" } },
           "Email us at",
           React.createElement(
             "a",
