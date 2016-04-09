@@ -14710,6 +14710,10 @@ var ReactEmptyComponentInjection = {
   }
 };
 
+function registerNullComponentID() {
+  ReactEmptyComponentRegistry.registerNullComponentID(this._rootNodeID);
+}
+
 var ReactEmptyComponent = function (instantiate) {
   this._currentElement = null;
   this._rootNodeID = null;
@@ -14718,7 +14722,7 @@ var ReactEmptyComponent = function (instantiate) {
 assign(ReactEmptyComponent.prototype, {
   construct: function (element) {},
   mountComponent: function (rootID, transaction, context) {
-    ReactEmptyComponentRegistry.registerNullComponentID(rootID);
+    transaction.getReactMountReady().enqueue(registerNullComponentID, this);
     this._rootNodeID = rootID;
     return ReactReconciler.mountComponent(this._renderedComponent, rootID, transaction, context);
   },
@@ -19024,7 +19028,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.7';
+module.exports = '0.14.8';
 },{}],149:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -24152,9 +24156,7 @@ const AboutSection = React.createClass({
   displayName: "AboutSection",
 
   render() {
-    // const aboutStyle = {
-    //   backgroundColor: 'white',
-    // };
+
     return React.createElement(
       "div",
       { id: "about", className: "section" },
@@ -24200,30 +24202,6 @@ const ApplySection = React.createClass({
   displayName: "ApplySection",
 
   render() {
-    // const applyStyle = {
-    //   height: '600px',
-    //   backgroundColor: '#6FCBDC',
-    // };
-    // const applyContainerStyle = {
-    //   width: '100%',
-    //   maxWidth: '400px',
-    //   textAlign: 'center',
-    //   margin: '0 auto',
-    //   marginYop: '150px',
-    //   position: 'relative',
-    // };
-    // const applyHeaderStyle = {
-    //   color: 'white',
-    //   fontSize: '28px',
-    //   lineHeight: '1.5',
-    //   textAlign: 'center',
-    //   marginBottom: '15px',
-    // };
-    // const buttonApplyStyle = {
-    //   padding: '12px 25px',
-    //   textAlign: 'center',
-    //   fontSize: '24px',
-    // };
     return React.createElement(
       "div",
       { id: "apply", className: "section" },
@@ -24339,9 +24317,7 @@ const cardData = require('../data.json');
 const FaqSection = React.createClass({
   displayName: 'FaqSection',
 
-
   render() {
-
     return React.createElement(
       'div',
       { className: 'section', id: 'FAQ' },
@@ -24369,47 +24345,40 @@ module.exports = FaqSection;
 const React = require('react');
 
 const FooterSection = React.createClass({
-  displayName: 'FooterSection',
+  displayName: "FooterSection",
 
   render() {
-    const footerSectionStyle = {
-      backgroundColor: '#3E3E3E',
-      color: 'white',
-      textAlign: 'center',
-      padding: '20px 20px',
-      fontFamily: 'Proxima Nova, Open Sans, sans-serif'
-    };
     return React.createElement(
-      'div',
-      { className: 'section', id: 'footer', style: footerSectionStyle },
+      "div",
+      { className: "section", id: "footer" },
       React.createElement(
-        'a',
-        { href: 'https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts', target: '_blank', className: 'social' },
-        React.createElement('img', { src: 'assets/img/facebook.svg', alt: 'Facebook' })
+        "a",
+        { href: "https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts", target: "_blank", className: "social" },
+        React.createElement("img", { src: "assets/img/facebook.svg", alt: "Facebook" })
       ),
       React.createElement(
-        'a',
-        { href: 'https://twitter.com/SiliconHacks', target: '_blank', className: 'social' },
-        React.createElement('img', { src: 'assets/img/twitter.svg', alt: 'Twitter' })
+        "a",
+        { href: "https://twitter.com/SiliconHacks", target: "_blank", className: "social" },
+        React.createElement("img", { src: "assets/img/twitter.svg", alt: "Twitter" })
       ),
       React.createElement(
-        'a',
-        { href: 'mailto:hacksilicon@gmail.com', target: '_blank', className: 'social' },
-        React.createElement('img', { src: 'assets/img/mail.svg', alt: 'Email' })
+        "a",
+        { href: "mailto:hacksilicon@gmail.com", target: "_blank", className: "social" },
+        React.createElement("img", { src: "assets/img/mail.svg", alt: "Email" })
       ),
       React.createElement(
-        'a',
-        { href: 'https://www.instagram.com/siliconhacks/', target: '_blank', className: 'social instagram' },
-        React.createElement('img', { src: 'assets/img/instagram.svg', alt: 'Instagram' })
+        "a",
+        { href: "https://www.instagram.com/siliconhacks/", target: "_blank", className: "social instagram" },
+        React.createElement("img", { src: "assets/img/instagram.svg", alt: "Instagram" })
       ),
       React.createElement(
-        'p',
+        "p",
         null,
-        'Made with ♥ by the SiliconHacks team! Contact us at',
+        "Made with ♥ by the SiliconHacks team! Contact us at",
         React.createElement(
-          'a',
-          { href: 'mailto:hacksilicon@gmail.com' },
-          'hacksilicon@gmail.com'
+          "a",
+          { href: "mailto:hacksilicon@gmail.com" },
+          "hacksilicon@gmail.com"
         )
       )
     );
@@ -24426,15 +24395,9 @@ const GeneralSection = React.createClass({
   displayName: 'GeneralSection',
 
   render() {
-    const generalSectionStyle = {
-      backgroundColor: 'white',
-      paddingBottom: '60px',
-      paddingTop: '120px'
-    };
-
     return React.createElement(
       'div',
-      { id: 'general', className: 'section', style: generalSectionStyle },
+      { id: 'general', className: 'section' },
       React.createElement(
         'div',
         { className: 'section-wrapper' },
@@ -24560,7 +24523,7 @@ const Nav = React.createClass({
       React.createElement("img", { id: "logo_white", className: "logo", src: "assets/img/logo_white.png", alt: "SiliconHacks" }),
       React.createElement("img", { id: "logo_green", className: "logo", src: "assets/img/logo_green.png", alt: "SiliconHacks" }),
       React.createElement("img", { id: "menu_white", className: "nav-menu", src: "assets/img/menu_white.svg", alt: "" }),
-      React.createElement("img", { id: "menu_orange", className: "nav-menu", src: "assets/img/menu_orange.svg", alt: "" }),
+      React.createElement("img", { id: "menu_green", className: "nav-menu", src: "assets/img/menu_green.svg", alt: "" }),
       React.createElement(
         "div",
         { id: "nav-sections" },

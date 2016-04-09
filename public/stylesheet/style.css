@@ -681,7 +681,7 @@ a {
     display: block;
   }
 
-  #menu_orange {
+  #menu_green {
     display: none;
   }
 
@@ -689,7 +689,7 @@ a {
     display: none;
   }
 
-  #nav.active-mobile #menu_orange {
+  #nav.active-mobile #menu_green {
     display: block;
   }
 
@@ -698,7 +698,7 @@ a {
   }
 
   .nav-section:hover:not(#nav-close), .nav-section.active {
-    background-color: #FFEB3B;
+    background-color: #43a047;
     padding: 20px;
     border: none;
     color: white

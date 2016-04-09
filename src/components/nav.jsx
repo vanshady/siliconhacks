@@ -7,7 +7,7 @@ const Nav = React.createClass({
         <img id="logo_white" className="logo" src="assets/img/logo_white.png" alt="SiliconHacks" />
         <img id="logo_green" className="logo" src="assets/img/logo_green.png" alt="SiliconHacks" />
         <img id="menu_white" className="nav-menu" src="assets/img/menu_white.svg" alt="" />
-        <img id="menu_orange" className="nav-menu" src="assets/img/menu_orange.svg" alt="" />
+        <img id="menu_green" className="nav-menu" src="assets/img/menu_green.svg" alt="" />
         <div id="nav-sections">
           <div id="nav-close" className="nav-section">x</div>
           <div className="nav-section active">
