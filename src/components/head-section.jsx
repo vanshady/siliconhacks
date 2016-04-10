@@ -13,8 +13,8 @@ const HeadSection = React.createClass({
             <div className="sub-headline">INVITING EVERY HACKER. DESIGNER. INNOVATOR. NIGHT OWL.</div>
             <div className="sub-headline mini">LOCATION: TBA | TIME: FALL 2016</div>
             <div className="button-container">
-              <a className="button" href="https://siliconhacks.typeform.com/to/lzxr3H" target="_blank">Apply</a>
-              <a className="button" href="">Sponsor Us</a>
+              <a className="button" href="https://siliconhacks.typeform.com/to/wK5Mls" target="_blank">Apply</a>
+              <a className="button" href="https://siliconhacks.typeform.com/to/lzxr3H" target="_blank">Sponsor Us</a>
             </div>
           </div>
         </div>

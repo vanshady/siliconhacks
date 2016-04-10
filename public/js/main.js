@@ -19353,12 +19353,12 @@ var HeadSection = React.createClass({
             { className: "button-container" },
             React.createElement(
               "a",
-              { className: "button", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
+              { className: "button", href: "https://siliconhacks.typeform.com/to/wK5Mls", target: "_blank" },
               "Apply"
             ),
             React.createElement(
               "a",
-              { className: "button", href: "" },
+              { className: "button", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
               "Sponsor Us"
             )
           )
