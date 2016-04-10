@@ -19724,6 +19724,18 @@ module.exports={
             "link": "",
             "image": "vivian.jpg",
             "school": "Columbia University"
+        },
+        {
+            "name": "Janet Fang",
+            "link": "",
+            "image": "janet.jpg",
+            "school": "University of San Francisco"
+        },
+        {
+            "name": "Khizer Husain",
+            "link": "",
+            "image": "khizer.jpg",
+            "school": "Ohlone College"
         }
     ],
     "schedule": [
