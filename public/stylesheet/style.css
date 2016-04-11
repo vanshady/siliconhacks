@@ -321,6 +321,16 @@ a {
 
 /* home */
 
+@keyframes bannerColor {
+  0% {
+    -webkit-filter: hue-rotate(0);
+  }
+  100% {
+    -webkit-filter: hue-rotate(90deg);
+  }
+}
+
+
 #landing {
   width: 100%;
   height: 100%;
@@ -330,26 +340,16 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: hue-rotate(180deg);
-  -webkit-filter: hue-rotate(0);
-  -moz-filter: hue-rotate(0);
-  -o-filter: hue-rotate(0);
-  -ms-filter: hue-rotate(0);
+  animation-name: bannerColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
   -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-}
-  
-
-#landing:hover {
-  
-  filter: hue-rotate(90deg);
-  -webkit-filter: hue-rotate(90deg);
-  -moz-filter: hue-rotate(90deg);
-  -o-filter: hue-rotate(90deg);
-  -ms-filter: hue-rotate(90deg);
 }
 
 
@@ -882,4 +882,3 @@ a {
   .desktop-img {
     display: none
   }
-}
