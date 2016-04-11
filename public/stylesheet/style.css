@@ -330,7 +330,28 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  filter: hue-rotate(180deg);
+  -webkit-filter: hue-rotate(0);
+  -moz-filter: hue-rotate(0);
+  -o-filter: hue-rotate(0);
+  -ms-filter: hue-rotate(0);
+  -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
+  
+
+#landing:hover {
+  
+  filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
+  -moz-filter: hue-rotate(90deg);
+  -o-filter: hue-rotate(90deg);
+  -ms-filter: hue-rotate(90deg);
+}
+
 
 #landing-filter {
   display: block;
@@ -341,6 +362,7 @@ a {
   top: 0px;
   /*background: linear-gradient(90deg, rgba(36, 198, 220, 0.360784) 10%, rgba(81, 74, 157, 0.239216) 90%);*/
   background-color: rgba(0, 23, 36, 0.6);
+
 }
 
 .section:not(#landing) {
