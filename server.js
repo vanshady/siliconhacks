@@ -30,7 +30,20 @@ app.get('/events', function (req, res) {
 })
 
 //301 Redirect
-res.redirect(301, 'http://siliconhacks.com');
+app.get ('/*', function (req, res, next){
+if (req.headers.host.match(/^www\./))
+
+  {
+    //res.writeHead (301, {'Location': 'http://example.com'});
+    res.redirect(301, 'http://siliconhacks.com');
+    }
+else { 
+
+   return next();
+    }
+
+} );
+
 
 //404 Error
 app.use(function(req, res, next) {
