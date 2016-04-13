@@ -13,6 +13,7 @@
   "dependencies": {
     "babelify": "^7.2.0",
     "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
     "express": "^4.13.4",
     "history": "^2.0.1",
     "lodash": "^4.6.1",
