@@ -5,7 +5,7 @@ var compression = require('compression')
 
 // const port = process.env.VCAP_APP_PORT || 3000;
 const port = process.env.PORT || 3000;
-app.use(express.compress());
+//app.use(express.compress());
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,7 +15,7 @@ app.get ('/*', function (req, res, next){
 if (req.headers.host.match(/^www\./))
 
   {
-    //res.writeHead (301, {'Location': 'http://siliconhacks.com'});
+    res.writeHead (301, {'Location': 'http://siliconhacks.com'});
     }
 else { 
 
