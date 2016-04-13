@@ -5,36 +5,17 @@ var compression = require('compression')
 
 // const port = process.env.VCAP_APP_PORT || 3000;
 const port = process.env.PORT || 3000;
-
+app.use(express.compress());
 app.use(express.static('public'));
-app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// server-sent event stream
-app.get('/events', function (req, res) {
-  res.setHeader('Content-Type', 'text/event-stream')
-  res.setHeader('Cache-Control', 'no-cache')
-
-  // send a ping approx every 2 seconds
-  var timer = setInterval(function () {
-    res.write('data: ping\n\n')
-
-    // !!! this is the important part
-    res.flush()
-  }, 2000)
-
-  res.on('close', function () {
-    clearInterval(timer)
-  })
-})
 
 //301 Redirect
 app.get ('/*', function (req, res, next){
 if (req.headers.host.match(/^www\./))
 
   {
-    //res.writeHead (301, {'Location': 'http://siliconhacks.com'});
+    res.writeHead (301, {'Location': 'http://siliconhacks.com'});
     }
 else { 
 
