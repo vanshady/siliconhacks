@@ -29,6 +29,10 @@ app.get('/events', function (req, res) {
   })
 })
 
+//301 Redirect
+res.redirect(301, 'http://siliconhacks.com');
+
+//404 Error
 app.use(function(req, res, next) {
   res.status(404).sendFile(__dirname + '/public/error.html');
 });
