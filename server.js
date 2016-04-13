@@ -34,8 +34,7 @@ app.get ('/*', function (req, res, next){
 if (req.headers.host.match(/^www\./))
 
   {
-    //res.writeHead (301, {'Location': 'http://example.com'});
-    res.redirect(301, 'http://siliconhacks.com');
+    //res.writeHead (301, {'Location': 'http://siliconhacks.com'});
     }
 else { 
 
