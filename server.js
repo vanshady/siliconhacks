@@ -6,7 +6,7 @@ var http = require("http");
 
 // const port = process.env.VCAP_APP_PORT || 3000;
 const port = process.env.PORT || 3000;
-//app.use(express.compress({threshold: 0}));
+app.use(compress({threshold: 0}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
