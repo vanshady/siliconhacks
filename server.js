@@ -1,28 +1,24 @@
-const express = require('express');
-const app = express();
+var express = require('express');
+var app = express();
 var bodyParser = require('body-parser');
 var compression = require('compression')
 
 // const port = process.env.VCAP_APP_PORT || 3000;
 const port = process.env.PORT || 3000;
-//app.use(express.compress());
+//app.use(express.compress({threshold: 0}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //301 Redirect
-app.get ('/*', function (req, res, next){
-if (req.headers.host.match(/^www\./))
+var http = require("http");
 
-  {
-    res.writeHead (301, {'Location': 'http://siliconhacks.com'});
-    }
-else { 
+    http.createServer(function (req, res) {
+    res.writeHead(301, {"Location": "http://siliconhacks.com"});
+    res.end();
 
-   return next();
-    }
+}).listen(80);
 
-} );
 
 
 //404 Error
