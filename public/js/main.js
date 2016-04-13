@@ -19547,7 +19547,7 @@ var OrganizersSection = React.createClass({
     });
     return React.createElement(
       'div',
-      { id: 'general', className: 'section container', style: { maxWidth: 'none' } },
+      { id: 'organizer', className: 'section container', style: { maxWidth: 'none' } },
       React.createElement(
         'div',
         { className: 'section-body row', style: { maxWidth: 'none', width: '80%' } },

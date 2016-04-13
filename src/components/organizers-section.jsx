@@ -11,7 +11,7 @@ const OrganizersSection = React.createClass({
       return (<Organizer key={i} organizer={obj} />);
     });
     return (
-      <div id="general" className="section container" style={{ maxWidth: 'none' }}>
+      <div id="organizer" className="section container" style={{ maxWidth: 'none' }}>
         <div className="section-body row" style={{ maxWidth: 'none', width: '80%' }}>
           <h1>Organizers</h1>
           {rows}
