@@ -10,7 +10,7 @@ button-green: #558B2F;
   
   body {
     margin: 0;
-    font-family: 'Comfortaa','Proxima Nova', 'Montserrat', sans-serif;
+    font-family: 'Orbitron','Proxima Nova', 'Montserrat', sans-serif;
     position: relative;
     color: #3E3E3E;
   }
@@ -447,7 +447,7 @@ button-green: #558B2F;
   }
   
   .faq-card {
-    font-family: "Proxima Nova", "Open Sans", sans-serif;
+    font-family: "Oxygen","Proxima Nova", "Open Sans", sans-serif;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 4px;
