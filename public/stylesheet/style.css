@@ -10,7 +10,7 @@ button-green: #558B2F;
   
   body {
     margin: 0;
-    font-family: 'Rubik','Proxima Nova', 'Montserrat', sans-serif;
+    font-family: 'Proxima Nova', 'Montserrat', sans-serif;
     position: relative;
     color: #3E3E3E;
   }
@@ -222,7 +222,7 @@ button-green: #558B2F;
   }
   
   .section-body p {
-    font-family: 'Roboto', "Proxima Nova", "Open Sans", sans-serif;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.8;
@@ -397,6 +397,7 @@ button-green: #558B2F;
   }
   
   .headline {
+    font-family: 'Orbitron', sans-serif;
     color: white;
     font-size: 42px;
     text-transform: uppercase;
@@ -447,7 +448,7 @@ button-green: #558B2F;
   }
   
   .faq-card {
-    font-family: "Rubik","Proxima Nova", "Open Sans", sans-serif;
+    font-family: "Proxima Nova", "Open Sans", sans-serif;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 4px;
