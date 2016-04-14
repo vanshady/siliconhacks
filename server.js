@@ -7,14 +7,17 @@ var http = require("http");
 // const port = process.env.VCAP_APP_PORT || 3000;
 const port = process.env.PORT || 3000;
 
-app.use(function forceLiveDomain(req, res, next) {
-  // Don't allow user to hit Heroku now that we have a domain
-  var host = req.get('Host');
-  if (host === 'http://www.siliconhacks.com') {
-    return res.redirect(301, 'http://siliconhacks.com/' + req.originalUrl);
-  }
-  return next();
-});
+app.use(function(req,res,next){
+        var host = req.get('host');
+        if(/^www\./.test(host)){
+            host = host.substring(4, host.length);
+            res.writeHead(301, {'Location':req.protocol + '://' + host + req.originalUrl,
+                'Expires': new Date().toGMTString()});
+            res.end();
+        } else {
+            next();
+        }
+    });
 
 app.use(compression({threshold: 0}));
 app.use(express.static('public'));
