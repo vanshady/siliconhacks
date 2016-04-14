@@ -25,10 +25,15 @@ app.get('/', function (req, res) {
 });
 
 //301 Redirect
-http.createServer(function(req, res){
-  res.writeHead(301, {'Location' : 'http://siliconhacks.com'});
-  res.end();
-}).listen(8080);
+app.use(function(req,res,next){
+    if(req.headers.host=="www.siliconhacks.com"){
+      res.writeHead(301, {'Location':'http://siliconhacks.com'});
+      res.end();
+    }
+    else{
+      next();
+    }
+});
 
 app.listen(port);
 console.log('listening at:', port);
