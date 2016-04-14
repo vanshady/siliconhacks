@@ -10,7 +10,7 @@ button-green: #558B2F;
   
   body {
     margin: 0;
-    font-family: 'Cabin','Proxima Nova', 'Montserrat', sans-serif;
+    font-family: 'Comfortaa','Proxima Nova', 'Montserrat', sans-serif;
     position: relative;
     color: #3E3E3E;
   }
@@ -222,7 +222,7 @@ button-green: #558B2F;
   }
   
   .section-body p {
-    font-family: 'Cabin', "Proxima Nova", "Open Sans", sans-serif;
+    font-family: 'Comfortaa', "Proxima Nova", "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.8;
