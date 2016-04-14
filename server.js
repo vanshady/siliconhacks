@@ -25,14 +25,17 @@ app.get('/', function (req, res) {
 });
 
 //301 Redirect
-app.use(function(req,res,next){
+app.configure(function(){
+  // Forward www.siliconhacks.com to siliconhacks.com
+  app.use(function(req,res,next){
     if(req.headers.host=="www.siliconhacks.com"){
-      res.writeHead(301, {'Location':'http://siliconhacks.com'});
+      res.writeHead(301, {'Location':'http://siliconhacks.com'+req.url, 'Expires': (new Date).toGMTString()});
       res.end();
     }
     else{
       next();
     }
+  });
 });
 
 app.listen(port);
