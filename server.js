@@ -10,7 +10,14 @@ app.use(compression({threshold: 0}));
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(function forceLiveDomain(req, res, next) {
+  // Don't allow user to hit Heroku now that we have a domain
+  var host = req.get('Host');
+  if (host === 'http://www.siliconhacks.com') {
+    return res.redirect(301, 'http://siliconhacks.com/' + req.originalUrl);
+  }
+  return next();
+});
 
 
 
@@ -18,13 +25,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //404 Error
 app.use(function(req, res, next) {
   res.status(404).sendFile(__dirname + '/public/error.html');
-  if(req.headers.host=="www.siliconhacks.com"){
-      res.writeHead(301, {'Location':'http://siliconhacks.com'+req.url, 'Expires': (new Date).toGMTString()});
-      res.end();
-    }
-    else{
-      next();
-    }
 });
 
 app.get('/', function (req, res) {
