@@ -7,6 +7,7 @@ var http = require("http");
 // const port = process.env.VCAP_APP_PORT || 3000;
 const port = process.env.PORT || 3000;
 
+//301 Redirect
 app.use(function(req,res,next){
         var host = req.get('host');
         if(/^www\./.test(host)){
@@ -31,11 +32,7 @@ app.use(function(req, res, next) {
 
 app.get('/', function (req, res) {
   res.render('index');
-});
-
-//301 Redirect
-    
+});    
 
 app.listen(port);
 console.log('listening at:', port);
-
