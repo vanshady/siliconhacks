@@ -6,10 +6,7 @@ var http = require("http");
 
 // const port = process.env.VCAP_APP_PORT || 3000;
 const port = process.env.PORT || 3000;
-app.use(compression({threshold: 0}));
-app.use(express.static('public'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(function forceLiveDomain(req, res, next) {
   // Don't allow user to hit Heroku now that we have a domain
   var host = req.get('Host');
@@ -19,8 +16,10 @@ app.use(function forceLiveDomain(req, res, next) {
   return next();
 });
 
-
-
+app.use(compression({threshold: 0}));
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //404 Error
 app.use(function(req, res, next) {
