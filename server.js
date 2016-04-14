@@ -18,6 +18,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //404 Error
 app.use(function(req, res, next) {
   res.status(404).sendFile(__dirname + '/public/error.html');
+  if(req.headers.host=="www.siliconhacks.com"){
+      res.writeHead(301, {'Location':'http://siliconhacks.com'+req.url, 'Expires': (new Date).toGMTString()});
+      res.end();
+    }
+    else{
+      next();
+    }
 });
 
 app.get('/', function (req, res) {
@@ -25,18 +32,7 @@ app.get('/', function (req, res) {
 });
 
 //301 Redirect
-app.configure(function(){
-  // Forward www.siliconhacks.com to siliconhacks.com
-  app.use(function(req,res,next){
-    if(req.headers.host=="www.siliconhacks.com"){
-      res.writeHead(301, {'Location':'http://siliconhacks.com'+req.url, 'Expires': (new Date).toGMTString()});
-      res.end();
-    }
-    else{
-      next();
-    }
-  });
-});
+    
 
 app.listen(port);
 console.log('listening at:', port);
