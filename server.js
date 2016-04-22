@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //404 Error
 app.use(function(req, res, next) {
-  res.status(404).sendFile(__dirname + '/public/error.html');
+  res.status(404).redirect('/');
 });
 
 app.get('/', function (req, res) {
