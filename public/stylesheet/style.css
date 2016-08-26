@@ -492,7 +492,7 @@ button-green: #558B2F;
   }
   
   .desktop-img {
-    background-image: url("../assets/img/messy.png");
+    background-image: url("../assets/img/messy_min.png");
     position: absolute;
     top: 0;
     width: 50%;
