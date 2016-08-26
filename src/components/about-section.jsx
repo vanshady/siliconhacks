@@ -16,7 +16,7 @@ const AboutSection = React.createClass({
             <h1>Location</h1>
             <p>
 
-              Silicon Hacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed!
+              SiliconHacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed!
 
             </p>
           </div>
