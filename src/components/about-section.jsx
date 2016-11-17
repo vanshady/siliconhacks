@@ -12,13 +12,6 @@ const AboutSection = React.createClass({
             </h1>
             <p>
               Turn your energy and free food into awesome projects by the end of one weekend. Bring your laptop, passion, smartphone, and whatever else you can manage to carry to this once-in-a-lifetime event and have some fun working alongside some of the best minds in Silicon Valley!</p>
-
-            <h1>Location</h1>
-            <p>
-
-              SiliconHacks will take place at a very special place in Silicon Valley, stay tuned and prepare to be amazed!
-
-            </p>
           </div>
         </div>
         <div className="slant bottom left"></div>
