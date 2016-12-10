@@ -6,9 +6,6 @@ const AboutSection = React.createClass({
     return (
       <div id="about" className="section">
         <div className="section-wrapper">
-          <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white" target="_blank">
-            <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg" alt="Major League Hacking 2017 Hackathon Season" style={{ width: '100%' }} />
-          </a>
           <div className="section-body">
             <h1>
               Come Hack With The Best
