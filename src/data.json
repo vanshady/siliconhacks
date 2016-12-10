@@ -24,7 +24,7 @@
     "faqrow2": [
         {
             "title": "What is a hackathon?",
-            "body": "Hackathons are really cool events where moonshot and crazy ideas come to life. You can build anything you want, hardware, software, you name it. Some of the world’s most innovative and widely used products are started in these concentrations of innovation! You should follow the MLH's <a href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'>Code of Conduct</a>. <br /> Want to know more? Read<a href='https://medium.com/hackathons-anonymous/wtf-is-a-hackathon-92668579601' target='_blank'>here</a>."
+            "body": "Hackathons are really cool events where moonshot and crazy ideas come to life. You can build anything you want, hardware, software, you name it. Some of the world’s most innovative and widely used products are started in these concentrations of innovation! Want to know more? Read<a href='https://medium.com/hackathons-anonymous/wtf-is-a-hackathon-92668579601' target='_blank'>here</a>."
         },
         {
             "title": "What resources will I have access to?",
@@ -38,10 +38,10 @@
             "title": "What should I bring?",
             "body": "All attendees are required to bring their valid student ID for admission. Laptops, sleeping bags, and toiletries are highly recommended."
         },
-        // {
-        //     "title": "Is there a code of conduct?",
-        //     "body": "<a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf' target='_blank'>yes.</a>tl;dr: Don't be a jerk."
-        // },
+        {
+            "title": "Is there a code of conduct?",
+            "body": "Yes. <a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf' target='_blank'>Here it is.</a> <br />tl;dr: Don't be a jerk."
+        },
         {
             "title": "How will I get to the event?",
             "body": "Free SiliconHacks-sponsored buses will pick up and drop off hackers at universities within California. Flights from anywhere are unlikely to be reimbursed though a final position is TBD. Car rides are likely to be reimbursed up to a certain amount, though the amount itself is TBA."
