@@ -17,7 +17,7 @@ const index = React.createClass({
         <HeadSection />
         <AboutSection />
         <FaqSection />
-        {/*<GeneralSection />*/}
+        {/* <GeneralSection /> */}
         <SponsorSection />
         <ApplySection />
         <OrganizersSection />

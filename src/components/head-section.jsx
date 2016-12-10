@@ -11,10 +11,10 @@ const HeadSection = React.createClass({
             <div className="headline">SiliconHacks
             </div>
             <div className="sub-headline">INVITING EVERY HACKER. DESIGNER. INNOVATOR. NIGHT
-             OWL.</div>
+              OWL.</div>
             <div className="sub-headline mini">LOCATION: 42 USA - Fremont, CA | TIME: March
-             4-5, 2017
-</div>
+              4-5, 2017
+            </div>
             <div className="button-container">
               <a className="button" href="https://siliconhacks.typeform.com/to/wK5Mls" target="_blank">Apply</a>
               <a className="button" href="https://siliconhacks.typeform.com/to/lzxr3H" target="_blank">Sponsor Us</a>
