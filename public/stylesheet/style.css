@@ -47,6 +47,20 @@ button-green: #558B2F;
     color: white;
   }
   
+  #mlh-trust-badge {
+    display: flex;
+    max-width: 100px;
+    min-width: 60px;
+    float: left;
+    /*position: fixed;*/
+    right: 50px;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 10000;
+    border-bottom: none;
+  }
+  
   #sponsor #sponsors-container a {
     border: none;
   }
@@ -483,7 +497,6 @@ button-green: #558B2F;
     padding-bottom: 60px;
     padding-top: 120px;
   }
-  
   /* apply */
   
   #apply {
