@@ -101,6 +101,18 @@
             "link": "https://www.facebook.com/KZHusain",
             "image": "khizer.jpg",
             "school": "Ohlone College"
+        },
+        {
+            "name": "Justin Raizes",
+            "link": "https://www.facebook.com/justin.raizes",
+            "image": "justin.jpg",
+            "school": "UC Santa Cruz"
+        },
+        {
+            "name": "JC Dy",
+            "link": "https://www.facebook.com/jcdyismyname",
+            "image": "jc.jpg",
+            "school": "UC Berkeley"
         }
     ],
     "schedule": [
