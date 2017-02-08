@@ -2,7 +2,6 @@ const React = require('react');
 
 const AboutSection = React.createClass({
   render() {
-
     return (
       <div id="about" className="section">
         <div className="section-wrapper">
