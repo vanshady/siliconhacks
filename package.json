@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "watch": "",
-    "build": "watchify src/main.jsx -v -t [ babelify --presets [ es2015 react ] ] -o 'uglifyjs -cm > public/js/main.js'",
+    "build": "browserify src/main.jsx -t [ babelify --presets [ es2015 react ] ] | uglifyjs -cm  --noerr --warnings=false > public/js/main.js",
+    "watch": "watchify src/main.jsx -v -t [ babelify --presets [ es2015 react ] ] -o public/js/main.js",
     "test": "npm run build & npm run start"
   },
   "author": "",
