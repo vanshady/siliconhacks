@@ -17,7 +17,9 @@ const HeadSection = React.createClass({
             </div>
             <div className="button-container">
               <a className="button" href="https://siliconhacks.typeform.com/to/wK5Mls" target="_blank">Apply</a>
+              <a className="button" href="https://siliconhacks.typeform.com/to/ON7ar6" target="_blank">Mentor</a>
               <a className="button" href="https://siliconhacks.typeform.com/to/lzxr3H" target="_blank">Sponsor Us</a>
+              <a className="button" href="https://donorbox.org/siliconhacks?recurring=true" target="_blank">Donate</a>
             </div>
           </div>
         </div>
