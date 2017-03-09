@@ -7,7 +7,7 @@
     "start": "nodemon server.js",
     "build": "browserify src/main.jsx -t [ babelify --presets [ es2015 react ] ] | uglifyjs -cm  --noerr --warnings=false > public/js/main.js",
     "watch": "watchify src/main.jsx -v -t [ babelify --presets [ es2015 react ] ] -o public/js/main.js",
-    "test": "npm run build & npm run start"
+    "test": "npm run watch & npm run start"
   },
   "author": "",
   "license": "Apache-2.0",
