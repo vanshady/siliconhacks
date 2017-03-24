@@ -8,7 +8,7 @@ const SponsorSection = React.createClass({
         <div className="section-body">
           <div>
             <h1 style={{ marginBottom: '30px' }}>Sponsors</h1>
-            <a href="https://ww.ibm.com/" style={{ border: 'none' }}>
+            <a href="https://www.ibm.com/" style={{ border: 'none' }}>
               <img src="assets/img/ibm.svg" height="120" alt="IBM" />
             </a>
             {/* <a href="https://freshprints.com/" style={{ border: 'none' }}>
