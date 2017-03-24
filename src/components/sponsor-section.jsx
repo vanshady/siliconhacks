@@ -6,29 +6,32 @@ const SponsorSection = React.createClass({
     return (
       <div id="sponsor" className="section">
         <div className="section-body">
-          {/*<div>
-            <h1>Sponsors</h1>
-            <a href="https://freshprints.com/" style={{ border: 'none' }}>
+          <div>
+            <h1 style={{ marginBottom: '30px' }}>Sponsors</h1>
+            <a href="https://ww.ibm.com/" style={{ border: 'none' }}>
+              <img src="assets/img/ibm.svg" height="120" alt="IBM" />
+            </a>
+            {/* <a href="https://freshprints.com/" style={{ border: 'none' }}>
               <img src="assets/img/freshprints.jpg" height="150" alt="freshprints" />
             </a>
             <a href="https://github.com/" style={{ border: 'none' }}>
               <img src="assets/img/github.png" height="120" alt="github" />
-            </a>
+            </a> */}
           </div>
-          <br />*/}
+          <br />
           <div>
             <h1 style={{ marginBottom: '30px' }}>Partners</h1>
             <a href="https://mlh.io/" style={{ border: 'none', marginRight: '30px' }}>
-              <img src="assets/img/mlh.png" height="80" alt="mlh" style={{ marginBottom: '30px' }} />
+              <img src="assets/img/mlh.png" height="80" alt="MLH" style={{ marginBottom: '30px' }} />
             </a>
             <a href="https://www.42.usa.org/" style={{ border: 'none' }}>
               <img src="assets/img/42.png" height="100" alt="42 USA" style={{ marginBottom: '30px' }} />
             </a>
             <a href="https://www.hackerearth.com/" style={{ border: 'none', marginRight: '30px' }}>
-              <img src="assets/img/hackerearth.png" height="60" alt="hackerearth" />
+              <img src="assets/img/hackerearth.png" height="60" alt="HackerEarth" />
             </a>
             <a href="https://hacker.fund/" style={{ border: 'none', marginRight: '00px' }}>
-              <img src="assets/img/hackerfund.png" height="60" alt="hackerfund" />
+              <img src="assets/img/hackerfund.png" height="60" alt="HackerFund" />
             </a>
           </div>
           <br />
