@@ -8,8 +8,13 @@ const SponsorSection = React.createClass({
         <div className="section-body">
           <div>
             <h1 style={{ marginBottom: '30px' }}>Sponsors</h1>
-            <a href="https://www.ibm.com/" style={{ border: 'none' }}>
-              <img src="assets/img/ibm.svg" height="120" alt="IBM" />
+            <div style={{ display: 'block', marginBottom: '50px' }}>
+              <a href="https://www.ibm.com/" style={{ border: 'none' }}>
+                <img src="assets/img/ibm.svg" height="120" alt="IBM" />
+              </a>
+            </div>
+            <a href="http://www.mst.com/msei/index.html" style={{ border: 'none' }}>
+              <img src="assets/img/msei.jpg" height="60" alt="MSEI" />
             </a>
             {/* <a href="https://freshprints.com/" style={{ border: 'none' }}>
               <img src="assets/img/freshprints.jpg" height="150" alt="freshprints" />
