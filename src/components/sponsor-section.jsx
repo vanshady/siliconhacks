@@ -13,13 +13,15 @@ const SponsorSection = React.createClass({
                 <img src="assets/img/ibm.svg" height="120" alt="IBM" />
               </a>
             </div>
-            <a href="http://www.mst.com/msei/index.html" style={{ border: 'none' }}>
-              <img src="assets/img/msei.jpg" height="60" alt="MSEI" />
+            <div style={{ display: 'block', marginBottom: '50px' }}>
+              <a href="http://www.mst.com/msei/index.html" style={{ border: 'none' }}>
+                <img src="assets/img/msei.jpg" height="60" alt="MSEI" />
+              </a>
+            </div>
+            <a href="https://www.jetbrains.com/" style={{ border: 'none' }}>
+              <img src="assets/img/jetbrains.png" height="90" alt="JetBrains" />
             </a>
-            {/* <a href="https://freshprints.com/" style={{ border: 'none' }}>
-              <img src="assets/img/freshprints.jpg" height="150" alt="freshprints" />
-            </a>
-            <a href="https://github.com/" style={{ border: 'none' }}>
+            {/* <a href="https://github.com/" style={{ border: 'none' }}>
               <img src="assets/img/github.png" height="120" alt="github" />
             </a> */}
           </div>
