@@ -62,7 +62,7 @@
         },
         {
             "name": "Minwei Xu",
-            "link": "https://www.facebook.com/vanshady.xu",
+            "link": "http://minweixu.com",
             "image": "minwei.jpg",
             "school": "Johns Hopkins University"
         },
@@ -113,6 +113,12 @@
             "link": "https://www.facebook.com/jcdyismyname",
             "image": "jc.jpg",
             "school": "UC Berkeley"
+        },
+        {
+            "name": "Chris Ngo",
+            "link": "https://www.facebook.com/ingochris",
+            "image": "chris.jpg",
+            "school": "42"
         }
     ],
     "schedule": [
