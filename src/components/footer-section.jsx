@@ -19,6 +19,8 @@ const FooterSection = React.createClass({
         <p style={{ marginTop: '10px' }}>
           Site inspired by CalHacks and designed and developed by the SiliconHacks team. Contact us at
           <a href="mailto:hacksilicon@gmail.com">hacksilicon@gmail.com</a>
+          <br />
+          SiliconHacks is a project of Hacker Fund, a 501(c)(3) nonprofit incubator registered in CA, with the tax ID number: 472485464
         </p>
       </div>
     );
