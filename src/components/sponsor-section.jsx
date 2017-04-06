@@ -22,6 +22,11 @@ const SponsorSection = React.createClass({
               </a>
             </div>
             <div style={{ display: 'block', marginBottom: '50px' }}>
+              <a href="https://github.com/" style={{ border: 'none' }}>
+                <img src="assets/img/github.png" height="50" alt="github" />
+              </a> 
+            </div>
+            <div style={{ display: 'block', marginBottom: '50px' }}>
               <a href="https://www.jetbrains.com/" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/jetbrains.png" height="90" alt="JetBrains" />
               </a>
@@ -29,9 +34,6 @@ const SponsorSection = React.createClass({
                 <img src="assets/img/yerba_mate.jpg" height="90" alt="YerbaMate" />
               </a>
             </div>
-            {/* <a href="https://github.com/" style={{ border: 'none' }}>
-              <img src="assets/img/github.png" height="120" alt="github" />
-            </a> */}
           </div>
           <br />
           <div>
