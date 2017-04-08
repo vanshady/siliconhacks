@@ -22,9 +22,12 @@ const SponsorSection = React.createClass({
               </a>
             </div>
             <div style={{ display: 'block', marginBottom: '50px' }}>
-              <a href="https://github.com/" style={{ border: 'none' }}>
-                <img src="assets/img/github.png" height="50" alt="github" />
-              </a> 
+              <a href="https://github.com/" style={{ border: 'none', marginRight: '20px' }}>
+                <img src="assets/img/github.png" height="40" alt="github" />
+              </a>
+              <a href="http://www.wolfram.com/" style={{ border: 'none' }}>
+                <img src="assets/img/wolfram.png" height="60" alt="wolfram" />
+              </a>
             </div>
             <div style={{ display: 'block', marginBottom: '50px' }}>
               <a href="https://www.jetbrains.com/" style={{ border: 'none', marginRight: '20px' }}>
