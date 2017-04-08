@@ -17,8 +17,11 @@ const SponsorSection = React.createClass({
               <a href="http://www.mst.com/msei/index.html" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/msei.jpg" height="60" alt="MSEI" />
               </a>
-              <a href="http://www.draperuniversity.com/" style={{ border: 'none' }}>
+              <a href="http://www.draperuniversity.com/" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/DraperU.png" height="55" alt="DraperUniversity" />
+              </a>
+              <a href="https://www.proofpoint.com/us" style={{ border: 'none' }}>
+                <img src="assets/img/proofpoint.svg" height="40" alt="proofpoint" />
               </a>
             </div>
             <div style={{ display: 'block', marginBottom: '50px' }}>
