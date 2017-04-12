@@ -47,7 +47,7 @@ const SponsorSection = React.createClass({
             <a href="https://mlh.io/" style={{ border: 'none', marginRight: '30px' }}>
               <img src="assets/img/mlh.png" height="80" alt="MLH" style={{ marginBottom: '30px' }} />
             </a>
-            <a href="https://www.42.usa.org/" style={{ border: 'none' }}>
+            <a href="https://www.42.us.org/" style={{ border: 'none' }}>
               <img src="assets/img/42.png" height="100" alt="42 USA" style={{ marginBottom: '30px' }} />
             </a>
             <a href="https://www.hackerearth.com/" style={{ border: 'none', marginRight: '30px' }}>
