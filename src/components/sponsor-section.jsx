@@ -48,10 +48,10 @@ const SponsorSection = React.createClass({
               <img src="assets/img/mlh.png" height="80" alt="MLH" style={{ marginBottom: '30px' }} />
             </a>
             <a href="https://www.42.us.org/" style={{ border: 'none' }}>
-              <img src="assets/img/42.png" height="100" alt="42 USA" style={{ marginBottom: '30px' }} />
+              <img src="assets/img/42.png" height="100" alt="42 USA" style={{ marginBottom: '30px', marginRight: '30px' }} />
             </a>
-            <a href="https://www.hackerearth.com/" style={{ border: 'none', marginRight: '30px' }}>
-              <img src="assets/img/hackerearth.png" height="60" alt="HackerEarth" />
+            <a href="https://www.hackerearth.com/" style={{ border: 'none' }}>
+              <img src="assets/img/hackerearth.png" height="60" alt="HackerEarth" style={{ marginBottom: '30px' }} />
             </a>
             <a href="https://hacker.fund/" style={{ border: 'none', marginRight: '00px' }}>
               <img src="assets/img/hackerfund.png" height="60" alt="HackerFund" />
