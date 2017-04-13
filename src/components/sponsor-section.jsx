@@ -10,7 +10,7 @@ const SponsorSection = React.createClass({
             <h1 style={{ marginBottom: '30px' }}>Sponsors</h1>
             <div style={{ display: 'block', marginBottom: '50px' }}>
               <a href="https://www.ibm.com/" style={{ border: 'none' }}>
-                <img src="assets/img/ibm.svg" height="120" alt="IBM" />
+                <img src="assets/img/ibm.svg" height="100" alt="IBM" />
               </a>
             </div>
             <div style={{ display: 'block', marginBottom: '50px' }}>
