@@ -17,9 +17,6 @@ const SponsorSection = React.createClass({
               <a href="http://www.mst.com/msei/index.html" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/msei.jpg" height="60" alt="MSEI" />
               </a>
-              <a href="http://www.draperuniversity.com/" style={{ border: 'none', marginRight: '20px' }}>
-                <img src="assets/img/DraperU.png" height="55" alt="DraperUniversity" />
-              </a>
               <a href="https://www.proofpoint.com/us" style={{ border: 'none' }}>
                 <img src="assets/img/proofpoint.svg" height="40" alt="proofpoint" />
               </a>
@@ -28,8 +25,14 @@ const SponsorSection = React.createClass({
               <a href="https://github.com/" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/github.png" height="40" alt="github" />
               </a>
-              <a href="http://www.wolfram.com/" style={{ border: 'none' }}>
+              <a href="http://www.wolfram.com/" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/wolfram.png" height="60" alt="wolfram" />
+              </a>
+              <a href="http://www.draperuniversity.com/" style={{ border: 'none', marginRight: '20px' }}>
+                <img src="assets/img/DraperU.png" height="55" alt="DraperUniversity" />
+              </a>
+              <a href="http://get.tech/" style={{ border: 'none', marginRight: '20px' }}>
+                <img src="assets/img/dot-tech.png" height="55" alt=".tech" style={{ backgroundColor: 'black' }} />
               </a>
             </div>
             <div style={{ display: 'block', marginBottom: '50px' }}>
