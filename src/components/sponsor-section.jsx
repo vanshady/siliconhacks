@@ -32,7 +32,7 @@ const SponsorSection = React.createClass({
                 <img src="assets/img/DraperU.png" height="55" alt="DraperUniversity" />
               </a>
               <a href="http://get.tech/" style={{ border: 'none', marginRight: '20px' }}>
-                <img src="assets/img/dot-tech.png" height="55" alt=".tech" style={{ backgroundColor: 'black' }} />
+                <img src="assets/img/dot-tech.png" height="55" alt=".tech" />
               </a>
             </div>
             <div style={{ display: 'block', marginBottom: '50px' }}>
