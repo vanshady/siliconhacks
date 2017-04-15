@@ -12,7 +12,7 @@ const HeadSection = React.createClass({
             </div>
             <div className="sub-headline">INVITING EVERY HACKER. DESIGNER. INNOVATOR. NIGHT
               OWL.</div>
-            <div className="sub-headline mini">LOCATION: 42 USA - Fremont, CA | TIME: May
+            <div className="sub-headline mini">LOCATION: 42 Silicon Valley - Fremont, CA | TIME: May
               6-7, 2017
             </div>
             <div className="button-container">
