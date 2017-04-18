@@ -1,6 +1,13 @@
 const React = require('react');
 // const Sponsors = require('./sponsors.jsx');
 
+const blockStyle = {
+  display: 'block',
+  marginBottom: '50px',
+  whiteSpace: 'nowrap',
+  overflowX: 'auto',
+};
+
 const SponsorSection = React.createClass({
   render() {
     return (
@@ -8,12 +15,12 @@ const SponsorSection = React.createClass({
         <div className="section-body">
           <div>
             <h1 style={{ marginBottom: '30px' }}>Sponsors</h1>
-            <div style={{ display: 'block', marginBottom: '50px' }}>
+            <div style={blockStyle}>
               <a href="https://www.ibm.com/" style={{ border: 'none' }}>
                 <img src="assets/img/ibm.svg" height="100" alt="IBM" />
               </a>
             </div>
-            <div style={{ display: 'block', marginBottom: '50px' }}>
+            <div style={blockStyle}>
               <a href="http://www.mst.com/msei/index.html" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/msei.jpg" height="60" alt="MSEI" />
               </a>
@@ -21,7 +28,7 @@ const SponsorSection = React.createClass({
                 <img src="assets/img/proofpoint.svg" height="40" alt="proofpoint" />
               </a>
             </div>
-            <div style={{ display: 'block', marginBottom: '50px' }}>
+            <div style={blockStyle}>
               <a href="https://github.com/" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/github.png" height="40" alt="github" />
               </a>
@@ -35,19 +42,22 @@ const SponsorSection = React.createClass({
                 <img src="assets/img/dot-tech.png" height="55" alt=".tech" />
               </a>
             </div>
-            <div style={{ display: 'block', marginBottom: '50px' }}>
+            <div style={blockStyle}>
               <a href="https://www.jetbrains.com/" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/jetbrains.png" height="90" alt="JetBrains" />
               </a>
-              <a href="http://guayaki.com/" style={{ border: 'none' }}>
+              <a href="http://guayaki.com/" style={{ border: 'none', marginRight: '20px' }}>
                 <img src="assets/img/yerba_mate.jpg" height="90" alt="YerbaMate" />
+              </a>
+              <a href="http://guayaki.com/" style={{ border: 'none' }}>
+                <img src="assets/img/imperfectproduce.png" height="95" alt="ImperfectProduce" />
               </a>
             </div>
           </div>
           <br />
           <div>
             <h1 style={{ marginBottom: '30px' }}>Partners</h1>
-            <div style={{ display: 'block', marginBottom: '50px' }}>
+            <div style={blockStyle}>
               <a href="https://mlh.io/" style={{ border: 'none', marginRight: '30px' }}>
                 <img src="assets/img/mlh.png" height="80" alt="MLH" />
               </a>
@@ -58,7 +68,7 @@ const SponsorSection = React.createClass({
                 <img src="assets/img/hackerearth.png" height="60" alt="HackerEarth" />
               </a>
             </div>
-            <div style={{ display: 'block', marginBottom: '50px' }}>
+            <div style={blockStyle}>
               <a href="https://hacker.fund/" style={{ border: 'none' }}>
                 <img src="assets/img/hackerfund.png" height="60" alt="HackerFund" style={{ marginRight: '30px' }} />
               </a>
