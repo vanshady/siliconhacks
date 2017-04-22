@@ -54,6 +54,12 @@ const SponsorSection = React.createClass({
               <a href="http://guayaki.com/" style={{ border: 'none' }}>
                 <img src="assets/img/imperfectproduce.png" height="95" alt="ImperfectProduce" style={imgStyle} />
               </a>
+              <a href="http://www.drinkbai.com/" style={{ border: 'none' }}>
+                <img src="assets/img/bai.png" height="95" alt="Bai" style={imgStyle} />
+              </a>
+              <a href="http://www.drinkbai.com/" style={{ border: 'none' }}>
+                <img src="assets/img/makeschool.png" height="95" alt="Bai" style={imgStyle} />
+              </a>
             </div>
           </div>
           <br />
