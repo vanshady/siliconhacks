@@ -63,8 +63,8 @@ const SponsorSection = React.createClass({
               <a href="https://nootrobox.com/go-cubes" style={{ border: 'none' }}>
                 <img src="assets/img/go_cubes.png" height="60" alt="Go Cubes" style={imgStyle} />
               </a>
-              <a href="https://freshprints.com/" style={{ border: 'none' }}>
-                <img src="assets/img/freshprints.jpg" height="90" alt="Fresh Prints" style={imgStyle} />
+              <a href="https://ultrapress.com/" style={{ paddingLeft: '20px', border: 'none' }}>
+                <img src="assets/img/ultrapress.png" height="50" alt="Ultrapress" style={imgStyle} />
               </a>
             </div>
           </div>
