@@ -60,6 +60,12 @@ const SponsorSection = React.createClass({
               <a href="https://www.makeschool.com/" style={{ border: 'none' }}>
                 <img src="assets/img/makeschool.png" height="120" alt="MakeSchool" style={imgStyle} />
               </a>
+              <a href="https://nootrobox.com/go-cubes" style={{ border: 'none' }}>
+                <img src="assets/img/go_cubes.png" height="60" alt="Go Cubes" style={imgStyle} />
+              </a>
+              <a href="https://freshprints.com/" style={{ border: 'none' }}>
+                <img src="assets/img/freshprints.jpg" height="90" alt="Fresh Prints" style={imgStyle} />
+              </a>
             </div>
           </div>
           <br />
