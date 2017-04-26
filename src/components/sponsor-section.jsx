@@ -84,10 +84,13 @@ const SponsorSection = React.createClass({
             </div>
             <div style={blockStyle}>
               <a href="https://hacker.fund/" style={{ border: 'none', marginRight: '30px' }}>
-                <img src="assets/img/hackerfund.png" height="60" alt="HackerFund" style={imgStyle} />
+                <img src="assets/img/hackerfund.png" height="60" alt="HackerFund" style={{ marginBottom: '20px', paddingTop: '10px' }} />
               </a>
-              <a href="https://www.hackplus.io/" style={{ border: 'none' }}>
+              <a href="https://www.hackplus.io/" style={{ border: 'none', marginRight: '30px' }}>
                 <img src="assets/img/hackplus.png" height="50" alt="Hack+" style={imgStyle} />
+              </a>
+              <a href="https://github.com/stohio/software-lab" style={{ border: 'none' }}>
+                <img src="assets/img/softwarelab.jpg" height="50" alt="Software Lab" style={imgStyle} />
               </a>
             </div>
           </div>
