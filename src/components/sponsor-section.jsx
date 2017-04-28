@@ -66,6 +66,9 @@ const SponsorSection = React.createClass({
               <a href="https://ultrapress.com/" style={{ paddingLeft: '20px', border: 'none' }}>
                 <img src="assets/img/ultrapress.png" height="50" alt="Ultrapress" style={imgStyle} />
               </a>
+              <a href="https://twilio.com/" style={{ paddingLeft: '20px', border: 'none' }}>
+                <img src="assets/img/twilio.png" height="50" alt="Twilio" style={imgStyle} />
+              </a>
             </div>
           </div>
           <br />
