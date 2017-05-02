@@ -24089,21 +24089,28 @@ var _reactRouterDom = require('react-router-dom');
 var React = require('react');
 
 var Index = require('./components/index.jsx');
+var Live = require('./components/live.jsx');
+var HeadSection = require('./components/head-section.jsx');
+var Nav = require('./components/nav.jsx');
+var FooterSection = require('./components/footer-section.jsx');
 
 var Routes = React.createElement(
   _reactRouterDom.BrowserRouter,
   null,
   React.createElement(
     'div',
-    null,
+    { id: 'overflow-wrapper' },
+    React.createElement(Nav, null),
+    React.createElement(HeadSection, null),
     React.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: Index }),
-    React.createElement(_reactRouterDom.Route, { path: '/live', component: Index })
+    React.createElement(_reactRouterDom.Route, { path: '/live', component: Live }),
+    React.createElement(FooterSection, null)
   )
 );
 
 module.exports = Routes;
 
-},{"./components/index.jsx":235,"react":224,"react-router-dom":171}],228:[function(require,module,exports){
+},{"./components/footer-section.jsx":233,"./components/head-section.jsx":234,"./components/index.jsx":235,"./components/live.jsx":236,"./components/nav.jsx":237,"react":224,"react-router-dom":171}],228:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -24319,7 +24326,7 @@ var FaqSection = React.createClass({
 
 module.exports = FaqSection;
 
-},{"../data.json":240,"./faq-row.jsx":231,"react":224}],233:[function(require,module,exports){
+},{"../data.json":241,"./faq-row.jsx":231,"react":224}],233:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -24440,6 +24447,31 @@ var React = require('react');
 var ApplySection = require('./apply-section.jsx');
 var AboutSection = require('./about-section.jsx');
 var FaqSection = require('./faq-section.jsx');
+// const GeneralSection = require('./general-section.jsx');
+var SponsorSection = require('./sponsor-section.jsx');
+var OrganizersSection = require('./organizers-section.jsx');
+
+var index = function index() {
+  return React.createElement(
+    'div',
+    null,
+    React.createElement(AboutSection, null),
+    React.createElement(FaqSection, null),
+    React.createElement(SponsorSection, null),
+    React.createElement(ApplySection, null),
+    React.createElement(OrganizersSection, null)
+  );
+};
+
+module.exports = index;
+
+},{"./about-section.jsx":228,"./apply-section.jsx":229,"./faq-section.jsx":232,"./organizers-section.jsx":239,"./sponsor-section.jsx":240,"react":224}],236:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var ApplySection = require('./apply-section.jsx');
+var AboutSection = require('./about-section.jsx');
+var FaqSection = require('./faq-section.jsx');
 var FooterSection = require('./footer-section.jsx');
 // const GeneralSection = require('./general-section.jsx');
 var HeadSection = require('./head-section.jsx');
@@ -24447,27 +24479,26 @@ var Nav = require('./nav.jsx');
 var SponsorSection = require('./sponsor-section.jsx');
 var OrganizersSection = require('./organizers-section.jsx');
 
-var index = function index() {
-  return React.createElement(
-    'div',
-    { id: 'overflow-wrapper' },
-    React.createElement(Nav, null),
-    React.createElement(HeadSection, null),
-    React.createElement(AboutSection, null),
-    React.createElement(FaqSection, null),
-    React.createElement(SponsorSection, null),
-    React.createElement(ApplySection, null),
-    React.createElement(OrganizersSection, null),
-    React.createElement(FooterSection, null)
-  );
-};
+var Live = React.createClass({
+  displayName: 'Live',
+  render: function render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(OrganizersSection, null)
+    );
+  }
+});
 
-module.exports = index;
+module.exports = Live;
 
-},{"./about-section.jsx":228,"./apply-section.jsx":229,"./faq-section.jsx":232,"./footer-section.jsx":233,"./head-section.jsx":234,"./nav.jsx":236,"./organizers-section.jsx":238,"./sponsor-section.jsx":239,"react":224}],236:[function(require,module,exports){
+},{"./about-section.jsx":228,"./apply-section.jsx":229,"./faq-section.jsx":232,"./footer-section.jsx":233,"./head-section.jsx":234,"./nav.jsx":237,"./organizers-section.jsx":239,"./sponsor-section.jsx":240,"react":224}],237:[function(require,module,exports){
 'use strict';
 
+var _reactRouterDom = require('react-router-dom');
+
 var React = require('react');
+
 
 var mlhBadgeStyle = {
   width: '100%',
@@ -24475,73 +24506,87 @@ var mlhBadgeStyle = {
   maxHeight: '135px'
 };
 
-var Nav = React.createClass({
-  displayName: 'Nav',
-  render: function render() {
-    return React.createElement(
-      'nav',
-      { id: 'nav' },
-      React.createElement(
-        'a',
-        { id: 'mlh-trust-badge', href: 'https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white', target: '_blank' },
-        React.createElement('img', { src: 'https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg', alt: 'Major League Hacking 2017 Hackathon Season', style: mlhBadgeStyle })
-      ),
-      React.createElement('img', { id: 'logo_white', className: 'logo', src: 'assets/img/logo_white.png', alt: 'SiliconHacks' }),
-      React.createElement('img', { id: 'logo_green', className: 'logo', src: 'assets/img/logo_green.png', alt: 'SiliconHacks' }),
-      React.createElement('img', { id: 'menu_white', className: 'nav-menu', src: 'assets/img/menu_white.svg', alt: '' }),
-      React.createElement('img', { id: 'menu_green', className: 'nav-menu', src: 'assets/img/menu_green.svg', alt: '' }),
+var Nav = function Nav() {
+  return React.createElement(
+    'nav',
+    { id: 'nav' },
+    React.createElement(
+      'a',
+      { id: 'mlh-trust-badge', href: 'https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white', target: '_blank' },
+      React.createElement('img', { src: 'https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg', alt: 'Major League Hacking 2017 Hackathon Season', style: mlhBadgeStyle })
+    ),
+    React.createElement('img', { id: 'logo_white', className: 'logo', src: 'assets/img/logo_white.png', alt: 'SiliconHacks' }),
+    React.createElement('img', { id: 'logo_green', className: 'logo', src: 'assets/img/logo_green.png', alt: 'SiliconHacks' }),
+    React.createElement('img', { id: 'menu_white', className: 'nav-menu', src: 'assets/img/menu_white.svg', alt: '' }),
+    React.createElement('img', { id: 'menu_green', className: 'nav-menu', src: 'assets/img/menu_green.svg', alt: '' }),
+    React.createElement(
+      'div',
+      { id: 'nav-sections' },
       React.createElement(
         'div',
-        { id: 'nav-sections' },
+        { id: 'nav-close', className: 'nav-section' },
+        'x'
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section active' },
         React.createElement(
-          'div',
-          { id: 'nav-close', className: 'nav-section' },
-          'x'
-        ),
-        React.createElement(
-          'div',
-          { className: 'nav-section active' },
+          _reactRouterDom.Link,
+          { to: '/' },
           React.createElement(
             'a',
             { href: '#landing' },
             'Home'
           )
-        ),
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
         React.createElement(
-          'div',
-          { className: 'nav-section' },
-          React.createElement(
-            'a',
-            { href: '#about' },
-            'About'
-          )
-        ),
+          'a',
+          { href: '#about' },
+          'About'
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
         React.createElement(
-          'div',
-          { className: 'nav-section' },
-          React.createElement(
-            'a',
-            { href: '#apply' },
-            'Apply'
-          )
-        ),
+          'a',
+          { href: '#apply' },
+          'Apply'
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
         React.createElement(
-          'div',
-          { className: 'nav-section' },
+          'a',
+          { href: '#sponsor' },
+          'Sponsor'
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
+        React.createElement(
+          'a',
+          null,
           React.createElement(
-            'a',
-            { href: '#sponsor' },
-            'Sponsor'
+            _reactRouterDom.Link,
+            { to: '/live' },
+            'Live'
           )
         )
       )
-    );
-  }
-});
+    )
+  );
+};
 
 module.exports = Nav;
 
-},{"react":224}],237:[function(require,module,exports){
+},{"react":224,"react-router-dom":171}],238:[function(require,module,exports){
 'use strict';
 
 var _propTypes = require('prop-types');
@@ -24607,7 +24652,7 @@ Organizer.propTypes = {
 
 module.exports = Organizer;
 
-},{"prop-types":32,"react":224}],238:[function(require,module,exports){
+},{"prop-types":32,"react":224}],239:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -24642,7 +24687,7 @@ var OrganizersSection = React.createClass({
 
 module.exports = OrganizersSection;
 
-},{"../data.json":240,"./organizer.jsx":237,"react":224}],239:[function(require,module,exports){
+},{"../data.json":241,"./organizer.jsx":238,"react":224}],240:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -24849,7 +24894,7 @@ var SponsorSection = React.createClass({
 
 module.exports = SponsorSection;
 
-},{"react":224}],240:[function(require,module,exports){
+},{"react":224}],241:[function(require,module,exports){
 module.exports={
     "faqrow1": [
         {
@@ -24981,7 +25026,7 @@ module.exports={
     ]
 }
 
-},{}],241:[function(require,module,exports){
+},{}],242:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -24993,4 +25038,4 @@ ReactDOM.render(Routes, document.getElementById('main'));
 
 // ReactDOM.render(<Index />, document.getElementById('main'));
 
-},{"./Routes.jsx":227,"react":224,"react-dom":34}]},{},[241]);
+},{"./Routes.jsx":227,"react":224,"react-dom":34}]},{},[242]);

@@ -9,23 +9,19 @@ const Nav = require('./nav.jsx');
 const SponsorSection = require('./sponsor-section.jsx');
 const OrganizersSection = require('./organizers-section.jsx');
 
-const index = React.createClass({
+const Live = React.createClass({
   render() {
     return (
-      <div id="overflow-wrapper">
-        <Nav />
-        <HeadSection />
-        <AboutSection />
+      <div>
+        {/* <AboutSection />
         <FaqSection />
-        {/* <GeneralSection /> */}
         <SponsorSection />
-        <ApplySection />
+        <ApplySection /> */}
         <OrganizersSection />
-        <FooterSection />
       </div>
     );
   },
 
 });
 
-module.exports = index;
+module.exports = Live;
