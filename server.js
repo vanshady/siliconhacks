@@ -26,12 +26,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // 404 Error
-app.use(function(req, res, next) {
-  res.status(404).redirect('/');
-});
+// app.use(function(req, res, next) {
+//   res.status(404).redirect('/');
+// });
 
-app.get('/', function (req, res) {
-  res.render('index');
+app.get('*', function (req, res) {
+  res.sendFile('./public/index.html');
 });
 
 app.listen(port);

@@ -9,18 +9,23 @@ const Nav = require('./nav.jsx');
 const SponsorSection = require('./sponsor-section.jsx');
 const OrganizersSection = require('./organizers-section.jsx');
 
-const index = () => (
-    <div id="overflow-wrapper">
-      <Nav />
-      <HeadSection />
-      <AboutSection />
-      <FaqSection />
-      {/* <GeneralSection /> */}
-      <SponsorSection />
-      <ApplySection />
-      <OrganizersSection />
-      <FooterSection />
-    </div>
-  );
+const index = React.createClass({
+  render() {
+    return (
+      <div id="overflow-wrapper">
+        <Nav />
+        <HeadSection />
+        <AboutSection />
+        <FaqSection />
+        {/* <GeneralSection /> */}
+        <SponsorSection />
+        <ApplySection />
+        <OrganizersSection />
+        <FooterSection />
+      </div>
+    );
+  },
+
+});
 
 module.exports = index;

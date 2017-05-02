@@ -1,10 +1,7 @@
 const React = require('react');
+import PropTypes from 'prop-types';
 
 const FaqCard = React.createClass({
-  propTypes: {
-    title: React.PropTypes.string.isRequired,
-    body: React.PropTypes.string.isRequired,
-  },
   render() {
     const faqCardStyle = {
       fontFamily: 'Proxima Nova, Open Sans, sans-serif',
@@ -40,5 +37,11 @@ const FaqCard = React.createClass({
     );
   },
 });
+
+
+FaqCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+};
 
 module.exports = FaqCard;

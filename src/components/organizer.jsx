@@ -1,9 +1,7 @@
 const React = require('react');
+import PropTypes from 'prop-types';
 
 const Organizer = React.createClass({
-  propTypes: {
-    organizer: React.PropTypes.object.isRequired,
-  },
   render() {
     const organizer = this.props.organizer;
     const imageURL = `assets/img/organizers/${organizer.image}`;
@@ -34,5 +32,9 @@ const Organizer = React.createClass({
     );
   },
 });
+
+Organizer.propTypes = {
+  organizer: PropTypes.object.isRequired,
+};
 
 module.exports = Organizer;

@@ -1,20 +1,20 @@
 
 const React = require('react');
-const ReactRouter = require('react-router');
-const Router = ReactRouter.Router;
-const Route = ReactRouter.Route;
-const routerHistory = ReactRouter.useRouterHistory;
-const CreateHistory = require('history').createHashHistory;
-const History = routerHistory(CreateHistory)({
-  queryKey: false,
-});
+
+import {
+  BrowserRouter as Router,
+  Route,
+  // Link
+} from 'react-router-dom';
 
 const Index = require('./components/index.jsx');
 
 const Routes = (
-    <Router history={History}>
-      <Route path="/" component={Index}>
-      </Route>
+    <Router>
+      <div>
+        <Route exact path="/" component={Index} />
+        <Route path="/live" component={Index} />
+      </div>
     </Router>
 );
 

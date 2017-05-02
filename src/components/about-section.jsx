@@ -1,8 +1,6 @@
 const React = require('react');
 
-const AboutSection = React.createClass({
-  render() {
-    return (
+const AboutSection = () => (
       <div id="about" className="section">
         <div className="section-wrapper">
           <div className="section-body">
@@ -13,9 +11,6 @@ const AboutSection = React.createClass({
           </div>
         </div>
         <div className="slant bottom left"></div>
-      </div>
-    );
-  },
-});
+      </div>);
 
 module.exports = AboutSection;
