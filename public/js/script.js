@@ -2,13 +2,15 @@ function onScroll(event) {
   var scrollPos = $(document).scrollTop();
   $('#nav-sections a').each(function () {
     var currLink = $(this);
-    var refElement = $(currLink.attr('href'));
-    if (refElement.position() && refElement.position().top <= scrollPos &&
-        refElement.position().top + refElement.height() > scrollPos) {
-      $('#nav-sections .nav-section').removeClass('active');
-      currLink.parent().addClass('active');
-    } else {
-      currLink.parent().removeClass('active');
+    if (currLink.attr('href').charAt(0) == '#') {
+      var refElement = $(currLink.attr('href'));
+      if (refElement.position() && refElement.position().top <= scrollPos &&
+          refElement.position().top + refElement.height() > scrollPos) {
+        $('#nav-sections .nav-section').removeClass('active');
+        currLink.parent().addClass('active');
+      } else {
+        currLink.parent().removeClass('active');
+      }
     }
   });
 }

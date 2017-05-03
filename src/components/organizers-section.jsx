@@ -3,7 +3,7 @@ const Organizer = require('./organizer.jsx');
 const organizersData = require('../data.json');
 const organizers = organizersData.organizers;
 
-const OrganizersSection = React.createClass({
+class OrganizersSection extends React.Component {
   render() {
     let i = -1;
     const rows = organizers.map((obj) => {
@@ -16,9 +16,8 @@ const OrganizersSection = React.createClass({
           <h1>Organizers</h1>
           {rows}
         </div>
-      </div>
-    );
-  },
-});
+      </div>);
+  }
+}
 
 module.exports = OrganizersSection;

@@ -1,27 +1,18 @@
-const React = require('react');
-const ApplySection = require('./apply-section.jsx');
-const AboutSection = require('./about-section.jsx');
-const FaqSection = require('./faq-section.jsx');
-const FooterSection = require('./footer-section.jsx');
-// const GeneralSection = require('./general-section.jsx');
-const HeadSection = require('./head-section.jsx');
-const Nav = require('./nav.jsx');
-const SponsorSection = require('./sponsor-section.jsx');
-const OrganizersSection = require('./organizers-section.jsx');
+import React from 'react';
+import LiveNav from './live-nav.jsx';
+import LiveHeadSection from './live-head-section.jsx';
+import PrizeSection from './prize-section.jsx';
+import Schedule from './schedule.jsx';
+import API from './api.jsx';
 
-const Live = React.createClass({
-  render() {
-    return (
-      <div>
-        {/* <AboutSection />
-        <FaqSection />
-        <SponsorSection />
-        <ApplySection /> */}
-        <OrganizersSection />
-      </div>
-    );
-  },
-
-});
+const Live = () => (
+    <div>
+      <LiveNav />
+      <LiveHeadSection />
+      <Schedule />
+      <PrizeSection />
+      <API />
+    </div>
+  );
 
 module.exports = Live;

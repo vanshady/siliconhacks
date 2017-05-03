@@ -1,7 +1,7 @@
 const React = require('react');
 import PropTypes from 'prop-types';
 
-const FaqCard = React.createClass({
+class FaqCard extends React.Component {
   render() {
     const faqCardStyle = {
       fontFamily: 'Proxima Nova, Open Sans, sans-serif',
@@ -25,19 +25,18 @@ const FaqCard = React.createClass({
       lineHeight: '1.7',
       fontWeight: '400',
     };
+
     return (
       <div style={faqCardStyle} className="faq-card">
         <div className="card-title" style={cardTitleStyle}>{this.props.title}</div>
         <div className="card-body"
           dangerouslySetInnerHTML={{ __html: this.props.body }}
           style={cardBodyStyle}
-        >
-        </div>
+        />
       </div>
     );
-  },
-});
-
+  }
+}
 
 FaqCard.propTypes = {
   title: PropTypes.string.isRequired,

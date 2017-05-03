@@ -121,10 +121,88 @@
             "school": "42"
         }
     ],
-    "schedule": [
+    "day1": [
         {
-            "event": "Event starts:",
-            "time": "TBA"
+            "event": "Registration Opens",
+            "time": "12:42 PM"
+        },
+        {
+            "event": "Opening Ceremony",
+            "time": "2-3:30 PM"
+        },
+        {
+            "time": "3:30 PM",
+            "event": "Hacking Begins, Hardware Lab opens"
+        },
+        {
+            "time": "4 PM",
+            "event": "Team Formation"
+        },
+        {
+            "time": "4:30 - 5:30 PM",
+            "event": "Workshop 1 - Eric Vicenti (Facebook) Intro to React (see Messenger chats - Dhanush)"
+        },
+        {
+            "time": "5:30 - 6:30 PM",
+            "event": "Workshop 2.1 - Using Watson (IBM)"
+        },
+        {
+            "time": "5:30 - 6:30 PM",
+            "event": "Workshop 2.2 - Intro to Golang (Software Labs)"
+        },
+        {
+            "time": "7:00 - 8:30 PM",
+            "event": "Dinner"
+        },
+        {
+            "time": "9:00 - 10:00 PM",
+            "event": "Workshop 3.1 - Build Your First iOS App (Make School)"
+        },
+        {
+            "time": "10:30 - 11:30 PM",
+            "event": "MLH Cup Stacking Competition"
+        },
+        {
+            "time": "12 PM",
+            "event": "Midnight Snack"
         }
+    ],
+    "day2": [
+        {
+            "time": "8:00 - 9:30 AM",
+            "event": "Breakfast"
+        },
+        {
+            "time": "10 - 11 AM",
+            "event": "Workshop - Github/HackerEarth"
+        },
+        {
+            "time": "11:30 AM",
+            "event": "HackerEarth submissions due"
+        },
+        {
+            "time": "12 - 1 PM",
+            "event": "Lunch"
+        },
+        {
+            "time": "1 PM",
+            "event": "Hacking Ends"
+        },
+        {
+            "time": "1-1:30 PM",
+            "event": "Prepare for Judging"
+        },
+        {
+            "time": "1:30 - 3 PM",
+            "event": "Judging"
+        },
+        {
+            "time": "3 - 3:30 PM",
+            "event": "Tally up marks"
+        },
+        {
+            "time": "3:30 - 4:30 PM",
+            "event": "Closing Ceremony"
+        },
     ]
 }

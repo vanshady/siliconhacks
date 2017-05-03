@@ -24090,8 +24090,6 @@ var React = require('react');
 
 var Index = require('./components/index.jsx');
 var Live = require('./components/live.jsx');
-var HeadSection = require('./components/head-section.jsx');
-var Nav = require('./components/nav.jsx');
 var FooterSection = require('./components/footer-section.jsx');
 
 var Routes = React.createElement(
@@ -24100,8 +24098,6 @@ var Routes = React.createElement(
   React.createElement(
     'div',
     { id: 'overflow-wrapper' },
-    React.createElement(Nav, null),
-    React.createElement(HeadSection, null),
     React.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: Index }),
     React.createElement(_reactRouterDom.Route, { path: '/live', component: Live }),
     React.createElement(FooterSection, null)
@@ -24110,7 +24106,7 @@ var Routes = React.createElement(
 
 module.exports = Routes;
 
-},{"./components/footer-section.jsx":233,"./components/head-section.jsx":234,"./components/index.jsx":235,"./components/live.jsx":236,"./components/nav.jsx":237,"react":224,"react-router-dom":171}],228:[function(require,module,exports){
+},{"./components/footer-section.jsx":234,"./components/index.jsx":236,"./components/live.jsx":239,"react":224,"react-router-dom":171}],228:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -24147,6 +24143,108 @@ module.exports = AboutSection;
 "use strict";
 
 var React = require('react');
+var API = function API() {
+  return React.createElement(
+    "div",
+    { id: "api", className: "section" },
+    React.createElement(
+      "div",
+      { className: "section-wrapper" },
+      React.createElement(
+        "div",
+        { className: "section-body" },
+        React.createElement(
+          "h1",
+          null,
+          "APIs"
+        ),
+        React.createElement(
+          "div",
+          {
+            className: "container",
+            style: {
+              width: '80%',
+              maxWidth: '8=800px',
+              margin: '0 auto',
+              marginTop: '20px',
+              fontSize: '17px'
+            }
+          },
+          React.createElement(
+            "dl",
+            { className: "dl-horizontal", key: 1 },
+            React.createElement(
+              "dt",
+              null,
+              "Wolfram"
+            ),
+            React.createElement(
+              "dd",
+              { style: { textAlign: 'left', lineHeight: '180%' } },
+              "Create a Wolfram ID and get your keys ",
+              React.createElement(
+                "a",
+                { href: "https://www.wolframcloud.com/access?code=SiliconHacksFRE2017" },
+                "here"
+              )
+            )
+          ),
+          React.createElement(
+            "dl",
+            { className: "dl-horizontal", key: 2 },
+            React.createElement(
+              "dt",
+              null,
+              ".Tech"
+            ),
+            React.createElement(
+              "dd",
+              { style: { textAlign: 'left', lineHeight: '180%' } },
+              "Log onto ",
+              React.createElement(
+                "a",
+                { href: "https://goo.gl/zwe3by" },
+                "goo.gl/zwe3by"
+              ),
+              " ",
+              React.createElement("br", null),
+              "Select “SiliconHacks” and enter the code \"siliconhacks.tech\" ",
+              React.createElement("br", null),
+              "Once you’re approved you’ll get a coupon code to use at checkout on",
+              React.createElement(
+                "a",
+                { href: "www.get.tech" },
+                "www.get.tech"
+              ),
+              " for your free .Tech domain and Privacy Protect"
+            )
+          ),
+          React.createElement(
+            "dl",
+            { className: "dl-horizontal", key: 3 },
+            React.createElement(
+              "dt",
+              null,
+              "Twilio"
+            ),
+            React.createElement(
+              "dd",
+              { style: { textAlign: 'left', lineHeight: '180%' } },
+              "Use the promo code \"SiliconHacks 2017\""
+            )
+          )
+        )
+      )
+    )
+  );
+};
+
+module.exports = API;
+
+},{"react":224}],230:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
 
 var ApplySection = function ApplySection() {
   return React.createElement(
@@ -24172,8 +24270,10 @@ var ApplySection = function ApplySection() {
 
 module.exports = ApplySection;
 
-},{"react":224}],230:[function(require,module,exports){
+},{"react":224}],231:[function(require,module,exports){
 'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _propTypes = require('prop-types');
 
@@ -24181,49 +24281,67 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var React = require('react');
 
+var FaqCard = function (_React$Component) {
+  _inherits(FaqCard, _React$Component);
 
-var FaqCard = React.createClass({
-  displayName: 'FaqCard',
-  render: function render() {
-    var faqCardStyle = {
-      fontFamily: 'Proxima Nova, Open Sans, sans-serif',
-      marginBottom: '20px',
-      backgroundColor: 'white',
-      borderRadius: '4px',
-      color: '#3E3E3E',
-      padding: '40px 30px',
-      position: 'relative',
-      textAlign: 'left',
-      width: '100%'
-    };
-    var cardTitleStyle = {
-      fontSize: '20px',
-      lineHeight: '1.5',
-      marginBottom: '25px',
-      fontWeight: 'bold'
-    };
-    var cardBodyStyle = {
-      fontSize: '14px',
-      lineHeight: '1.7',
-      fontWeight: '400'
-    };
-    return React.createElement(
-      'div',
-      { style: faqCardStyle, className: 'faq-card' },
-      React.createElement(
-        'div',
-        { className: 'card-title', style: cardTitleStyle },
-        this.props.title
-      ),
-      React.createElement('div', { className: 'card-body',
-        dangerouslySetInnerHTML: { __html: this.props.body },
-        style: cardBodyStyle
-      })
-    );
+  function FaqCard() {
+    _classCallCheck(this, FaqCard);
+
+    return _possibleConstructorReturn(this, (FaqCard.__proto__ || Object.getPrototypeOf(FaqCard)).apply(this, arguments));
   }
-});
+
+  _createClass(FaqCard, [{
+    key: 'render',
+    value: function render() {
+      var faqCardStyle = {
+        fontFamily: 'Proxima Nova, Open Sans, sans-serif',
+        marginBottom: '20px',
+        backgroundColor: 'white',
+        borderRadius: '4px',
+        color: '#3E3E3E',
+        padding: '40px 30px',
+        position: 'relative',
+        textAlign: 'left',
+        width: '100%'
+      };
+      var cardTitleStyle = {
+        fontSize: '20px',
+        lineHeight: '1.5',
+        marginBottom: '25px',
+        fontWeight: 'bold'
+      };
+      var cardBodyStyle = {
+        fontSize: '14px',
+        lineHeight: '1.7',
+        fontWeight: '400'
+      };
+
+      return React.createElement(
+        'div',
+        { style: faqCardStyle, className: 'faq-card' },
+        React.createElement(
+          'div',
+          { className: 'card-title', style: cardTitleStyle },
+          this.props.title
+        ),
+        React.createElement('div', { className: 'card-body',
+          dangerouslySetInnerHTML: { __html: this.props.body },
+          style: cardBodyStyle
+        })
+      );
+    }
+  }]);
+
+  return FaqCard;
+}(React.Component);
 
 FaqCard.propTypes = {
   title: _propTypes2.default.string.isRequired,
@@ -24232,7 +24350,7 @@ FaqCard.propTypes = {
 
 module.exports = FaqCard;
 
-},{"prop-types":32,"react":224}],231:[function(require,module,exports){
+},{"prop-types":32,"react":224}],232:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -24293,168 +24411,162 @@ FaqRow.propTypes = {
 
 module.exports = FaqRow;
 
-},{"./faq-card.jsx":230,"prop-types":32,"react":224}],232:[function(require,module,exports){
+},{"./faq-card.jsx":231,"prop-types":32,"react":224}],233:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
 var FaqRow = require('./faq-row.jsx');
 var cardData = require('../data.json');
 
-var FaqSection = React.createClass({
-  displayName: 'FaqSection',
-  render: function render() {
-    return React.createElement(
+var FaqSection = function FaqSection() {
+  return React.createElement(
+    'div',
+    { className: 'section', id: 'FAQ' },
+    React.createElement('div', { className: 'slant top left' }),
+    React.createElement(
       'div',
-      { className: 'section', id: 'FAQ' },
-      React.createElement('div', { className: 'slant top left' }),
-      React.createElement(
-        'div',
-        { className: 'section-header' },
-        'FAQ'
-      ),
-      React.createElement(
-        'div',
-        { className: 'section-body' },
-        React.createElement(FaqRow, { cards: cardData.faqrow1, row: '1' }),
-        React.createElement(FaqRow, { cards: cardData.faqrow2, row: '2' }),
-        React.createElement('div', { className: 'clear' })
-      ),
-      React.createElement('div', { className: 'slant bottom right' })
-    );
-  }
-});
+      { className: 'section-header' },
+      'FAQ'
+    ),
+    React.createElement(
+      'div',
+      { className: 'section-body' },
+      React.createElement(FaqRow, { cards: cardData.faqrow1, row: '1' }),
+      React.createElement(FaqRow, { cards: cardData.faqrow2, row: '2' }),
+      React.createElement('div', { className: 'clear' })
+    ),
+    React.createElement('div', { className: 'slant bottom right' })
+  );
+};
 
 module.exports = FaqSection;
 
-},{"../data.json":241,"./faq-row.jsx":231,"react":224}],233:[function(require,module,exports){
+},{"../data.json":246,"./faq-row.jsx":232,"react":224}],234:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 
-var FooterSection = React.createClass({
-  displayName: "FooterSection",
-  render: function render() {
-    return React.createElement(
-      "div",
-      { className: "section", id: "footer" },
+var FooterSection = function FooterSection() {
+  return React.createElement(
+    "div",
+    { className: "section", id: "footer" },
+    React.createElement(
+      "a",
+      { href: "https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts", target: "_blank", className: "social" },
+      React.createElement("img", { src: "assets/img/facebook.svg", alt: "Facebook" })
+    ),
+    React.createElement(
+      "a",
+      { href: "https://twitter.com/SiliconHacks", target: "_blank", className: "social" },
+      React.createElement("img", { src: "assets/img/twitter.svg", alt: "Twitter" })
+    ),
+    React.createElement(
+      "a",
+      { href: "mailto:hacksilicon@gmail.com", target: "_blank", className: "social" },
+      React.createElement("img", { src: "assets/img/mail.svg", alt: "Email" })
+    ),
+    React.createElement(
+      "a",
+      { href: "https://www.instagram.com/siliconhacks/", target: "_blank", className: "social instagram" },
+      React.createElement("img", { src: "assets/img/instagram.svg", alt: "Instagram" })
+    ),
+    React.createElement(
+      "p",
+      { style: { marginTop: '10px' } },
+      "Site inspired by CalHacks and designed and developed by the SiliconHacks team. Contact us at",
       React.createElement(
         "a",
-        { href: "https://www.facebook.com/SiliconHacks-1599535033704053/?fref=ts", target: "_blank", className: "social" },
-        React.createElement("img", { src: "assets/img/facebook.svg", alt: "Facebook" })
+        { href: "mailto:hacksilicon@gmail.com" },
+        "hacksilicon@gmail.com"
       ),
-      React.createElement(
-        "a",
-        { href: "https://twitter.com/SiliconHacks", target: "_blank", className: "social" },
-        React.createElement("img", { src: "assets/img/twitter.svg", alt: "Twitter" })
-      ),
-      React.createElement(
-        "a",
-        { href: "mailto:hacksilicon@gmail.com", target: "_blank", className: "social" },
-        React.createElement("img", { src: "assets/img/mail.svg", alt: "Email" })
-      ),
-      React.createElement(
-        "a",
-        { href: "https://www.instagram.com/siliconhacks/", target: "_blank", className: "social instagram" },
-        React.createElement("img", { src: "assets/img/instagram.svg", alt: "Instagram" })
-      ),
-      React.createElement(
-        "p",
-        { style: { marginTop: '10px' } },
-        "Site inspired by CalHacks and designed and developed by the SiliconHacks team. Contact us at",
-        React.createElement(
-          "a",
-          { href: "mailto:hacksilicon@gmail.com" },
-          "hacksilicon@gmail.com"
-        ),
-        React.createElement("br", null),
-        "SiliconHacks is a project of Hacker Fund, a 501(c)(3) nonprofit incubator registered in CA, with the tax ID number: 472485464"
-      )
-    );
-  }
-});
+      React.createElement("br", null),
+      "SiliconHacks is a project of Hacker Fund, a 501(c)(3) nonprofit incubator registered in CA, with the tax ID number: 472485464"
+    )
+  );
+};
 
 module.exports = FooterSection;
 
-},{"react":224}],234:[function(require,module,exports){
+},{"react":224}],235:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 
-var HeadSection = React.createClass({
-  displayName: "HeadSection",
-  render: function render() {
-    return React.createElement(
+var HeadSection = function HeadSection() {
+  return React.createElement(
+    "div",
+    { id: "landing", className: "section full" },
+    React.createElement("div", { id: "landing-filter" }),
+    React.createElement(
       "div",
-      { id: "landing", className: "section full" },
-      React.createElement("div", { id: "landing-filter" }),
+      { className: "section-wrapper" },
       React.createElement(
         "div",
-        { className: "section-wrapper" },
+        { id: "copy-container" },
         React.createElement(
           "div",
-          { id: "copy-container" },
+          { className: "headline" },
+          "SiliconHacks"
+        ),
+        React.createElement(
+          "div",
+          { className: "sub-headline" },
+          "INVITING EVERY HACKER. DESIGNER. INNOVATOR. NIGHT OWL."
+        ),
+        React.createElement(
+          "div",
+          { className: "sub-headline mini" },
+          "LOCATION: 42 Silicon Valley - Fremont, CA | TIME: May 6-7, 2017"
+        ),
+        React.createElement(
+          "div",
+          { className: "button-container" },
           React.createElement(
-            "div",
-            { className: "headline" },
-            "SiliconHacks"
+            "a",
+            { className: "button" },
+            "Application Closed"
           ),
           React.createElement(
-            "div",
-            { className: "sub-headline" },
-            "INVITING EVERY HACKER. DESIGNER. INNOVATOR. NIGHT OWL."
+            "a",
+            { className: "button", href: "https://siliconhacks.typeform.com/to/ON7ar6", target: "_blank" },
+            "Mentor"
           ),
           React.createElement(
-            "div",
-            { className: "sub-headline mini" },
-            "LOCATION: 42 Silicon Valley - Fremont, CA | TIME: May 6-7, 2017"
+            "a",
+            { className: "button", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
+            "Sponsor Us"
           ),
           React.createElement(
-            "div",
-            { className: "button-container" },
-            React.createElement(
-              "a",
-              { className: "button" },
-              "Application Closed"
-            ),
-            React.createElement(
-              "a",
-              { className: "button", href: "https://siliconhacks.typeform.com/to/ON7ar6", target: "_blank" },
-              "Mentor"
-            ),
-            React.createElement(
-              "a",
-              { className: "button", href: "https://siliconhacks.typeform.com/to/lzxr3H", target: "_blank" },
-              "Sponsor Us"
-            ),
-            React.createElement(
-              "a",
-              { className: "button", href: "https://donorbox.org/siliconhacks?recurring=true", target: "_blank" },
-              "Donate"
-            )
+            "a",
+            { className: "button", href: "https://donorbox.org/siliconhacks?recurring=true", target: "_blank" },
+            "Donate"
           )
         )
       )
-    );
-  }
-});
+    )
+  );
+};
 
 module.exports = HeadSection;
 
-},{"react":224}],235:[function(require,module,exports){
+},{"react":224}],236:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
 var ApplySection = require('./apply-section.jsx');
 var AboutSection = require('./about-section.jsx');
 var FaqSection = require('./faq-section.jsx');
-// const GeneralSection = require('./general-section.jsx');
 var SponsorSection = require('./sponsor-section.jsx');
 var OrganizersSection = require('./organizers-section.jsx');
+var HeadSection = require('./head-section.jsx');
+var Nav = require('./nav.jsx');
 
 var index = function index() {
   return React.createElement(
     'div',
     null,
+    React.createElement(Nav, null),
+    React.createElement(HeadSection, null),
     React.createElement(AboutSection, null),
     React.createElement(FaqSection, null),
     React.createElement(SponsorSection, null),
@@ -24465,40 +24577,196 @@ var index = function index() {
 
 module.exports = index;
 
-},{"./about-section.jsx":228,"./apply-section.jsx":229,"./faq-section.jsx":232,"./organizers-section.jsx":239,"./sponsor-section.jsx":240,"react":224}],236:[function(require,module,exports){
+},{"./about-section.jsx":228,"./apply-section.jsx":230,"./faq-section.jsx":233,"./head-section.jsx":235,"./nav.jsx":240,"./organizers-section.jsx":242,"./sponsor-section.jsx":245,"react":224}],237:[function(require,module,exports){
+"use strict";
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var LiveHeadSection = function LiveHeadSection() {
+  return _react2.default.createElement(
+    "div",
+    { id: "landing", className: "section full" },
+    _react2.default.createElement("div", { id: "landing-filter" }),
+    _react2.default.createElement(
+      "div",
+      { className: "section-wrapper" },
+      _react2.default.createElement(
+        "div",
+        { id: "copy-container" },
+        _react2.default.createElement(
+          "div",
+          { className: "headline" },
+          "SiliconHacks"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "sub-headline" },
+          "INVITING EVERY HACKER. DESIGNER. INNOVATOR. NIGHT OWL."
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "sub-headline mini" },
+          "LOCATION: 42 Silicon Valley - Fremont, CA | TIME: May 6-7, 2017"
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "button-container" },
+          _react2.default.createElement(
+            "a",
+            { className: "button", href: "https://siliconhacks.slack.com/", target: "_blank" },
+            "Slack"
+          ),
+          _react2.default.createElement(
+            "a",
+            { className: "button", href: "https://siliconhacks.hackerearth.com/", target: "_blank" },
+            "HackerEarth"
+          )
+        )
+      )
+    )
+  );
+};
+
+module.exports = LiveHeadSection;
+
+},{"react":224}],238:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
-var ApplySection = require('./apply-section.jsx');
-var AboutSection = require('./about-section.jsx');
-var FaqSection = require('./faq-section.jsx');
-var FooterSection = require('./footer-section.jsx');
-// const GeneralSection = require('./general-section.jsx');
-var HeadSection = require('./head-section.jsx');
-var Nav = require('./nav.jsx');
-var SponsorSection = require('./sponsor-section.jsx');
-var OrganizersSection = require('./organizers-section.jsx');
 
-var Live = React.createClass({
-  displayName: 'Live',
-  render: function render() {
-    return React.createElement(
+var mlhBadgeStyle = {
+  width: '100%',
+  height: '100%',
+  maxHeight: '135px'
+};
+
+var LiveNav = function LiveNav() {
+  return React.createElement(
+    'nav',
+    { id: 'nav' },
+    React.createElement(
+      'a',
+      {
+        id: 'mlh-trust-badge',
+        href: 'https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white',
+        target: '_blank'
+      },
+      React.createElement('img', { src: 'https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg', alt: 'Major League Hacking 2017 Hackathon Season', style: mlhBadgeStyle })
+    ),
+    React.createElement('img', { id: 'logo_white', className: 'logo', src: 'assets/img/logo_white.png', alt: 'SiliconHacks' }),
+    React.createElement('img', { id: 'logo_green', className: 'logo', src: 'assets/img/logo_green.png', alt: 'SiliconHacks' }),
+    React.createElement('img', { id: 'menu_white', className: 'nav-menu', src: 'assets/img/menu_white.svg', alt: '' }),
+    React.createElement('img', { id: 'menu_green', className: 'nav-menu', src: 'assets/img/menu_green.svg', alt: '' }),
+    React.createElement(
       'div',
-      null,
-      React.createElement(OrganizersSection, null)
-    );
-  }
-});
+      { id: 'nav-sections' },
+      React.createElement(
+        'div',
+        { id: 'nav-close', className: 'nav-section' },
+        'x'
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
+        React.createElement(
+          'a',
+          { href: '/' },
+          'Home'
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section active' },
+        React.createElement(
+          'a',
+          { href: '#landing' },
+          'Live'
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
+        React.createElement(
+          'a',
+          { href: '#schedule' },
+          'Schedule'
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
+        React.createElement(
+          'a',
+          { href: '#prizes' },
+          'Prizes'
+        )
+      ),
+      React.createElement(
+        'div',
+        { className: 'nav-section' },
+        React.createElement(
+          'a',
+          { href: '#api' },
+          'APIs'
+        )
+      )
+    )
+  );
+};
+
+module.exports = LiveNav;
+
+},{"react":224}],239:[function(require,module,exports){
+'use strict';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _liveNav = require('./live-nav.jsx');
+
+var _liveNav2 = _interopRequireDefault(_liveNav);
+
+var _liveHeadSection = require('./live-head-section.jsx');
+
+var _liveHeadSection2 = _interopRequireDefault(_liveHeadSection);
+
+var _prizeSection = require('./prize-section.jsx');
+
+var _prizeSection2 = _interopRequireDefault(_prizeSection);
+
+var _schedule = require('./schedule.jsx');
+
+var _schedule2 = _interopRequireDefault(_schedule);
+
+var _api = require('./api.jsx');
+
+var _api2 = _interopRequireDefault(_api);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Live = function Live() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_liveNav2.default, null),
+    _react2.default.createElement(_liveHeadSection2.default, null),
+    _react2.default.createElement(_schedule2.default, null),
+    _react2.default.createElement(_prizeSection2.default, null),
+    _react2.default.createElement(_api2.default, null)
+  );
+};
 
 module.exports = Live;
 
-},{"./about-section.jsx":228,"./apply-section.jsx":229,"./faq-section.jsx":232,"./footer-section.jsx":233,"./head-section.jsx":234,"./nav.jsx":237,"./organizers-section.jsx":239,"./sponsor-section.jsx":240,"react":224}],237:[function(require,module,exports){
+},{"./api.jsx":229,"./live-head-section.jsx":237,"./live-nav.jsx":238,"./prize-section.jsx":243,"./schedule.jsx":244,"react":224}],240:[function(require,module,exports){
 'use strict';
 
-var _reactRouterDom = require('react-router-dom');
-
 var React = require('react');
-
 
 var mlhBadgeStyle = {
   width: '100%',
@@ -24531,13 +24799,9 @@ var Nav = function Nav() {
         'div',
         { className: 'nav-section active' },
         React.createElement(
-          _reactRouterDom.Link,
-          { to: '/' },
-          React.createElement(
-            'a',
-            { href: '#landing' },
-            'Home'
-          )
+          'a',
+          { href: '#landing' },
+          'Home'
         )
       ),
       React.createElement(
@@ -24572,12 +24836,8 @@ var Nav = function Nav() {
         { className: 'nav-section' },
         React.createElement(
           'a',
-          null,
-          React.createElement(
-            _reactRouterDom.Link,
-            { to: '/live' },
-            'Live'
-          )
+          { href: '/live' },
+          'Live'
         )
       )
     )
@@ -24586,8 +24846,10 @@ var Nav = function Nav() {
 
 module.exports = Nav;
 
-},{"react":224,"react-router-dom":171}],238:[function(require,module,exports){
+},{"react":224}],241:[function(require,module,exports){
 'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _propTypes = require('prop-types');
 
@@ -24595,56 +24857,73 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var React = require('react');
 
+var Organizer = function (_React$Component) {
+  _inherits(Organizer, _React$Component);
 
-var Organizer = React.createClass({
-  displayName: 'Organizer',
-  render: function render() {
-    var organizer = this.props.organizer;
-    var imageURL = 'assets/img/organizers/' + organizer.image;
-    var schoolStyle = {
-      textDecoration: 'none',
-      color: 'inherit',
-      transition: '0.3s ease',
-      fontFamily: 'Proxima Nova, Montserrat, sans-serif',
-      textAlign: 'center',
-      fontSize: '16px'
-    };
-    return React.createElement(
-      'div',
-      { className: 'col-xs-12 col-md-6 col-lg-4', style: { marginTop: '30px' } },
-      React.createElement(
+  function Organizer() {
+    _classCallCheck(this, Organizer);
+
+    return _possibleConstructorReturn(this, (Organizer.__proto__ || Object.getPrototypeOf(Organizer)).apply(this, arguments));
+  }
+
+  _createClass(Organizer, [{
+    key: 'render',
+    value: function render() {
+      var organizer = this.props.organizer;
+      var imageURL = 'assets/img/organizers/' + organizer.image;
+      var schoolStyle = {
+        textDecoration: 'none',
+        color: 'inherit',
+        transition: '0.3s ease',
+        fontFamily: 'Proxima Nova, Montserrat, sans-serif',
+        textAlign: 'center',
+        fontSize: '16px'
+      };
+      return React.createElement(
         'div',
-        { className: 'row' },
+        { className: 'col-xs-12 col-md-6 col-lg-4', style: { marginTop: '30px' } },
         React.createElement(
           'div',
-          { className: 'col-xs-4' },
-          React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100',
-            alt: organizer.name
-          })
-        ),
-        React.createElement(
-          'div',
-          { className: 'col-xs-8' },
+          { className: 'row' },
           React.createElement(
-            'a',
-            { href: organizer.link, target: '_blank',
-              style: { fontSize: '18px', marginBottom: '20px' }
-            },
-            organizer.name
+            'div',
+            { className: 'col-xs-4' },
+            React.createElement('img', { className: 'img-circle', src: imageURL, height: '100', width: '100',
+              alt: organizer.name
+            })
           ),
-          React.createElement('br', null),
           React.createElement(
-            'p',
-            { style: schoolStyle },
-            organizer.school
+            'div',
+            { className: 'col-xs-8' },
+            React.createElement(
+              'a',
+              { href: organizer.link, target: '_blank',
+                style: { fontSize: '18px', marginBottom: '20px' }
+              },
+              organizer.name
+            ),
+            React.createElement('br', null),
+            React.createElement(
+              'p',
+              { style: schoolStyle },
+              organizer.school
+            )
           )
         )
-      )
-    );
-  }
-});
+      );
+    }
+  }]);
+
+  return Organizer;
+}(React.Component);
 
 Organizer.propTypes = {
   organizer: _propTypes2.default.object.isRequired
@@ -24652,42 +24931,181 @@ Organizer.propTypes = {
 
 module.exports = Organizer;
 
-},{"prop-types":32,"react":224}],239:[function(require,module,exports){
+},{"prop-types":32,"react":224}],242:[function(require,module,exports){
 'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var React = require('react');
 var Organizer = require('./organizer.jsx');
 var organizersData = require('../data.json');
 var organizers = organizersData.organizers;
 
-var OrganizersSection = React.createClass({
-  displayName: 'OrganizersSection',
-  render: function render() {
-    var i = -1;
-    var rows = organizers.map(function (obj) {
-      i++;
-      return React.createElement(Organizer, { key: i, organizer: obj });
-    });
-    return React.createElement(
-      'div',
-      { id: 'organizer', className: 'section container', style: { maxWidth: 'none' } },
-      React.createElement(
-        'div',
-        { className: 'section-body row', style: { maxWidth: 'none', width: '80%' } },
-        React.createElement(
-          'h1',
-          null,
-          'Organizers'
-        ),
-        rows
-      )
-    );
+var OrganizersSection = function (_React$Component) {
+  _inherits(OrganizersSection, _React$Component);
+
+  function OrganizersSection() {
+    _classCallCheck(this, OrganizersSection);
+
+    return _possibleConstructorReturn(this, (OrganizersSection.__proto__ || Object.getPrototypeOf(OrganizersSection)).apply(this, arguments));
   }
-});
+
+  _createClass(OrganizersSection, [{
+    key: 'render',
+    value: function render() {
+      var i = -1;
+      var rows = organizers.map(function (obj) {
+        i++;
+        return React.createElement(Organizer, { key: i, organizer: obj });
+      });
+      return React.createElement(
+        'div',
+        { id: 'organizer', className: 'section container', style: { maxWidth: 'none' } },
+        React.createElement(
+          'div',
+          { className: 'section-body row', style: { maxWidth: 'none', width: '80%' } },
+          React.createElement(
+            'h1',
+            null,
+            'Organizers'
+          ),
+          rows
+        )
+      );
+    }
+  }]);
+
+  return OrganizersSection;
+}(React.Component);
 
 module.exports = OrganizersSection;
 
-},{"../data.json":241,"./organizer.jsx":238,"react":224}],240:[function(require,module,exports){
+},{"../data.json":246,"./organizer.jsx":241,"react":224}],243:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var PrizeSection = function PrizeSection() {
+  return React.createElement(
+    "div",
+    { id: "prizes", className: "section" },
+    React.createElement(
+      "div",
+      { className: "section-wrapper" },
+      React.createElement(
+        "div",
+        { className: "section-body" },
+        React.createElement(
+          "h1",
+          null,
+          "Prizes"
+        ),
+        React.createElement("br", null),
+        React.createElement(
+          "h3",
+          null,
+          "Please check out our page at ",
+          React.createElement(
+            "a",
+            { href: "https://siliconhacks.hackerearth.com/#prizes", target: "_blank" },
+            "HackerEarth"
+          ),
+          "."
+        )
+      )
+    ),
+    React.createElement("div", { className: "slant bottom left" })
+  );
+};
+
+module.exports = PrizeSection;
+
+},{"react":224}],244:[function(require,module,exports){
+'use strict';
+
+var _data = require('../data.json');
+
+var React = require('react');
+
+
+var Schedule = function Schedule() {
+  return React.createElement(
+    'div',
+    {
+      className: 'container table-responsive',
+      style: { width: '80%', maxWidth: '800px', margin: '0 auto', marginTop: '50px' },
+      id: 'schedule'
+    },
+    React.createElement(
+      'h1',
+      null,
+      'Saturday, May 6'
+    ),
+    React.createElement(
+      'table',
+      { className: 'table', style: { fontSize: '16px', marginTop: '10px' } },
+      React.createElement(
+        'tbody',
+        null,
+        _data.day1.map(function (obj) {
+          return React.createElement(
+            'tr',
+            null,
+            React.createElement(
+              'td',
+              { style: { whiteSpace: 'nowrap', width: '200px' } },
+              obj.time
+            ),
+            React.createElement(
+              'td',
+              null,
+              obj.event
+            )
+          );
+        })
+      )
+    ),
+    React.createElement(
+      'h1',
+      null,
+      'Sunday, May 7'
+    ),
+    React.createElement(
+      'table',
+      { className: 'table', style: { fontSize: '16px', marginTop: '10px' } },
+      React.createElement(
+        'tbody',
+        null,
+        _data.day2.map(function (obj) {
+          return React.createElement(
+            'tr',
+            null,
+            React.createElement(
+              'td',
+              { style: { whiteSpace: 'nowrap', width: '200px' } },
+              obj.time
+            ),
+            React.createElement(
+              'td',
+              null,
+              obj.event
+            )
+          );
+        })
+      )
+    )
+  );
+};
+
+module.exports = Schedule;
+
+},{"../data.json":246,"react":224}],245:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -24702,199 +25120,196 @@ var imgStyle = {
   marginBottom: '20px'
 };
 
-var SponsorSection = React.createClass({
-  displayName: 'SponsorSection',
-  render: function render() {
-    return React.createElement(
+var SponsorSection = function SponsorSection() {
+  return React.createElement(
+    'div',
+    { id: 'sponsor', className: 'section' },
+    React.createElement(
       'div',
-      { id: 'sponsor', className: 'section' },
+      { className: 'section-body' },
       React.createElement(
         'div',
-        { className: 'section-body' },
-        React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'h1',
-            { style: { marginBottom: '30px' } },
-            'Sponsors'
-          ),
-          React.createElement(
-            'div',
-            { style: blockStyle },
-            React.createElement(
-              'a',
-              { href: 'https://www.ibm.com/', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/ibm.svg', height: '100', alt: 'IBM', style: imgStyle })
-            )
-          ),
-          React.createElement(
-            'div',
-            { style: blockStyle },
-            React.createElement(
-              'a',
-              { href: 'http://www.mst.com/msei/index.html', style: { border: 'none', marginRight: '20px' } },
-              React.createElement('img', { src: 'assets/img/msei.jpg', height: '60', alt: 'MSEI', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://www.proofpoint.com/us', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/proofpoint.svg', height: '40', alt: 'proofpoint', style: imgStyle })
-            )
-          ),
-          React.createElement(
-            'div',
-            { style: blockStyle },
-            React.createElement(
-              'a',
-              { href: 'https://github.com/', style: { border: 'none', marginRight: '20px' } },
-              React.createElement('img', { src: 'assets/img/github.png', height: '40', alt: 'github', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'http://www.wolfram.com/', style: { border: 'none', marginRight: '20px' } },
-              React.createElement('img', { src: 'assets/img/wolfram.png', height: '60', alt: 'wolfram', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'http://www.draperuniversity.com/', style: { border: 'none', marginRight: '20px' } },
-              React.createElement('img', { src: 'assets/img/DraperU.png', height: '55', alt: 'DraperUniversity', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'http://get.tech/', style: { border: 'none', marginRight: '20px' } },
-              React.createElement('img', { src: 'assets/img/dot-tech.png', height: '55', alt: '.tech', style: imgStyle })
-            )
-          ),
-          React.createElement(
-            'div',
-            { style: blockStyle },
-            React.createElement(
-              'a',
-              { href: 'https://www.jetbrains.com/', style: { border: 'none', marginRight: '20px' } },
-              React.createElement('img', { src: 'assets/img/jetbrains.png', height: '90', alt: 'JetBrains', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'http://guayaki.com/', style: { border: 'none', marginRight: '20px' } },
-              React.createElement('img', { src: 'assets/img/yerba_mate.jpg', height: '90', alt: 'YerbaMate', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'http://guayaki.com/', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/imperfectproduce.jpg', height: '95', alt: 'ImperfectProduce', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'http://www.drinkbai.com/', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/bai.png', height: '90', alt: 'Bai', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://www.makeschool.com/', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/makeschool.png', height: '120', alt: 'MakeSchool', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://nootrobox.com/go-cubes', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/go_cubes.png', height: '60', alt: 'Go Cubes', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://ultrapress.com/', style: { paddingLeft: '20px', border: 'none' } },
-              React.createElement('img', { src: 'assets/img/ultrapress.png', height: '50', alt: 'Ultrapress', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://twilio.com/', style: { paddingLeft: '20px', border: 'none' } },
-              React.createElement('img', { src: 'assets/img/twilio.png', height: '50', alt: 'Twilio', style: imgStyle })
-            )
-          )
-        ),
-        React.createElement('br', null),
-        React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'h1',
-            { style: { marginBottom: '30px' } },
-            'Partners'
-          ),
-          React.createElement(
-            'div',
-            { style: blockStyle },
-            React.createElement(
-              'a',
-              { href: 'https://mlh.io/', style: { border: 'none', marginRight: '30px' } },
-              React.createElement('img', { src: 'assets/img/mlh.png', height: '80', alt: 'MLH', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://www.42.us.org/', style: { border: 'none', marginRight: '30px' } },
-              React.createElement('img', { src: 'assets/img/42.png', height: '100', alt: '42 USA', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://www.hackerearth.com/', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/hackerearth.png', height: '60', alt: 'HackerEarth', style: imgStyle })
-            )
-          ),
-          React.createElement(
-            'div',
-            { style: blockStyle },
-            React.createElement(
-              'a',
-              { href: 'https://hacker.fund/', style: { border: 'none', marginRight: '30px' } },
-              React.createElement('img', { src: 'assets/img/hackerfund.png', height: '65', alt: 'HackerFund', style: { marginBottom: '20px', paddingTop: '20px' } })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://www.hackplus.io/', style: { border: 'none', marginRight: '30px' } },
-              React.createElement('img', { src: 'assets/img/hackplus.png', height: '50', alt: 'Hack+', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://github.com/stohio/software-lab', style: { border: 'none', marginRight: '30px' } },
-              React.createElement('img', { src: 'assets/img/softwarelab.jpg', height: '50', alt: 'Software Lab', style: imgStyle })
-            ),
-            React.createElement(
-              'a',
-              { href: 'https://hackclub.com/', style: { border: 'none' } },
-              React.createElement('img', { src: 'assets/img/hack_club.svg', height: '35', alt: 'Hack Club', style: imgStyle })
-            )
-          )
-        ),
-        React.createElement('br', null),
-        React.createElement('br', null),
+        null,
         React.createElement(
           'h1',
-          null,
-          'Interested in Sponsoring?'
+          { style: { marginBottom: '30px' } },
+          'Sponsors'
         ),
         React.createElement(
-          'a',
-          { className: 'button green', href: 'https://siliconhacks.typeform.com/to/lzxr3H', target: '_blank' },
-          'Sponsor us'
-        ),
-        React.createElement(
-          'p',
-          { style: { textAlign: 'center' } },
-          'or email us at',
+          'div',
+          { style: blockStyle },
           React.createElement(
             'a',
-            { href: 'mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry' },
-            'hacksilicon@gmail.com'
+            { href: 'https://www.ibm.com/', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/ibm.svg', height: '100', alt: 'IBM', style: imgStyle })
           )
         ),
-        React.createElement('br', null)
-      )
-    );
-  }
-});
+        React.createElement(
+          'div',
+          { style: blockStyle },
+          React.createElement(
+            'a',
+            { href: 'http://www.mst.com/msei/index.html', style: { border: 'none', marginRight: '20px' } },
+            React.createElement('img', { src: 'assets/img/msei.jpg', height: '60', alt: 'MSEI', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://www.proofpoint.com/us', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/proofpoint.svg', height: '40', alt: 'proofpoint', style: imgStyle })
+          )
+        ),
+        React.createElement(
+          'div',
+          { style: blockStyle },
+          React.createElement(
+            'a',
+            { href: 'https://github.com/', style: { border: 'none', marginRight: '20px' } },
+            React.createElement('img', { src: 'assets/img/github.png', height: '40', alt: 'github', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'http://www.wolfram.com/', style: { border: 'none', marginRight: '20px' } },
+            React.createElement('img', { src: 'assets/img/wolfram.png', height: '60', alt: 'wolfram', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'http://www.draperuniversity.com/', style: { border: 'none', marginRight: '20px' } },
+            React.createElement('img', { src: 'assets/img/DraperU.png', height: '55', alt: 'DraperUniversity', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'http://get.tech/', style: { border: 'none', marginRight: '20px' } },
+            React.createElement('img', { src: 'assets/img/dot-tech.png', height: '55', alt: '.tech', style: imgStyle })
+          )
+        ),
+        React.createElement(
+          'div',
+          { style: blockStyle },
+          React.createElement(
+            'a',
+            { href: 'https://www.jetbrains.com/', style: { border: 'none', marginRight: '20px' } },
+            React.createElement('img', { src: 'assets/img/jetbrains.png', height: '90', alt: 'JetBrains', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'http://guayaki.com/', style: { border: 'none', marginRight: '20px' } },
+            React.createElement('img', { src: 'assets/img/yerba_mate.jpg', height: '90', alt: 'YerbaMate', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'http://guayaki.com/', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/imperfectproduce.jpg', height: '95', alt: 'ImperfectProduce', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'http://www.drinkbai.com/', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/bai.png', height: '90', alt: 'Bai', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://www.makeschool.com/', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/makeschool.png', height: '120', alt: 'MakeSchool', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://nootrobox.com/go-cubes', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/go_cubes.png', height: '60', alt: 'Go Cubes', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://ultrapress.com/', style: { paddingLeft: '20px', border: 'none' } },
+            React.createElement('img', { src: 'assets/img/ultrapress.png', height: '50', alt: 'Ultrapress', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://twilio.com/', style: { paddingLeft: '20px', border: 'none' } },
+            React.createElement('img', { src: 'assets/img/twilio.png', height: '50', alt: 'Twilio', style: imgStyle })
+          )
+        )
+      ),
+      React.createElement('br', null),
+      React.createElement(
+        'div',
+        null,
+        React.createElement(
+          'h1',
+          { style: { marginBottom: '30px' } },
+          'Partners'
+        ),
+        React.createElement(
+          'div',
+          { style: blockStyle },
+          React.createElement(
+            'a',
+            { href: 'https://mlh.io/', style: { border: 'none', marginRight: '30px' } },
+            React.createElement('img', { src: 'assets/img/mlh.png', height: '80', alt: 'MLH', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://www.42.us.org/', style: { border: 'none', marginRight: '30px' } },
+            React.createElement('img', { src: 'assets/img/42.png', height: '100', alt: '42 USA', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://www.hackerearth.com/', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/hackerearth.png', height: '60', alt: 'HackerEarth', style: imgStyle })
+          )
+        ),
+        React.createElement(
+          'div',
+          { style: blockStyle },
+          React.createElement(
+            'a',
+            { href: 'https://hacker.fund/', style: { border: 'none', marginRight: '30px' } },
+            React.createElement('img', { src: 'assets/img/hackerfund.png', height: '65', alt: 'HackerFund', style: { marginBottom: '20px', paddingTop: '20px' } })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://www.hackplus.io/', style: { border: 'none', marginRight: '30px' } },
+            React.createElement('img', { src: 'assets/img/hackplus.png', height: '50', alt: 'Hack+', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://github.com/stohio/software-lab', style: { border: 'none', marginRight: '30px' } },
+            React.createElement('img', { src: 'assets/img/softwarelab.jpg', height: '50', alt: 'Software Lab', style: imgStyle })
+          ),
+          React.createElement(
+            'a',
+            { href: 'https://hackclub.com/', style: { border: 'none' } },
+            React.createElement('img', { src: 'assets/img/hack_club.svg', height: '35', alt: 'Hack Club', style: imgStyle })
+          )
+        )
+      ),
+      React.createElement('br', null),
+      React.createElement('br', null),
+      React.createElement(
+        'h1',
+        null,
+        'Interested in Sponsoring?'
+      ),
+      React.createElement(
+        'a',
+        { className: 'button green', href: 'https://siliconhacks.typeform.com/to/lzxr3H', target: '_blank' },
+        'Sponsor us'
+      ),
+      React.createElement(
+        'p',
+        { style: { textAlign: 'center' } },
+        'or email us at',
+        React.createElement(
+          'a',
+          { href: 'mailto:hacksilicon@gmail.com?subject=SiliconHacks%202.0%20Sponsorship%20Inquiry' },
+          'hacksilicon@gmail.com'
+        )
+      ),
+      React.createElement('br', null)
+    )
+  );
+};
 
 module.exports = SponsorSection;
 
-},{"react":224}],241:[function(require,module,exports){
+},{"react":224}],246:[function(require,module,exports){
 module.exports={
     "faqrow1": [
         {
@@ -25018,18 +25433,96 @@ module.exports={
             "school": "42"
         }
     ],
-    "schedule": [
+    "day1": [
         {
-            "event": "Event starts:",
-            "time": "TBA"
+            "event": "Registration Opens",
+            "time": "12:42 PM"
+        },
+        {
+            "event": "Opening Ceremony",
+            "time": "2-3:30 PM"
+        },
+        {
+            "time": "3:30 PM",
+            "event": "Hacking Begins, Hardware Lab opens"
+        },
+        {
+            "time": "4 PM",
+            "event": "Team Formation"
+        },
+        {
+            "time": "4:30 - 5:30 PM",
+            "event": "Workshop 1 - Eric Vicenti (Facebook) Intro to React (see Messenger chats - Dhanush)"
+        },
+        {
+            "time": "5:30 - 6:30 PM",
+            "event": "Workshop 2.1 - Using Watson (IBM)"
+        },
+        {
+            "time": "5:30 - 6:30 PM",
+            "event": "Workshop 2.2 - Intro to Golang (Software Labs)"
+        },
+        {
+            "time": "7:00 - 8:30 PM",
+            "event": "Dinner"
+        },
+        {
+            "time": "9:00 - 10:00 PM",
+            "event": "Workshop 3.1 - Build Your First iOS App (Make School)"
+        },
+        {
+            "time": "10:30 - 11:30 PM",
+            "event": "MLH Cup Stacking Competition"
+        },
+        {
+            "time": "12 PM",
+            "event": "Midnight Snack"
         }
+    ],
+    "day2": [
+        {
+            "time": "8:00 - 9:30 AM",
+            "event": "Breakfast"
+        },
+        {
+            "time": "10 - 11 AM",
+            "event": "Workshop - Github/HackerEarth"
+        },
+        {
+            "time": "11:30 AM",
+            "event": "HackerEarth submissions due"
+        },
+        {
+            "time": "12 - 1 PM",
+            "event": "Lunch"
+        },
+        {
+            "time": "1 PM",
+            "event": "Hacking Ends"
+        },
+        {
+            "time": "1-1:30 PM",
+            "event": "Prepare for Judging"
+        },
+        {
+            "time": "1:30 - 3 PM",
+            "event": "Judging"
+        },
+        {
+            "time": "3 - 3:30 PM",
+            "event": "Tally up marks"
+        },
+        {
+            "time": "3:30 - 4:30 PM",
+            "event": "Closing Ceremony"
+        },
     ]
 }
 
-},{}],242:[function(require,module,exports){
+},{}],247:[function(require,module,exports){
 'use strict';
 
-var React = require('react');
+// const React = require('react');
 var ReactDOM = require('react-dom');
 // const Index = require('./components/index.jsx');
 var Routes = require('./Routes.jsx');
@@ -25038,4 +25531,4 @@ ReactDOM.render(Routes, document.getElementById('main'));
 
 // ReactDOM.render(<Index />, document.getElementById('main'));
 
-},{"./Routes.jsx":227,"react":224,"react-dom":34}]},{},[242]);
+},{"./Routes.jsx":227,"react-dom":34}]},{},[247]);

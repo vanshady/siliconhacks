@@ -10,9 +10,7 @@ const imgStyle = {
   marginBottom: '20px',
 };
 
-const SponsorSection = React.createClass({
-  render() {
-    return (
+const SponsorSection = () => (
       <div id="sponsor" className="section">
         <div className="section-body">
           <div>
@@ -114,7 +112,5 @@ const SponsorSection = React.createClass({
         </div>
       </div>
     );
-  },
-});
 
 module.exports = SponsorSection;
