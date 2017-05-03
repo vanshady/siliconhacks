@@ -140,7 +140,11 @@
         },
         {
             "time": "4:30 - 5:30 PM",
-            "event": "Workshop 1 - Eric Vicenti (Facebook) Intro to React (see Messenger chats - Dhanush)"
+            "event": "Workshop 1.1 - Eric Vicenti (Facebook) Intro to React"
+        },
+        {
+            "time": "4:30 - 5:30 PM",
+            "event": "Workshop 1.2 - Build Your First iOS App (Make School)"
         },
         {
             "time": "5:30 - 6:30 PM",
@@ -155,11 +159,7 @@
             "event": "Dinner"
         },
         {
-            "time": "9:00 - 10:00 PM",
-            "event": "Workshop 3.1 - Build Your First iOS App (Make School)"
-        },
-        {
-            "time": "10:30 - 11:30 PM",
+            "time": "10 - 11 PM",
             "event": "MLH Cup Stacking Competition"
         },
         {

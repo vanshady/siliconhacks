@@ -10,8 +10,8 @@ SiliconHacks website. Written in HTML, CSS, and JavaScript, React.
 **Developers:**
 * Minwei Xu
 * Moshe Reinhart
+* Dhanush Patel
 
 **Designers:**
 * Anderson Pan
 * Jesse Gao
-* Jiarun Chen
