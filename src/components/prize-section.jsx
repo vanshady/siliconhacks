@@ -1,7 +1,7 @@
 const React = require('react');
 
 const PrizeSection = () => (
-      <div id="prizes" className="section">
+      <div id="prizes" className="section" style={{ paddingBottom: '40px' }}>
         <div className="section-wrapper">
           <div className="section-body">
             <h1>
@@ -13,7 +13,6 @@ const PrizeSection = () => (
             </h3>
           </div>
         </div>
-        <div className="slant bottom left"></div>
       </div>);
 
 module.exports = PrizeSection;
