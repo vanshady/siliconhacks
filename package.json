@@ -28,7 +28,7 @@
     "react-big-calendar": "^0.14.0",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
-    "uglify-js": "^2.7.3",
+    "uglify-js": "^2.8.22",
     "watchify": "^3.9.0"
   },
   "devDependencies": {
