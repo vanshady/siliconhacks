@@ -1,19 +1,32 @@
 const React = require('react');
-
+import { hardware } from '../data.json';
 const HardwareSection = () => (
-      <div id="hardware" className="section">
+      <div id="hardware" className="section" style={{ paddingBottom: '20px' }}>
         <div className="section-wrapper">
           <div className="section-body">
             <h1>
               Hardware
             </h1>
             <br />
-            <h3>
-              Please check out our page at <a href="https://siliconhacks.hackerearth.com/#prizes" target="_blank">hackerearth</a>.
-            </h3>
+            <div
+              className="container table-responsive"
+              style={{ width: '80%', maxWidth: '500px', margin: '0 auto' }}
+            >
+              <table className="table" style={{ fontSize: '16px', marginTop: '10px' }}>
+                <tbody>
+                  {
+                    hardware.map((obj) => (
+                      <tr>
+                        <td style={{ whiteSpace: 'nowrap' }}>{obj.number}</td>
+                        <td>{obj.item}</td>
+                      </tr>
+                    ))
+                  }
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <div className="slant bottom left"></div>
       </div>);
 
 module.exports = HardwareSection;

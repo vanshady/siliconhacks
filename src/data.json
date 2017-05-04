@@ -203,6 +203,84 @@
         {
             "time": "3:30 - 4:30 PM",
             "event": "Closing Ceremony"
+        }
+    ],
+    "hardware": [
+        {
+            "number": 3,
+            "item": "NEW Alienware Laptop"
         },
+        {
+            "number": 1,
+            "item": "Alienware X51 Desktop Set"
+        },
+        {
+            "number": 6,
+            "item": "Amazon Echo"
+        },
+        {
+            "number": 2,
+            "item": "Amazon Fire Phone"
+        },
+        {
+            "number": 10,
+            "item": "Arduino 101"
+        },
+        {
+            "number": 10,
+            "item": "Base Shield"
+        },
+        {
+            "number": 1,
+            "item": "Dell Inspiron Laptop"
+        },
+        {
+            "number": 2,
+            "item": "Dell Monitor"
+        },
+        {
+            "number": 1,
+            "item": "Dell XPS 13 2-in-1"
+        },
+        {
+            "number": 1,
+            "item": "Dell XPS 13 Laptop (Ubuntu)"
+        },
+        {
+            "number": 2,
+            "item": "Dell XPS 13 Laptop (Windows)"
+        },
+        {
+            "number": 1,
+            "item": "Grove Starter Kit"
+        },
+        {
+            "number": 15,
+            "item": "Intel Edison"
+        },
+        {
+            "number": 1,
+            "item": "Intel Starter Kit"
+        },
+        {
+            "number": 6,
+            "item": "Leap Motion"
+        },
+        {
+            "number": 1,
+            "item": "Muse Headband"
+        },
+        {
+            "number": 6,
+            "item": "Oculus Rift"
+        },
+        {
+            "number": 6,
+            "item": "Pebble Time"
+        },
+        {
+            "number": 4,
+            "item": "Samsung Gear VR"
+        }
     ]
 }

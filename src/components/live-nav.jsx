@@ -35,9 +35,9 @@ const LiveNav = () => (
           <div className="nav-section">
             <a href="#prizes">Prizes</a>
           </div>
-          {/* <div className="nav-section">
+          <div className="nav-section">
             <a href="#hardware">Hardware</a>
-          </div> */}
+          </div>
           <div className="nav-section">
             <a href="#api">APIs</a>
           </div>
