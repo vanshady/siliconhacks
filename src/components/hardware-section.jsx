@@ -16,7 +16,7 @@ const HardwareSection = () => (
                 <tbody>
                   {
                     hardware.map((obj) => (
-                      <tr>
+                      <tr key={obj.item}>
                         <td style={{ whiteSpace: 'nowrap' }}>{obj.number}</td>
                         <td>{obj.item}</td>
                       </tr>

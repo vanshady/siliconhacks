@@ -53,19 +53,9 @@ var activateSection = function (section) {
   $(section).addClass('active');
 };
 
-
 $(document).ready(function () {
-
   // var window_height = $(window).height();
   // adjust section height
-
-  $('.nav-menu').click(function () {
-    $('#nav-sections').show();
-    setTimeout(function () {
-      $('#nav-sections').addClass('active');
-    }, 50);
-  });
-
   if ($(window).width() > 480) {
     $(window).scroll(switchNav);
     //$('body').backstretch('assets/img/background.png');
@@ -76,12 +66,6 @@ $(document).ready(function () {
     $(window).scroll(switchNavMobile);
     $('#logo_white').hide();
     $('#logo_green').show();
-    $('#nav-close, .nav-section').click(function () {
-      $('#nav-sections').removeClass('active');
-      setTimeout(function () {
-        $('#nav-sections').hide();
-      }, 300);
-    });
   }
 
   // smoothscroll

@@ -12,7 +12,7 @@ const Schedule = () => (
         <tbody>
           {
             day1.map((obj) => (
-              <tr>
+              <tr key={obj.event}>
                 <td style={{ whiteSpace: 'nowrap', width: '200px' }}>{obj.time}</td>
                 <td>{obj.event}</td>
               </tr>
@@ -25,7 +25,7 @@ const Schedule = () => (
         <tbody>
           {
             day2.map((obj) => (
-              <tr>
+              <tr key={obj.event}>
                 <td style={{ whiteSpace: 'nowrap', width: '200px' }}>{obj.time}</td>
                 <td>{obj.event}</td>
               </tr>

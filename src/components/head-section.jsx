@@ -14,7 +14,7 @@ const HeadSection = () => (
           6-7, 2017
         </div>
         <div className="button-container">
-          <a className="button">Application Closed</a>
+          <a className="button" href="/">Live</a>
           <a className="button" href="https://siliconhacks.typeform.com/to/ON7ar6" target="_blank">Mentor</a>
           <a className="button" href="https://siliconhacks.typeform.com/to/lzxr3H" target="_blank">Sponsor Us</a>
           <a className="button" href="https://donorbox.org/siliconhacks?recurring=true" target="_blank">Donate</a>

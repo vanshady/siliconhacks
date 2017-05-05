@@ -6,7 +6,23 @@ const mlhBadgeStyle = {
   maxHeight: '135px',
 };
 
-const LiveNav = () => (
+class LiveNav extends React.Component {
+  onClick() {
+    $('#nav-sections').show();
+
+    setTimeout(function () {
+      $('#nav-sections').addClass('active');
+    }, 50);
+  }
+
+  onClose() {
+    $('#nav-sections').removeClass('active');
+    setTimeout(function () {
+      $('#nav-sections').hide();
+    }, 300);
+  }
+  render() {
+    return (
       <nav id="nav">
         <a
           id="mlh-trust-badge"
@@ -18,11 +34,11 @@ const LiveNav = () => (
 
         <img id="logo_white" className="logo" src="assets/img/logo_white.png" alt="SiliconHacks" />
         <img id="logo_green" className="logo" src="assets/img/logo_green.png" alt="SiliconHacks" />
-        <img id="menu_white" className="nav-menu" src="assets/img/menu_white.svg" alt="" />
-        <img id="menu_green" className="nav-menu" src="assets/img/menu_green.svg" alt="" />
+        <img id="menu_white" className="nav-menu" src="assets/img/menu_white.svg" alt="" onClick={this.onClick} />
+        <img id="menu_green" className="nav-menu" src="assets/img/menu_green.svg" alt="" onClick={this.onClick} />
 
         <div id="nav-sections">
-          <div id="nav-close" className="nav-section">x</div>
+          <div id="nav-close" className="nav-section" onClick={this.onClose}>x</div>
           <div className="nav-section">
             <a href="/">Home</a>
           </div>
@@ -44,5 +60,7 @@ const LiveNav = () => (
         </div>
       </nav>
     );
+  }
+}
 
 module.exports = LiveNav;
